@@ -7,6 +7,10 @@
   src: url(../fonts/FuturaPT/FuturaPTMedium.otf);
 }
 @font-face {
+  font-family: "FuturaPTHeavy";
+  src: url(../fonts/FuturaPT/FuturaPTHeavy.otf);
+}
+@font-face {
   font-family: "Brandon Grotesque Medium";
   src: url(../fonts/Brandon/Brandon_med.otf);
 }
@@ -56,8 +60,15 @@ body {
         .elem {
           padding: 15px 60px 5px 60px;
           p {
+            font-family: "FuturaPTHeavy";
             font-size: 16px;
             font-weight: 800;
+            color: #CBCBCB;
+            transition: 0.2s;
+            &:hover{
+              color: #ffffff;
+              transform: scale(1.05);
+            }
           }
           img {
             width: 104.24px;
@@ -103,9 +114,10 @@ body {
         margin-bottom: 50px;
         a {
           font-family: "Brandon Grotesque Medium";
+          font-size: 18px;
           height: 50px;
           width: 200px;
-          padding: 15px 30px 15px 30px;
+          padding: 10px 35px 10px 35px;
           background: linear-gradient(90deg, #0f92f1 0%, #04aff9 105.43%);
         }
       }
