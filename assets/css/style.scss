@@ -45,13 +45,15 @@ p {
 
     .firstpart {
       background-image: url(../img/firstbg.png);
-      background-size: 100% 100%;
+      background-size: 120%;
       background-repeat: no-repeat;
+      background-position: center;
       display: flex;
       flex-direction: column;
       .nav {
         background: rgba(19, 19, 19, 0.85);
         height: 100px;
+        display: none;
         .container {
           width: 80%;
           margin: 0 auto;
@@ -81,8 +83,28 @@ p {
           }
         }
       }
+      .navmobile {
+        width: 80%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        background: transparent;
+        img {
+          
+          width: 100px;
+          margin: 0 auto;
+          display: block;
+          justify-content: center;
+          align-items: center;
+          align-self: center;
+          margin-bottom: -77px;
+          margin-top: 15px;
+          filter: drop-shadow(0px 5px 18px black);
+        }
+      }
       .bg {
-        height: 980px;
+        height: 320px;
       }
     }
 
@@ -90,7 +112,7 @@ p {
       background-image: url(../img/secondbg.png);
       background-size: 100%;
       background-repeat: no-repeat;
-      margin-top: 100px;
+      margin-top: 10px;
       .container {
         width: 70%;
         margin: 0 auto;
@@ -98,12 +120,12 @@ p {
         flex-direction: column;
         .up {
           font-family: "Brandon Grotesque Medium";
-          margin-top: 80px;
-          font-size: 38px;
+          margin-top: 140px;
+          font-size: 24px;
         }
         .mid {
           p {
-            font-size: 26px;
+            font-size: 18px;
             line-height: 44px;
             color: #ffffff;
             opacity: 0.9;
@@ -114,9 +136,8 @@ p {
           }
         }
         .bottom {
-          margin-top: 50px;
+          margin-top: 30px;
           margin-bottom: 50px;
-          margin-left: 20px;
           a {
             font-family: "Brandon Grotesque Medium";
             font-size: 18px;
@@ -142,9 +163,11 @@ p {
     .tokenomics {
       margin-bottom: 150px;
       .container {
-        background-image: url(../img/tokenomics1.png);
-        background-size: 100%;
+        background-image: url(../img/tokenomics1mobile.png);
+        background-size: 170%;
         background-repeat: no-repeat;
+        background-position: top;
+        
         // background-repeat: no-repeat;
         .countdown {
           width: 55%;
@@ -154,7 +177,7 @@ p {
           flex-direction: row;
           flex-wrap: wrap;
           .box {
-            margin-top: 80px;
+            margin-top: 380px;
             background: linear-gradient(
               0deg,
               rgba(17, 17, 17, 0.19) 29.89%,
@@ -207,6 +230,9 @@ p {
               }
             }
           }
+          .box2{
+            margin-top: 10px;
+          }
         }
 
         .fuel {
@@ -237,7 +263,7 @@ p {
             font-family: "FuturaPTMedium";
             margin-top: 52px;
             transition: all 1s ease-in-out;
-            margin: 10px 10px;
+            margin: 30px 10px;
             .up {
               background: linear-gradient(90deg, #0f92f1 0%, #24bdff 100%);
               margin-bottom: 0;
@@ -286,7 +312,7 @@ p {
 
         .buynow {
           text-align: center;
-          margin-top: 60px;
+          margin-top: 50px;
           a {
             font-family: "Brandon Grotesque Medium";
             font-size: 18px;
@@ -305,6 +331,17 @@ p {
     .thirdpart {
       img {
         width: 100%;
+        margin: auto;
+        display: block;
+        overflow-x: hidden;
+        margin-top: -50px;
+      }
+      .imgrespo{
+        width: 100%;
+      }
+      .imgnorespo{
+        width: 100%;
+        display: none;
       }
       .con {
         background-image: url(../img/bgnft.png);
@@ -512,7 +549,7 @@ p {
               font-family: "FuturaPTLight";
               font-size: 26px;
               line-height: 44.2px;
-              text-align: center;
+              text-align: start;
               color: #ffffff;
 
               opacity: 0.9;
@@ -521,8 +558,10 @@ p {
           }
 
           .socials {
-            margin: 0;
-            padding: 0;
+            display: flex;
+            flex-direction: row;
+            margin: 0 auto;
+            justify-content: center;
             margin-left: -5px;
             margin-right: -5px;
             margin-top: 60px;
@@ -606,7 +645,7 @@ p {
             .title {
               P {
                 font-family: "Brandon Grotesque Bold";
-                font-size: 40px;
+                font-size: 36px;
               }
             }
             .title5k {
@@ -630,8 +669,9 @@ p {
                 box-sizing: border-box;
                 height: 410px;
                 img {
-                  width: 320px;
-                  height: 320px;
+                  margin-top: 0px;
+                  width: 280px;
+                  height: 280px;
                 }
                 .txtup {
                   display: flex;
@@ -678,7 +718,7 @@ p {
                 }
                 margin-bottom: 136px;
                 &:hover {
-                  height: 470px;
+                  height: 420px;
                   margin-bottom: 40px;
                   transition: all 0.2s ease-in-out;
                   .button {
@@ -731,12 +771,12 @@ p {
         margin-top: -8px;
         margin-bottom: -4px;
       }
-      .downimg{
+      .downimg {
         width: 100%;
         margin-top: 0px;
       }
       .container {
-        background-image: url(../img/roadmapbg.png);
+        background-image: url(../img/roadmapbgmobile.png);
         background-size: 100%;
         .con {
           width: 90%;
@@ -748,7 +788,6 @@ p {
             display: block;
             margin: auto;
             width: 219px;
-
           }
 
           .stages {
@@ -757,7 +796,7 @@ p {
             padding-top: 90px;
             justify-content: center;
             align-items: center;
-            text-align: center;
+            text-align: start;
             flex-wrap: wrap;
 
             .left {
@@ -806,14 +845,12 @@ p {
                   }
                 }
               }
-              
             }
-
-            
           }
         }
       }
     }
+
     .roadmap {
       margin: 0px;
       padding: 0px;
@@ -1138,8 +1175,9 @@ p {
 
     .game {
       background-image: url(../img/metacarsgame.png);
-      background-size: 100%;
+      background-size: 170%;
       background-repeat: no-repeat;
+      background-position: right top;
       margin-top: 60px;
       .container {
         width: 80%;
@@ -1152,7 +1190,7 @@ p {
             p {
               font-family: "Brandon Grotesque Medium";
               font-size: 38px;
-              margin-top: 190px;
+              margin-top: 410px;
             }
           }
 
@@ -1181,8 +1219,6 @@ p {
             }
           }
         }
-
-
       }
     }
 
@@ -1221,8 +1257,10 @@ p {
     .mcqueen {
       padding-top: 100px;
       background-image: url(../img/foterroad.png);
-      background-size: 100%;
+      background-size: 130%;
+      background-position: center top;
       background-repeat: no-repeat;
+      
 
       display: block;
       margin: auto;
@@ -1232,7 +1270,7 @@ p {
         display: block;
         margin: auto;
         width: 179px;
-        
+
         justify-content: center;
         align-items: center;
         padding-bottom: 80px;
@@ -1245,7 +1283,9 @@ p {
       .container {
         width: 90%;
         margin: 0 auto;
-        justify-content: center;align-self: center;align-items: center;
+        justify-content: center;
+        align-self: center;
+        align-items: center;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -1324,16 +1364,16 @@ p {
       background-repeat: no-repeat;
       .up {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         margin: 0 auto;
 
         .left {
           img {
-            width: 229px;
+            width: 100px;
 
             margin-top: 258px;
-            margin-left: 15px;
+            
           }
         }
 
@@ -1343,11 +1383,11 @@ p {
             justify-content: center;
             display: block;
             margin: auto;
-            margin-top: 50px;
-            margin-left: -30px;
+            margin-top: 200px;
+            
             .socials {
               display: flex;
-              flex-direction: column;
+              flex-direction: row;
               margin: 0;
               padding: 0;
               margin-left: -5px;
@@ -1432,9 +1472,9 @@ p {
 
         .right {
           img {
-            width: 229px;
+            width: 100px;
 
-            margin-top: 50px;
+            margin-top: 210px;
           }
         }
       }
@@ -2144,7 +2184,7 @@ p {
         margin-top: -8px;
         margin-bottom: -4px;
       }
-      .downimg{
+      .downimg {
         width: 100%;
         margin-top: 0px;
       }
@@ -2219,10 +2259,7 @@ p {
                   }
                 }
               }
-              
             }
-
-            
           }
         }
       }
@@ -2647,7 +2684,7 @@ p {
         display: block;
         margin: auto;
         width: 279px;
-        
+
         justify-content: center;
         align-items: center;
         padding-bottom: 0px;

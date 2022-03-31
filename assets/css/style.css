@@ -53,8 +53,9 @@ p {
   }
   body .firstpart {
     background-image: url(../img/firstbg.png);
-    background-size: 100% 100%;
+    background-size: 120%;
     background-repeat: no-repeat;
+    background-position: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -66,6 +67,7 @@ p {
   body .firstpart .nav {
     background: rgba(19, 19, 19, 0.85);
     height: 100px;
+    display: none;
   }
   body .firstpart .nav .container {
     width: 80%;
@@ -104,14 +106,46 @@ p {
     width: 104.24px;
     height: 70.28px;
   }
+  body .firstpart .navmobile {
+    width: 80%;
+    margin: 0 auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    background: transparent;
+  }
+  body .firstpart .navmobile img {
+    width: 100px;
+    margin: 0 auto;
+    display: block;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-bottom: -77px;
+    margin-top: 15px;
+    -webkit-filter: drop-shadow(0px 5px 18px black);
+            filter: drop-shadow(0px 5px 18px black);
+  }
   body .firstpart .bg {
-    height: 980px;
+    height: 320px;
   }
   body .secondpart {
     background-image: url(../img/secondbg.png);
     background-size: 100%;
     background-repeat: no-repeat;
-    margin-top: 100px;
+    margin-top: 10px;
   }
   body .secondpart .container {
     width: 70%;
@@ -126,11 +160,11 @@ p {
   }
   body .secondpart .container .up {
     font-family: "Brandon Grotesque Medium";
-    margin-top: 80px;
-    font-size: 38px;
+    margin-top: 140px;
+    font-size: 24px;
   }
   body .secondpart .container .mid p {
-    font-size: 26px;
+    font-size: 18px;
     line-height: 44px;
     color: #ffffff;
     opacity: 0.9;
@@ -140,9 +174,8 @@ p {
     font-weight: 100;
   }
   body .secondpart .container .bottom {
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 50px;
-    margin-left: 20px;
   }
   body .secondpart .container .bottom a {
     font-family: "Brandon Grotesque Medium";
@@ -168,9 +201,10 @@ p {
     margin-bottom: 150px;
   }
   body .tokenomics .container {
-    background-image: url(../img/tokenomics1.png);
-    background-size: 100%;
+    background-image: url(../img/tokenomics1mobile.png);
+    background-size: 170%;
     background-repeat: no-repeat;
+    background-position: top;
   }
   body .tokenomics .container .countdown {
     width: 55%;
@@ -189,7 +223,7 @@ p {
         flex-wrap: wrap;
   }
   body .tokenomics .container .countdown .box {
-    margin-top: 80px;
+    margin-top: 380px;
     background: -webkit-gradient(linear, left bottom, left top, color-stop(29.89%, rgba(17, 17, 17, 0.19)), color-stop(50.04%, rgba(62, 62, 63, 0.19)), color-stop(78.05%, rgba(133, 134, 135, 0.19)), color-stop(98.32%, rgba(188, 190, 192, 0.19)));
     background: linear-gradient(0deg, rgba(17, 17, 17, 0.19) 29.89%, rgba(62, 62, 63, 0.19) 50.04%, rgba(133, 134, 135, 0.19) 78.05%, rgba(188, 190, 192, 0.19) 98.32%);
     opacity: 1;
@@ -235,6 +269,9 @@ p {
     width: 34.36px;
     height: 36.51px;
   }
+  body .tokenomics .container .countdown .box2 {
+    margin-top: 10px;
+  }
   body .tokenomics .container .fuel {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -274,7 +311,7 @@ p {
     margin-top: 52px;
     -webkit-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
-    margin: 10px 10px;
+    margin: 30px 10px;
   }
   body .tokenomics .container .buttons .box .up {
     background: -webkit-gradient(linear, left top, right top, from(#0f92f1), to(#24bdff));
@@ -314,7 +351,7 @@ p {
   }
   body .tokenomics .container .buynow {
     text-align: center;
-    margin-top: 60px;
+    margin-top: 50px;
   }
   body .tokenomics .container .buynow a {
     font-family: "Brandon Grotesque Medium";
@@ -332,6 +369,17 @@ p {
   }
   body .thirdpart img {
     width: 100%;
+    margin: auto;
+    display: block;
+    overflow-x: hidden;
+    margin-top: -50px;
+  }
+  body .thirdpart .imgrespo {
+    width: 100%;
+  }
+  body .thirdpart .imgnorespo {
+    width: 100%;
+    display: none;
   }
   body .thirdpart .con {
     background-image: url(../img/bgnft.png);
@@ -580,14 +628,23 @@ p {
     font-family: "FuturaPTLight";
     font-size: 26px;
     line-height: 44.2px;
-    text-align: center;
+    text-align: start;
     color: #ffffff;
     opacity: 0.9;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
   body .thirdpart .con .container .socials {
-    margin: 0;
-    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 0 auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-left: -5px;
     margin-right: -5px;
     margin-top: 60px;
@@ -667,7 +724,7 @@ p {
   }
   body .thirdpart .con .container .nft .title P {
     font-family: "Brandon Grotesque Bold";
-    font-size: 40px;
+    font-size: 36px;
   }
   body .thirdpart .con .container .nft .title5k {
     text-align: start;
@@ -701,8 +758,9 @@ p {
     margin-bottom: 136px;
   }
   body .thirdpart .con .container .nft .coni .box img {
-    width: 320px;
-    height: 320px;
+    margin-top: 0px;
+    width: 280px;
+    height: 280px;
   }
   body .thirdpart .con .container .nft .coni .box .txtup {
     display: -webkit-box;
@@ -767,7 +825,7 @@ p {
     opacity: 0;
   }
   body .thirdpart .con .container .nft .coni .box:hover {
-    height: 470px;
+    height: 420px;
     margin-bottom: 40px;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
@@ -819,7 +877,7 @@ p {
     margin-top: 0px;
   }
   body .roadmapmobile .container {
-    background-image: url(../img/roadmapbg.png);
+    background-image: url(../img/roadmapbgmobile.png);
     background-size: 100%;
   }
   body .roadmapmobile .container .con {
@@ -853,7 +911,7 @@ p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    text-align: center;
+    text-align: start;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -1283,8 +1341,9 @@ p {
   }
   body .game {
     background-image: url(../img/metacarsgame.png);
-    background-size: 100%;
+    background-size: 170%;
     background-repeat: no-repeat;
+    background-position: right top;
     margin-top: 60px;
   }
   body .game .container {
@@ -1306,7 +1365,7 @@ p {
   body .game .container .left .up p {
     font-family: "Brandon Grotesque Medium";
     font-size: 38px;
-    margin-top: 190px;
+    margin-top: 410px;
   }
   body .game .container .left .mid p {
     font-family: "FuturaPTLight";
@@ -1364,7 +1423,8 @@ p {
   body .mcqueen {
     padding-top: 100px;
     background-image: url(../img/foterroad.png);
-    background-size: 100%;
+    background-size: 130%;
+    background-position: center top;
     background-repeat: no-repeat;
     display: block;
     margin: auto;
@@ -1502,19 +1562,18 @@ p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     margin: 0 auto;
   }
   body footer .up .left img {
-    width: 229px;
+    width: 100px;
     margin-top: 258px;
-    margin-left: 15px;
   }
   body footer .up .mid .down {
     -webkit-box-align: center;
@@ -1525,17 +1584,16 @@ p {
             justify-content: center;
     display: block;
     margin: auto;
-    margin-top: 50px;
-    margin-left: -30px;
+    margin-top: 200px;
   }
   body footer .up .mid .down .socials {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
     margin: 0;
     padding: 0;
     margin-left: -5px;
@@ -1616,8 +1674,8 @@ p {
     background-color: #0097ec;
   }
   body footer .up .right img {
-    width: 229px;
-    margin-top: 50px;
+    width: 100px;
+    margin-top: 210px;
   }
   body footer .downs {
     text-align: center;
