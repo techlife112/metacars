@@ -68,6 +68,11 @@ p {
     transform: rotate(360deg);
   }
 }
+@keyframes flip {
+  0%,85% {
+    transform: rotateY(360deg) 
+  }
+}
 @media only screen and (max-width: 669px) {
   body {
     margin: 0px;
@@ -153,9 +158,21 @@ p {
           display: flex;
           flex-direction: column;
           .up {
-            font-family: "Brandon Grotesque Medium";
+            
+            .waviy {
+              position: relative;
+            }
+            .waviy span {
+              font-family: "Brandon Grotesque Medium";
             margin-top: 140px;
             font-size: 24px;
+              
+              display: inline-block;
+              
+              color: #fff;
+              animation: flip 5s infinite;
+              animation-delay: calc(.2s * var(--i))
+            }
           }
           .mid {
             p {
@@ -1966,9 +1983,21 @@ p {
           display: flex;
           flex-direction: column;
           .up {
-            font-family: "Brandon Grotesque Medium";
+            
+            .waviy {
+              position: relative;
+            }
+            .waviy span {
+              font-family: "Brandon Grotesque Medium";
             margin-top: 80px;
             font-size: 38px;
+              
+              display: inline-block;
+              
+              color: #fff;
+              animation: flip 5s infinite;
+              animation-delay: calc(.2s * var(--i))
+            }
           }
           .mid {
             p {
@@ -3760,9 +3789,21 @@ p {
           display: flex;
           flex-direction: column;
           .up {
-            font-family: "Brandon Grotesque Medium";
-            margin-top: 80px;
-            font-size: 38px;
+            
+            .waviy {
+              position: relative;
+            }
+            .waviy span {
+              font-family: "Brandon Grotesque Medium";
+              margin-top: 80px;
+              font-size: 38px;
+              
+              display: inline-block;
+              
+              color: #fff;
+              animation: flip 5s infinite;
+              animation-delay: calc(.2s * var(--i))
+            }
           }
           .mid {
             p {

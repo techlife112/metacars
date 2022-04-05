@@ -134,6 +134,20 @@ p {
   }
 }
 
+@-webkit-keyframes flip {
+  0%, 85% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@keyframes flip {
+  0%, 85% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
 @media only screen and (max-width: 669px) {
   body {
     margin: 0px;
@@ -250,10 +264,19 @@ p {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  body .content .secondpart .container .up {
+  body .content .secondpart .container .up .waviy {
+    position: relative;
+  }
+  body .content .secondpart .container .up .waviy span {
     font-family: "Brandon Grotesque Medium";
     margin-top: 140px;
     font-size: 24px;
+    display: inline-block;
+    color: #fff;
+    -webkit-animation: flip 5s infinite;
+            animation: flip 5s infinite;
+    -webkit-animation-delay: calc(.2s * var(--i));
+            animation-delay: calc(.2s * var(--i));
   }
   body .content .secondpart .container .mid p {
     font-size: 18px;
@@ -2221,10 +2244,19 @@ p {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  body .content .secondpart .container .up {
+  body .content .secondpart .container .up .waviy {
+    position: relative;
+  }
+  body .content .secondpart .container .up .waviy span {
     font-family: "Brandon Grotesque Medium";
     margin-top: 80px;
     font-size: 38px;
+    display: inline-block;
+    color: #fff;
+    -webkit-animation: flip 5s infinite;
+            animation: flip 5s infinite;
+    -webkit-animation-delay: calc(.2s * var(--i));
+            animation-delay: calc(.2s * var(--i));
   }
   body .content .secondpart .container .mid p {
     font-size: 26px;
@@ -4161,10 +4193,19 @@ p {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  body .content .secondpart .container .up {
+  body .content .secondpart .container .up .waviy {
+    position: relative;
+  }
+  body .content .secondpart .container .up .waviy span {
     font-family: "Brandon Grotesque Medium";
     margin-top: 80px;
     font-size: 38px;
+    display: inline-block;
+    color: #fff;
+    -webkit-animation: flip 5s infinite;
+            animation: flip 5s infinite;
+    -webkit-animation-delay: calc(.2s * var(--i));
+            animation-delay: calc(.2s * var(--i));
   }
   body .content .secondpart .container .mid p {
     font-size: 26px;
