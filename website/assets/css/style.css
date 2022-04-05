@@ -42,6 +42,88 @@ p {
   color: white;
 }
 
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  75% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  75% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  25% {
+    height: 0%;
+  }
+  50% {
+    height: 100%;
+  }
+  75% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  25% {
+    height: 0%;
+  }
+  50% {
+    height: 100%;
+  }
+  75% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+
 @media only screen and (max-width: 669px) {
   body {
     margin: 0px;
@@ -51,7 +133,7 @@ p {
     overflow-x: hidden;
     background-color: black;
   }
-  body .firstpart {
+  body .content .firstpart {
     background-image: url(../img/firstbg.png);
     background-size: 120%;
     background-repeat: no-repeat;
@@ -64,12 +146,12 @@ p {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  body .firstpart .nav {
+  body .content .firstpart .nav {
     background: rgba(19, 19, 19, 0.85);
     height: 100px;
     display: none;
   }
-  body .firstpart .nav .container {
+  body .content .firstpart .nav .container {
     width: 80%;
     margin: 0 auto;
     -webkit-box-pack: center;
@@ -83,10 +165,10 @@ p {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  body .firstpart .nav .container .elem {
+  body .content .firstpart .nav .container .elem {
     padding: 15px 60px 5px 60px;
   }
-  body .firstpart .nav .container .elem p {
+  body .content .firstpart .nav .container .elem p {
     font-family: "FuturaPTHeavy";
     font-size: 16px;
     color: #cbcbcb;
@@ -94,7 +176,7 @@ p {
     transition: 0.2s;
     padding-top: 10px;
   }
-  body .firstpart .nav .container .elem p:hover {
+  body .content .firstpart .nav .container .elem p:hover {
     font-family: "FuturaPTHeavy";
     font-size: 16px;
     padding-top: 10px;
@@ -102,11 +184,11 @@ p {
     -webkit-transform: scale(1.05);
             transform: scale(1.05);
   }
-  body .firstpart .nav .container .elem img {
+  body .content .firstpart .nav .container .elem img {
     width: 104.24px;
     height: 70.28px;
   }
-  body .firstpart .navmobile {
+  body .content .firstpart .navmobile {
     width: 80%;
     margin: 0 auto;
     -webkit-box-pack: center;
@@ -120,7 +202,7 @@ p {
         align-self: center;
     background: transparent;
   }
-  body .firstpart .navmobile img {
+  body .content .firstpart .navmobile img {
     width: 100px;
     margin: 0 auto;
     display: block;
@@ -138,16 +220,16 @@ p {
     -webkit-filter: drop-shadow(0px 5px 18px black);
             filter: drop-shadow(0px 5px 18px black);
   }
-  body .firstpart .bg {
+  body .content .firstpart .bg {
     height: 320px;
   }
-  body .secondpart {
+  body .content .secondpart {
     background-image: url(../img/secondbg.png);
     background-size: 100%;
     background-repeat: no-repeat;
     margin-top: 10px;
   }
-  body .secondpart .container {
+  body .content .secondpart .container {
     width: 70%;
     margin: 0 auto;
     display: -webkit-box;
@@ -158,12 +240,12 @@ p {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  body .secondpart .container .up {
+  body .content .secondpart .container .up {
     font-family: "Brandon Grotesque Medium";
     margin-top: 140px;
     font-size: 24px;
   }
-  body .secondpart .container .mid p {
+  body .content .secondpart .container .mid p {
     font-size: 18px;
     line-height: 44px;
     color: #ffffff;
@@ -173,11 +255,11 @@ p {
     font-style: normal;
     font-weight: 100;
   }
-  body .secondpart .container .bottom {
+  body .content .secondpart .container .bottom {
     margin-top: 30px;
     margin-bottom: 50px;
   }
-  body .secondpart .container .bottom a {
+  body .content .secondpart .container .bottom a {
     font-family: "Brandon Grotesque Medium";
     font-size: 18px;
     height: 50px;
@@ -188,7 +270,7 @@ p {
     -webkit-transition: 0.5s;
     transition: 0.5s;
   }
-  body .secondpart .container .bottom a:hover {
+  body .content .secondpart .container .bottom a:hover {
     font-family: "Brandon Grotesque Medium";
     font-size: 18px;
     height: 50px;
@@ -197,16 +279,16 @@ p {
     background: -webkit-gradient(linear, left top, right top, from(#0f92f1), color-stop(105.43%, #04aff9));
     background: linear-gradient(90deg, #0f92f1 0%, #04aff9 105.43%);
   }
-  body .tokenomics {
+  body .content .tokenomics {
     margin-bottom: 150px;
   }
-  body .tokenomics .container {
+  body .content .tokenomics .container {
     background-image: url(../img/tokenomics1mobile.png);
     background-size: 170%;
     background-repeat: no-repeat;
     background-position: top;
   }
-  body .tokenomics .container .countdown {
+  body .content .tokenomics .container .countdown {
     width: 55%;
     margin: 0 auto;
     -webkit-box-pack: center;
@@ -222,7 +304,7 @@ p {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  body .tokenomics .container .countdown .box {
+  body .content .tokenomics .container .countdown .box {
     margin-top: 380px;
     background: -webkit-gradient(linear, left bottom, left top, color-stop(29.89%, rgba(17, 17, 17, 0.19)), color-stop(50.04%, rgba(62, 62, 63, 0.19)), color-stop(78.05%, rgba(133, 134, 135, 0.19)), color-stop(98.32%, rgba(188, 190, 192, 0.19)));
     background: linear-gradient(0deg, rgba(17, 17, 17, 0.19) 29.89%, rgba(62, 62, 63, 0.19) 50.04%, rgba(133, 134, 135, 0.19) 78.05%, rgba(188, 190, 192, 0.19) 98.32%);
@@ -232,47 +314,47 @@ p {
     height: 249.37px;
     text-align: center;
   }
-  body .tokenomics .container .countdown .box .minibox1 {
+  body .content .tokenomics .container .countdown .box .minibox1 {
     opacity: 1;
     font-size: 65px;
   }
-  body .tokenomics .container .countdown .box .minibox1 p {
+  body .content .tokenomics .container .countdown .box .minibox1 p {
     margin-top: 40px;
     margin-bottom: -15px;
     font-family: "Brandon Grotesque Medium";
   }
-  body .tokenomics .container .countdown .box .minibox2 {
+  body .content .tokenomics .container .countdown .box .minibox2 {
     opacity: 1;
     font-size: 30px;
   }
-  body .tokenomics .container .countdown .box .minibox2 p {
+  body .content .tokenomics .container .countdown .box .minibox2 p {
     margin-top: 0px;
     margin-bottom: 14px;
     font-family: "Brandon Grotesque Medium";
   }
-  body .tokenomics .container .countdown .box .minibox3 .timer1 {
+  body .content .tokenomics .container .countdown .box .minibox3 .timer1 {
     width: 57.87px;
     height: 57.87px;
   }
-  body .tokenomics .container .countdown .box .minibox3 .timer2 {
+  body .content .tokenomics .container .countdown .box .minibox3 .timer2 {
     margin-top: 15px;
     width: 73.85px;
     height: 30.34px;
   }
-  body .tokenomics .container .countdown .box .minibox3 .timer3 {
+  body .content .tokenomics .container .countdown .box .minibox3 .timer3 {
     margin-top: 15px;
     width: 40.92px;
     height: 39.28px;
   }
-  body .tokenomics .container .countdown .box .minibox3 .timer4 {
+  body .content .tokenomics .container .countdown .box .minibox3 .timer4 {
     margin-top: 15px;
     width: 34.36px;
     height: 36.51px;
   }
-  body .tokenomics .container .countdown .box2 {
+  body .content .tokenomics .container .countdown .box2 {
     margin-top: 10px;
   }
-  body .tokenomics .container .fuel {
+  body .content .tokenomics .container .fuel {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -284,12 +366,12 @@ p {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  body .tokenomics .container .fuel .right img {
+  body .content .tokenomics .container .fuel .right img {
     margin-top: 58px;
     width: 238.07px;
     margin-bottom: 100px;
   }
-  body .tokenomics .container .buttons {
+  body .content .tokenomics .container .buttons {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -305,7 +387,7 @@ p {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  body .tokenomics .container .buttons .box {
+  body .content .tokenomics .container .buttons .box {
     text-align: center;
     font-family: "FuturaPTMedium";
     margin-top: 52px;
@@ -313,47 +395,47 @@ p {
     transition: all 1s ease-in-out;
     margin: 30px 10px;
   }
-  body .tokenomics .container .buttons .box .up {
+  body .content .tokenomics .container .buttons .box .up {
     background: -webkit-gradient(linear, left top, right top, from(#0f92f1), to(#24bdff));
     background: linear-gradient(90deg, #0f92f1 0%, #24bdff 100%);
     margin-bottom: 0;
     -webkit-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
   }
-  body .tokenomics .container .buttons .box .up p {
+  body .content .tokenomics .container .buttons .box .up p {
     padding: 17px 46px;
     margin: 0px;
   }
-  body .tokenomics .container .buttons .box .down {
+  body .content .tokenomics .container .buttons .box .down {
     background: linear-gradient(179.36deg, #262829 0.55%, rgba(18, 20, 22, 0) 145.88%);
     -webkit-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
   }
-  body .tokenomics .container .buttons .box .down p {
+  body .content .tokenomics .container .buttons .box .down p {
     margin: 0px;
     padding: 32px 27px;
   }
-  body .tokenomics .container .buttons .box:hover .up {
+  body .content .tokenomics .container .buttons .box:hover .up {
     background: linear-gradient(179.36deg, #262829 0.55%, rgba(18, 20, 22, 0) 145.88%);
     margin-bottom: 0;
   }
-  body .tokenomics .container .buttons .box:hover .up p {
+  body .content .tokenomics .container .buttons .box:hover .up p {
     padding: 17px 46px;
     margin: 0px;
   }
-  body .tokenomics .container .buttons .box:hover .down {
+  body .content .tokenomics .container .buttons .box:hover .down {
     background: -webkit-gradient(linear, left top, right top, from(#0f92f1), to(#24bdff));
     background: linear-gradient(90deg, #0f92f1 0%, #24bdff 100%);
   }
-  body .tokenomics .container .buttons .box:hover .down p {
+  body .content .tokenomics .container .buttons .box:hover .down p {
     margin: 0px;
     padding: 32px 27px;
   }
-  body .tokenomics .container .buynow {
+  body .content .tokenomics .container .buynow {
     text-align: center;
     margin-top: 50px;
   }
-  body .tokenomics .container .buynow a {
+  body .content .tokenomics .container .buynow a {
     font-family: "Brandon Grotesque Medium";
     font-size: 18px;
     padding: 13px 50px;
@@ -361,32 +443,32 @@ p {
     -webkit-transition: 1s;
     transition: 1s;
   }
-  body .tokenomics .container .buynow a:hover {
+  body .content .tokenomics .container .buynow a:hover {
     background: -webkit-gradient(linear, left top, right top, from(#0f92f1), to(#24bdff));
     background: linear-gradient(90deg, #0f92f1 0%, #24bdff 100%);
     -webkit-transition: 2s;
     transition: 2s;
   }
-  body .thirdpart img {
+  body .content .thirdpart img {
     width: 100%;
     margin: auto;
     display: block;
     overflow-x: hidden;
     margin-top: -50px;
   }
-  body .thirdpart .imgrespo {
+  body .content .thirdpart .imgrespo {
     width: 100%;
   }
-  body .thirdpart .imgnorespo {
+  body .content .thirdpart .imgnorespo {
     width: 100%;
     display: none;
   }
-  body .thirdpart .con {
+  body .content .thirdpart .con {
     background-image: url(../img/bgnft.png);
     background-size: 100%;
     background-repeat: repeat;
   }
-  body .thirdpart .con .container {
+  body .content .thirdpart .con .container {
     width: 80%;
     margin: 0 auto;
     text-align: center;
@@ -394,22 +476,22 @@ p {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  body .thirdpart .con .container .title p {
+  body .content .thirdpart .con .container .title p {
     font-family: "Brandon Grotesque Bold";
     font-size: 46px;
   }
-  body .thirdpart .con .container .downtitle {
+  body .content .thirdpart .con .container .downtitle {
     margin-top: -30px;
   }
-  body .thirdpart .con .container .downtitle p {
+  body .content .thirdpart .con .container .downtitle p {
     font-family: "Brandon Grotesque Regular";
     font-size: 28px;
   }
-  body .thirdpart .con .container .downtitle p span {
+  body .content .thirdpart .con .container .downtitle p span {
     font-family: "Brandon Grotesque Medium";
     color: #50b5ff;
   }
-  body .thirdpart .con .container .boxes {
+  body .content .thirdpart .con .container .boxes {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -424,7 +506,7 @@ p {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  body .thirdpart .con .container .boxes .box1 {
+  body .content .thirdpart .con .container .boxes .box1 {
     background: rgba(255, 255, 255, 0.1);
     padding: 36px 94px;
     display: -webkit-box;
@@ -440,7 +522,7 @@ p {
     margin-top: 20px;
     margin-bottom: 10px;
   }
-  body .thirdpart .con .container .boxes .box1 .up {
+  body .content .thirdpart .con .container .boxes .box1 .up {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -453,27 +535,27 @@ p {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  body .thirdpart .con .container .boxes .box1 .up img {
+  body .content .thirdpart .con .container .boxes .box1 .up img {
     width: 33px;
     height: 33px;
     margin: auto;
     display: block;
   }
-  body .thirdpart .con .container .boxes .box1 .up p {
+  body .content .thirdpart .con .container .boxes .box1 .up p {
     font-size: 46px;
     font-family: "Brandon Grotesque Black";
   }
-  body .thirdpart .con .container .boxes .box1 .down p {
+  body .content .thirdpart .con .container .boxes .box1 .down p {
     font-size: 24px;
     font-family: "Brandon Grotesque Regular";
     margin-top: -30px;
   }
-  body .thirdpart .con .container .boxes .box1:hover {
+  body .content .thirdpart .con .container .boxes .box1:hover {
     background-color: #0097ec;
     border: 2px solid #ffffff;
     cursor: pointer;
   }
-  body .thirdpart .con .container .boxes .box2 {
+  body .content .thirdpart .con .container .boxes .box2 {
     background: rgba(255, 255, 255, 0.1);
     padding: 36px 84px;
     display: -webkit-box;
@@ -489,7 +571,7 @@ p {
     margin-top: 20px;
     margin-bottom: 10px;
   }
-  body .thirdpart .con .container .boxes .box2 .up {
+  body .content .thirdpart .con .container .boxes .box2 .up {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -501,27 +583,27 @@ p {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  body .thirdpart .con .container .boxes .box2 .up img {
+  body .content .thirdpart .con .container .boxes .box2 .up img {
     width: 33px;
     height: 33px;
     margin: auto;
     display: block;
   }
-  body .thirdpart .con .container .boxes .box2 .up p {
+  body .content .thirdpart .con .container .boxes .box2 .up p {
     font-size: 46px;
     font-family: "Brandon Grotesque Black";
   }
-  body .thirdpart .con .container .boxes .box2 .down p {
+  body .content .thirdpart .con .container .boxes .box2 .down p {
     font-size: 24px;
     font-family: "Brandon Grotesque Regular";
     margin-top: -30px;
   }
-  body .thirdpart .con .container .boxes .box2:hover {
+  body .content .thirdpart .con .container .boxes .box2:hover {
     background-color: #0097ec;
     border: 2px solid #ffffff;
     cursor: pointer;
   }
-  body .thirdpart .con .container .boxes .box3 {
+  body .content .thirdpart .con .container .boxes .box3 {
     background: rgba(255, 255, 255, 0.1);
     padding: 26px 46px;
     display: -webkit-box;
@@ -537,7 +619,7 @@ p {
     margin-top: 20px;
     margin-bottom: 10px;
   }
-  body .thirdpart .con .container .boxes .box3 .up {
+  body .content .thirdpart .con .container .boxes .box3 .up {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -550,27 +632,27 @@ p {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  body .thirdpart .con .container .boxes .box3 .up img {
+  body .content .thirdpart .con .container .boxes .box3 .up img {
     width: 33px;
     height: 33px;
     margin: auto;
     display: block;
   }
-  body .thirdpart .con .container .boxes .box3 .up p {
+  body .content .thirdpart .con .container .boxes .box3 .up p {
     font-size: 46px;
     font-family: "Brandon Grotesque Black";
   }
-  body .thirdpart .con .container .boxes .box3 .down p {
+  body .content .thirdpart .con .container .boxes .box3 .down p {
     font-size: 24px;
     font-family: "Brandon Grotesque Regular";
     margin-top: -30px;
   }
-  body .thirdpart .con .container .boxes .box3:hover {
+  body .content .thirdpart .con .container .boxes .box3:hover {
     background-color: #0097ec;
     border: 2px solid #ffffff;
     cursor: pointer;
   }
-  body .thirdpart .con .container .boxes .box4 {
+  body .content .thirdpart .con .container .boxes .box4 {
     background: rgba(255, 255, 255, 0.1);
     padding: 26px 44px;
     display: -webkit-box;
@@ -586,7 +668,7 @@ p {
     margin-top: 20px;
     margin-bottom: 10px;
   }
-  body .thirdpart .con .container .boxes .box4 .up {
+  body .content .thirdpart .con .container .boxes .box4 .up {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -599,32 +681,32 @@ p {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  body .thirdpart .con .container .boxes .box4 .up img {
+  body .content .thirdpart .con .container .boxes .box4 .up img {
     width: 33px;
     height: 33px;
     margin: auto;
     display: block;
   }
-  body .thirdpart .con .container .boxes .box4 .up p {
+  body .content .thirdpart .con .container .boxes .box4 .up p {
     font-size: 46px;
     font-family: "Brandon Grotesque Black";
   }
-  body .thirdpart .con .container .boxes .box4 .down p {
+  body .content .thirdpart .con .container .boxes .box4 .down p {
     font-size: 24px;
     font-family: "Brandon Grotesque Regular";
     margin-top: -30px;
   }
-  body .thirdpart .con .container .boxes .box4:hover {
+  body .content .thirdpart .con .container .boxes .box4:hover {
     background-color: #0097ec;
     border: 2px solid #ffffff;
     cursor: pointer;
   }
-  body .thirdpart .con .container .txt {
+  body .content .thirdpart .con .container .txt {
     width: 80%;
     margin: 0 auto;
     margin-top: 50px;
   }
-  body .thirdpart .con .container .txt p {
+  body .content .thirdpart .con .container .txt p {
     font-family: "FuturaPTLight";
     font-size: 18px;
     line-height: 44.2px;
@@ -633,7 +715,7 @@ p {
     opacity: 0.9;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
-  body .thirdpart .con .container .socials {
+  body .content .thirdpart .con .container .socials {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -650,11 +732,11 @@ p {
     margin-top: 60px;
     margin-bottom: 60px;
   }
-  body .thirdpart .con .container .socials a {
+  body .content .thirdpart .con .container .socials a {
     margin: 0;
     padding: 0;
   }
-  body .thirdpart .con .container .socials a .s1 {
+  body .content .thirdpart .con .container .socials a .s1 {
     width: 25px;
     height: 25px;
     padding: 12px 15px;
@@ -667,11 +749,11 @@ p {
     -webkit-transition: background-color 0.5s;
     transition: background-color 0.5s;
   }
-  body .thirdpart .con .container .socials a .s1:hover {
+  body .content .thirdpart .con .container .socials a .s1:hover {
     opacity: 1;
     background-color: #0097ec;
   }
-  body .thirdpart .con .container .socials a .s2 {
+  body .content .thirdpart .con .container .socials a .s2 {
     width: 25px;
     height: 25px;
     padding: 12px 15px;
@@ -684,11 +766,11 @@ p {
     -webkit-transition: background-color 0.5s;
     transition: background-color 0.5s;
   }
-  body .thirdpart .con .container .socials a .s2:hover {
+  body .content .thirdpart .con .container .socials a .s2:hover {
     opacity: 1;
     background-color: #0097ec;
   }
-  body .thirdpart .con .container .socials a .s3 {
+  body .content .thirdpart .con .container .socials a .s3 {
     width: 25px;
     height: 25px;
     padding: 12px 15px;
@@ -701,11 +783,11 @@ p {
     -webkit-transition: background-color 0.5s;
     transition: background-color 0.5s;
   }
-  body .thirdpart .con .container .socials a .s3:hover {
+  body .content .thirdpart .con .container .socials a .s3:hover {
     opacity: 1;
     background-color: #0097ec;
   }
-  body .thirdpart .con .container .socials a .s4 {
+  body .content .thirdpart .con .container .socials a .s4 {
     width: 25px;
     height: 25px;
     padding: 12px 15px;
@@ -718,30 +800,30 @@ p {
     -webkit-transition: background-color 0.5s;
     transition: background-color 0.5s;
   }
-  body .thirdpart .con .container .socials a .s4:hover {
+  body .content .thirdpart .con .container .socials a .s4:hover {
     opacity: 1;
     background-color: #0097ec;
   }
-  body .thirdpart .con .container .nft .title P {
+  body .content .thirdpart .con .container .nft .title P {
     font-family: "Brandon Grotesque Bold";
     font-size: 36px;
   }
-  body .thirdpart .con .container .nft .title5k {
+  body .content .thirdpart .con .container .nft .title5k {
     text-align: center;
   }
-  body .thirdpart .con .container .nft .title5k P {
+  body .content .thirdpart .con .container .nft .title5k P {
     font-family: "Brandon Grotesque Bold";
     font-size: 18px;
     color: #9da5ac;
   }
-  body .thirdpart .con .container .nft .container {
+  body .content .thirdpart .con .container .nft .container {
     position: relative;
     width: 80px;
     margin: 0px auto 0 auto;
     -webkit-perspective: 1000px;
             perspective: 1000px;
   }
-  body .thirdpart .con .container .nft .container .carousel {
+  body .content .thirdpart .con .container .nft .container .carousel {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -750,7 +832,7 @@ p {
     -webkit-animation: rotate360 60s infinite forwards linear;
             animation: rotate360 60s infinite forwards linear;
   }
-  body .thirdpart .con .container .nft .container .carousel .carousel__face {
+  body .content .thirdpart .con .container .nft .container .carousel .carousel__face {
     position: absolute;
     width: 80px;
     height: 80px;
@@ -763,47 +845,47 @@ p {
     display: flex;
     border: 5px solid rgba(255, 255, 255, 0.5);
   }
-  body .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(1) {
+  body .content .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(1) {
     background-image: url("../img/1.png");
     -webkit-transform: rotateY(0deg) translateZ(150px);
             transform: rotateY(0deg) translateZ(150px);
   }
-  body .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(2) {
+  body .content .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(2) {
     background-image: url("../img/2.png");
     -webkit-transform: rotateY(40deg) translateZ(150px);
             transform: rotateY(40deg) translateZ(150px);
   }
-  body .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(3) {
+  body .content .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(3) {
     background-image: url("../img/3.png");
     -webkit-transform: rotateY(80deg) translateZ(150px);
             transform: rotateY(80deg) translateZ(150px);
   }
-  body .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(4) {
+  body .content .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(4) {
     background-image: url("../img/4.png");
     -webkit-transform: rotateY(120deg) translateZ(150px);
             transform: rotateY(120deg) translateZ(150px);
   }
-  body .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(5) {
+  body .content .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(5) {
     background-image: url("../img/5.png");
     -webkit-transform: rotateY(160deg) translateZ(150px);
             transform: rotateY(160deg) translateZ(150px);
   }
-  body .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(6) {
+  body .content .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(6) {
     background-image: url("../img/6.png");
     -webkit-transform: rotateY(200deg) translateZ(150px);
             transform: rotateY(200deg) translateZ(150px);
   }
-  body .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(7) {
+  body .content .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(7) {
     background-image: url("../img/7.png");
     -webkit-transform: rotateY(240deg) translateZ(150px);
             transform: rotateY(240deg) translateZ(150px);
   }
-  body .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(8) {
+  body .content .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(8) {
     background-image: url("../img/8.png");
     -webkit-transform: rotateY(280deg) translateZ(150px);
             transform: rotateY(280deg) translateZ(150px);
   }
-  body .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(9) {
+  body .content .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(9) {
     background-image: url("../img/9.png");
     -webkit-transform: rotateY(320deg) translateZ(150px);
             transform: rotateY(320deg) translateZ(150px);
@@ -828,7 +910,7 @@ p {
               transform: rotateY(360deg);
     }
   }
-  body .thirdpart .con .container .nft .coni {
+  body .content .thirdpart .con .container .nft .coni {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -842,7 +924,7 @@ p {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  body .thirdpart .con .container .nft .coni .box {
+  body .content .thirdpart .con .container .nft .coni .box {
     padding: 10px;
     background: #1d1d1d;
     border: 2.2px solid #494949;
@@ -851,12 +933,12 @@ p {
     height: 410px;
     margin-bottom: 136px;
   }
-  body .thirdpart .con .container .nft .coni .box img {
+  body .content .thirdpart .con .container .nft .coni .box img {
     margin-top: 0px;
     width: 280px;
     height: 280px;
   }
-  body .thirdpart .con .container .nft .coni .box .txtup {
+  body .content .thirdpart .con .container .nft .coni .box .txtup {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -868,12 +950,12 @@ p {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  body .thirdpart .con .container .nft .coni .box .txtup p {
+  body .content .thirdpart .con .container .nft .coni .box .txtup p {
     font-family: "FuturaPTMedium";
     font-size: 14px;
     color: #9da6ac;
   }
-  body .thirdpart .con .container .nft .coni .box .txtdown {
+  body .content .thirdpart .con .container .nft .coni .box .txtdown {
     margin-top: -20px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -886,12 +968,12 @@ p {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  body .thirdpart .con .container .nft .coni .box .txtdown p {
+  body .content .thirdpart .con .container .nft .coni .box .txtdown p {
     font-family: "FuturaPTMedium";
     font-size: 14px;
     color: #ffffff;
   }
-  body .thirdpart .con .container .nft .coni .box .txtdown .right {
+  body .content .thirdpart .con .container .nft .coni .box .txtdown .right {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -900,49 +982,49 @@ p {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  body .thirdpart .con .container .nft .coni .box .txtdown .right img {
+  body .content .thirdpart .con .container .nft .coni .box .txtdown .right img {
     width: 14px;
     height: 14px;
     margin: auto;
     display: block;
   }
-  body .thirdpart .con .container .nft .coni .box .button {
+  body .content .thirdpart .con .container .nft .coni .box .button {
     visibility: hidden;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
   }
-  body .thirdpart .con .container .nft .coni .box .button a {
+  body .content .thirdpart .con .container .nft .coni .box .button a {
     font-family: "Brandon Grotesque Black";
     font-size: 18px;
     line-height: 26px;
     color: #3aacff;
     opacity: 0;
   }
-  body .thirdpart .con .container .nft .coni .box:hover {
+  body .content .thirdpart .con .container .nft .coni .box:hover {
     height: 420px;
     margin-bottom: 40px;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
   }
-  body .thirdpart .con .container .nft .coni .box:hover .button {
+  body .content .thirdpart .con .container .nft .coni .box:hover .button {
     -webkit-transition: all 1s;
     transition: all 1s;
     visibility: visible;
     margin-top: 20px;
     margin-bottom: 8px;
   }
-  body .thirdpart .con .container .nft .coni .box:hover .button a {
+  body .content .thirdpart .con .container .nft .coni .box:hover .button a {
     font-family: "Brandon Grotesque Black";
     font-size: 18px;
     line-height: 26px;
     color: #3aacff;
     opacity: 1;
   }
-  body .thirdpart .con .container .nft .view {
+  body .content .thirdpart .con .container .nft .view {
     margin-bottom: 100px;
     margin-top: 300px;
   }
-  body .thirdpart .con .container .nft .view a {
+  body .content .thirdpart .con .container .nft .view a {
     font-family: "Brandon Grotesque Medium";
     font-size: 24px;
     padding: 10px 35px;
@@ -951,31 +1033,31 @@ p {
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-  body .thirdpart .con .container .nft .view a:hover {
+  body .content .thirdpart .con .container .nft .view a:hover {
     font-family: "Brandon Grotesque Medium";
     font-size: 25px;
     padding: 10px 35px;
     background: -webkit-gradient(linear, left top, right top, from(#0f92f1), color-stop(105.43%, #04aff9));
     background: linear-gradient(90deg, #0f92f1 0%, #04aff9 105.43%);
   }
-  body .roadmapmobile {
+  body .content .roadmapmobile {
     margin: 0px;
     padding: 0px;
   }
-  body .roadmapmobile .upimg {
+  body .content .roadmapmobile .upimg {
     width: 100%;
     margin-top: -8px;
     margin-bottom: -4px;
   }
-  body .roadmapmobile .downimg {
+  body .content .roadmapmobile .downimg {
     width: 100%;
     margin-top: -1px;
   }
-  body .roadmapmobile .container {
+  body .content .roadmapmobile .container {
     background-image: url(../img/roadmapbgmobile.png);
     background-size: 100%;
   }
-  body .roadmapmobile .container .con {
+  body .content .roadmapmobile .container .con {
     width: 90%;
     margin: auto;
     -webkit-box-pack: center;
@@ -986,12 +1068,12 @@ p {
             align-items: center;
     padding-top: 50px;
   }
-  body .roadmapmobile .container .con img {
+  body .content .roadmapmobile .container .con img {
     display: block;
     margin: auto;
     width: 219px;
   }
-  body .roadmapmobile .container .con .stages {
+  body .content .roadmapmobile .container .con .stages {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1010,7 +1092,7 @@ p {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  body .roadmapmobile .container .con .stages .left .box1 {
+  body .content .roadmapmobile .container .con .stages .left .box1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1021,13 +1103,13 @@ p {
     width: 278px;
     margin-bottom: 5%;
   }
-  body .roadmapmobile .container .con .stages .left .box1 .up {
+  body .content .roadmapmobile .container .con .stages .left .box1 .up {
     background: #282843;
     border: 2.2px solid #ffffff;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  body .roadmapmobile .container .con .stages .left .box1 .up .con {
+  body .content .roadmapmobile .container .con .stages .left .box1 .up .con {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1042,41 +1124,41 @@ p {
     height: 54px;
     padding-top: 0px;
   }
-  body .roadmapmobile .container .con .stages .left .box1 .up .con .lefts p {
+  body .content .roadmapmobile .container .con .stages .left .box1 .up .con .lefts p {
     font-family: "Brandon Grotesque Medium";
     font-size: 20px;
   }
-  body .roadmapmobile .container .con .stages .left .box1 .up .con .rights img {
+  body .content .roadmapmobile .container .con .stages .left .box1 .up .con .rights img {
     width: 18.13px;
     height: 18.56px;
   }
-  body .roadmapmobile .container .con .stages .left .box1 .down {
+  body .content .roadmapmobile .container .con .stages .left .box1 .down {
     background: #1f1f34;
   }
-  body .roadmapmobile .container .con .stages .left .box1 .down .con {
+  body .content .roadmapmobile .container .con .stages .left .box1 .down .con {
     width: 90%;
     padding-top: 10px;
   }
-  body .roadmapmobile .container .con .stages .left .box1 .down .con p {
+  body .content .roadmapmobile .container .con .stages .left .box1 .down .con p {
     font-family: "FuturaPTMedium";
     font-size: 18px;
     line-height: 23.8px;
   }
-  body .roadmap {
+  body .content .roadmap {
     margin: 0px;
     padding: 0px;
     display: none;
   }
-  body .roadmap img {
+  body .content .roadmap img {
     width: 100%;
     margin-top: 0px;
     margin-bottom: -4px;
   }
-  body .roadmap .container {
+  body .content .roadmap .container {
     background-image: url(../img/roadmapbg.png);
     background-size: 100%;
   }
-  body .roadmap .container .con {
+  body .content .roadmap .container .con {
     width: 90%;
     margin: auto;
     -webkit-box-pack: center;
@@ -1087,13 +1169,13 @@ p {
             align-items: center;
     padding-top: 50px;
   }
-  body .roadmap .container .con img {
+  body .content .roadmap .container .con img {
     display: block;
     margin: auto;
     width: 419px;
     height: 141px;
   }
-  body .roadmap .container .con .stages {
+  body .content .roadmap .container .con .stages {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1112,7 +1194,7 @@ p {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  body .roadmap .container .con .stages .left .box1 {
+  body .content .roadmap .container .con .stages .left .box1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1123,13 +1205,13 @@ p {
     width: 278px;
     margin-bottom: 5%;
   }
-  body .roadmap .container .con .stages .left .box1 .up {
+  body .content .roadmap .container .con .stages .left .box1 .up {
     background: #282843;
     border: 2.2px solid #ffffff;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  body .roadmap .container .con .stages .left .box1 .up .con {
+  body .content .roadmap .container .con .stages .left .box1 .up .con {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1144,27 +1226,27 @@ p {
     height: 54px;
     padding-top: 0px;
   }
-  body .roadmap .container .con .stages .left .box1 .up .con .lefts p {
+  body .content .roadmap .container .con .stages .left .box1 .up .con .lefts p {
     font-family: "Brandon Grotesque Medium";
     font-size: 20px;
   }
-  body .roadmap .container .con .stages .left .box1 .up .con .rights img {
+  body .content .roadmap .container .con .stages .left .box1 .up .con .rights img {
     width: 18.13px;
     height: 18.56px;
   }
-  body .roadmap .container .con .stages .left .box1 .down {
+  body .content .roadmap .container .con .stages .left .box1 .down {
     background: #1f1f34;
   }
-  body .roadmap .container .con .stages .left .box1 .down .con {
+  body .content .roadmap .container .con .stages .left .box1 .down .con {
     width: 90%;
     padding-top: 10px;
   }
-  body .roadmap .container .con .stages .left .box1 .down .con p {
+  body .content .roadmap .container .con .stages .left .box1 .down .con p {
     font-family: "FuturaPTMedium";
     font-size: 14px;
     line-height: 23.8px;
   }
-  body .roadmap .container .con .stages .left .box2 {
+  body .content .roadmap .container .con .stages .left .box2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1177,13 +1259,13 @@ p {
     margin-left: 80%;
     margin-bottom: 5%;
   }
-  body .roadmap .container .con .stages .left .box2 .up {
+  body .content .roadmap .container .con .stages .left .box2 .up {
     background: #282843;
     border: 2.2px solid #ffffff;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  body .roadmap .container .con .stages .left .box2 .up .con {
+  body .content .roadmap .container .con .stages .left .box2 .up .con {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1198,27 +1280,27 @@ p {
     height: 54px;
     padding-top: 0px;
   }
-  body .roadmap .container .con .stages .left .box2 .up .con .lefts p {
+  body .content .roadmap .container .con .stages .left .box2 .up .con .lefts p {
     font-family: "Brandon Grotesque Medium";
     font-size: 20px;
   }
-  body .roadmap .container .con .stages .left .box2 .up .con .rights img {
+  body .content .roadmap .container .con .stages .left .box2 .up .con .rights img {
     width: 18.13px;
     height: 18.56px;
   }
-  body .roadmap .container .con .stages .left .box2 .down {
+  body .content .roadmap .container .con .stages .left .box2 .down {
     background: #1f1f34;
   }
-  body .roadmap .container .con .stages .left .box2 .down .con {
+  body .content .roadmap .container .con .stages .left .box2 .down .con {
     width: 90%;
     padding-top: 10px;
   }
-  body .roadmap .container .con .stages .left .box2 .down .con p {
+  body .content .roadmap .container .con .stages .left .box2 .down .con p {
     font-family: "FuturaPTMedium";
     font-size: 14px;
     line-height: 23.8px;
   }
-  body .roadmap .container .con .stages .left .box3 {
+  body .content .roadmap .container .con .stages .left .box3 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1231,13 +1313,13 @@ p {
     margin-left: 200%;
     margin-bottom: 25%;
   }
-  body .roadmap .container .con .stages .left .box3 .up {
+  body .content .roadmap .container .con .stages .left .box3 .up {
     background: #282843;
     border: 2.2px solid #ffffff;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  body .roadmap .container .con .stages .left .box3 .up .con {
+  body .content .roadmap .container .con .stages .left .box3 .up .con {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1252,30 +1334,30 @@ p {
     height: 54px;
     padding-top: 0px;
   }
-  body .roadmap .container .con .stages .left .box3 .up .con .lefts p {
+  body .content .roadmap .container .con .stages .left .box3 .up .con .lefts p {
     font-family: "Brandon Grotesque Medium";
     font-size: 20px;
   }
-  body .roadmap .container .con .stages .left .box3 .up .con .rights img {
+  body .content .roadmap .container .con .stages .left .box3 .up .con .rights img {
     width: 18.13px;
     height: 18.56px;
   }
-  body .roadmap .container .con .stages .left .box3 .down {
+  body .content .roadmap .container .con .stages .left .box3 .down {
     background: #1f1f34;
   }
-  body .roadmap .container .con .stages .left .box3 .down .con {
+  body .content .roadmap .container .con .stages .left .box3 .down .con {
     width: 90%;
     padding-top: 10px;
   }
-  body .roadmap .container .con .stages .left .box3 .down .con p {
+  body .content .roadmap .container .con .stages .left .box3 .down .con p {
     font-family: "FuturaPTMedium";
     font-size: 14px;
     line-height: 23.8px;
   }
-  body .roadmap .container .con .stages .right {
+  body .content .roadmap .container .con .stages .right {
     right: 50px;
   }
-  body .roadmap .container .con .stages .right .box1 {
+  body .content .roadmap .container .con .stages .right .box1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1288,13 +1370,13 @@ p {
     margin-left: 270%;
     margin-bottom: 5%;
   }
-  body .roadmap .container .con .stages .right .box1 .up {
+  body .content .roadmap .container .con .stages .right .box1 .up {
     background: #282843;
     border: 2.2px solid #ffffff;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  body .roadmap .container .con .stages .right .box1 .up .con {
+  body .content .roadmap .container .con .stages .right .box1 .up .con {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1309,27 +1391,27 @@ p {
     height: 54px;
     padding-top: 0px;
   }
-  body .roadmap .container .con .stages .right .box1 .up .con .lefts p {
+  body .content .roadmap .container .con .stages .right .box1 .up .con .lefts p {
     font-family: "Brandon Grotesque Medium";
     font-size: 20px;
   }
-  body .roadmap .container .con .stages .right .box1 .up .con .rights img {
+  body .content .roadmap .container .con .stages .right .box1 .up .con .rights img {
     width: 18.13px;
     height: 18.56px;
   }
-  body .roadmap .container .con .stages .right .box1 .down {
+  body .content .roadmap .container .con .stages .right .box1 .down {
     background: #1f1f34;
   }
-  body .roadmap .container .con .stages .right .box1 .down .con {
+  body .content .roadmap .container .con .stages .right .box1 .down .con {
     width: 90%;
     padding-top: 10px;
   }
-  body .roadmap .container .con .stages .right .box1 .down .con p {
+  body .content .roadmap .container .con .stages .right .box1 .down .con p {
     font-family: "FuturaPTMedium";
     font-size: 14px;
     line-height: 23.8px;
   }
-  body .roadmap .container .con .stages .right .box2 {
+  body .content .roadmap .container .con .stages .right .box2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1342,13 +1424,13 @@ p {
     margin-left: 290%;
     margin-bottom: 5%;
   }
-  body .roadmap .container .con .stages .right .box2 .up {
+  body .content .roadmap .container .con .stages .right .box2 .up {
     background: #282843;
     border: 2.2px solid #ffffff;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  body .roadmap .container .con .stages .right .box2 .up .con {
+  body .content .roadmap .container .con .stages .right .box2 .up .con {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1363,27 +1445,27 @@ p {
     height: 54px;
     padding-top: 0px;
   }
-  body .roadmap .container .con .stages .right .box2 .up .con .lefts p {
+  body .content .roadmap .container .con .stages .right .box2 .up .con .lefts p {
     font-family: "Brandon Grotesque Medium";
     font-size: 20px;
   }
-  body .roadmap .container .con .stages .right .box2 .up .con .rights img {
+  body .content .roadmap .container .con .stages .right .box2 .up .con .rights img {
     width: 18.13px;
     height: 18.56px;
   }
-  body .roadmap .container .con .stages .right .box2 .down {
+  body .content .roadmap .container .con .stages .right .box2 .down {
     background: #1f1f34;
   }
-  body .roadmap .container .con .stages .right .box2 .down .con {
+  body .content .roadmap .container .con .stages .right .box2 .down .con {
     width: 90%;
     padding-top: 10px;
   }
-  body .roadmap .container .con .stages .right .box2 .down .con p {
+  body .content .roadmap .container .con .stages .right .box2 .down .con p {
     font-family: "FuturaPTMedium";
     font-size: 14px;
     line-height: 23.8px;
   }
-  body .roadmap .container .con .stages .right .box {
+  body .content .roadmap .container .con .stages .right .box {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1393,13 +1475,13 @@ p {
             flex-direction: column;
     width: 278px;
   }
-  body .roadmap .container .con .stages .right .box .up {
+  body .content .roadmap .container .con .stages .right .box .up {
     background: #282843;
     border: 2.2px solid #ffffff;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  body .roadmap .container .con .stages .right .box .up .con {
+  body .content .roadmap .container .con .stages .right .box .up .con {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1414,34 +1496,34 @@ p {
     height: 54px;
     padding-top: 0px;
   }
-  body .roadmap .container .con .stages .right .box .up .con .lefts p {
+  body .content .roadmap .container .con .stages .right .box .up .con .lefts p {
     font-family: "Brandon Grotesque Medium";
     font-size: 20px;
   }
-  body .roadmap .container .con .stages .right .box .up .con .rights img {
+  body .content .roadmap .container .con .stages .right .box .up .con .rights img {
     width: 18.13px;
     height: 18.56px;
   }
-  body .roadmap .container .con .stages .right .box .down {
+  body .content .roadmap .container .con .stages .right .box .down {
     background: #1f1f34;
   }
-  body .roadmap .container .con .stages .right .box .down .con {
+  body .content .roadmap .container .con .stages .right .box .down .con {
     width: 90%;
     padding-top: 10px;
   }
-  body .roadmap .container .con .stages .right .box .down .con p {
+  body .content .roadmap .container .con .stages .right .box .down .con p {
     font-family: "FuturaPTMedium";
     font-size: 14px;
     line-height: 23.8px;
   }
-  body .game {
+  body .content .game {
     background-image: url(../img/metacarsgame.png);
     background-size: 170%;
     background-repeat: no-repeat;
     background-position: right top;
     margin-top: 60px;
   }
-  body .game .container {
+  body .content .game .container {
     width: 80%;
     margin: auto;
     display: -webkit-box;
@@ -1452,26 +1534,26 @@ p {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  body .game .container .left {
+  body .content .game .container .left {
     -webkit-box-flex: 5;
         -ms-flex: 5;
             flex: 5;
   }
-  body .game .container .left .up p {
+  body .content .game .container .left .up p {
     font-family: "Brandon Grotesque Medium";
     font-size: 38px;
     margin-top: 410px;
   }
-  body .game .container .left .mid p {
+  body .content .game .container .left .mid p {
     font-family: "FuturaPTLight";
     line-height: 170%;
     font-size: 18px;
     padding-bottom: 60px;
   }
-  body .game .container .left .down {
+  body .content .game .container .left .down {
     margin-bottom: 50px;
   }
-  body .game .container .left .down a {
+  body .content .game .container .left .down a {
     font-family: "Brandon Grotesque Medium";
     font-size: 24px;
     background: -webkit-gradient(linear, left top, right top, from(#0f92f1), color-stop(105.43%, #04aff9));
@@ -1480,21 +1562,21 @@ p {
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-  body .game .container .left .down a:hover {
+  body .content .game .container .left .down a:hover {
     font-family: "Brandon Grotesque Medium";
     font-size: 26px;
     background: -webkit-gradient(linear, left top, right top, from(#0f92f1), color-stop(105.43%, #04aff9));
     background: linear-gradient(90deg, #0f92f1 0%, #04aff9 105.43%);
     padding: 13px 55px;
   }
-  body .contract margin .bxslider {
+  body .content .contract margin .bxslider {
     width: 100%;
     background-color: transparent;
     margin: 0px;
     padding: 0px;
     border: 0px;
   }
-  body .contract .bx-wrapper {
+  body .content .contract .bx-wrapper {
     height: 150px !important;
     background-color: transparent;
     margin: 0px;
@@ -1503,19 +1585,19 @@ p {
     -webkit-box-shadow: none;
             box-shadow: none;
   }
-  body .contract .bx-wrapper .bx-pager.bx-default-pager a:hover,
-  body .contract .bx-wrapper .bx-pager.bx-default-pager a.active,
-  body .contract .bx-wrapper .bx-pager.bx-default-pager a:focus {
+  body .content .contract .bx-wrapper .bx-pager.bx-default-pager a:hover,
+  body .content .contract .bx-wrapper .bx-pager.bx-default-pager a.active,
+  body .content .contract .bx-wrapper .bx-pager.bx-default-pager a:focus {
     background: #fff;
   }
-  body .contract img {
+  body .content .contract img {
     width: 100%;
     background-color: transparent;
     margin: 0px;
     padding: 0px;
     border: 0px;
   }
-  body .mcqueen {
+  body .content .mcqueen {
     padding-top: 100px;
     background-image: url(../img/foterroad.png);
     background-size: 130%;
@@ -1530,7 +1612,7 @@ p {
         -ms-flex-align: center;
             align-items: center;
   }
-  body .mcqueen img {
+  body .content .mcqueen img {
     display: block;
     margin: auto;
     width: 179px;
@@ -1542,10 +1624,10 @@ p {
             align-items: center;
     padding-bottom: 130px;
   }
-  body .links {
+  body .content .links {
     margin-bottom: 50px;
   }
-  body .links .container {
+  body .content .links .container {
     width: 100%;
     margin: auto;
     -webkit-box-pack: justify;
@@ -1579,7 +1661,7 @@ p {
               transform: translateX(calc(-250px * 4));
     }
   }
-  body .links .container .slider {
+  body .content .links .container .slider {
     background: transparent;
     -webkit-box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
             box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
@@ -1589,17 +1671,17 @@ p {
     position: relative;
     width: 100%;
   }
-  body .links .container .slider::after {
+  body .content .links .container .slider::after {
     right: 0;
     top: 0;
     -webkit-transform: rotateZ(180deg);
             transform: rotateZ(180deg);
   }
-  body .links .container .slider::before {
+  body .content .links .container .slider::before {
     left: 0;
     top: 0;
   }
-  body .links .container .slider .slide-track {
+  body .content .links .container .slider .slide-track {
     -webkit-animation: scroll 40s linear infinite;
     animation: scroll 40s linear infinite;
     display: -webkit-box;
@@ -1607,10 +1689,10 @@ p {
     display: flex;
     width: 100%;
   }
-  body .links .container .slider .slide img {
+  body .content .links .container .slider .slide img {
     margin: 0px 20px;
   }
-  body .links .container .slider .slide .img1 {
+  body .content .links .container .slider .slide .img1 {
     width: 112px;
     height: 17.5px;
     -webkit-transition: 0.3s ease;
@@ -1619,12 +1701,12 @@ p {
     opacity: 0.7;
     margin-right: 0px;
   }
-  body .links .container .slider .slide .img1:hover {
+  body .content .links .container .slider .slide .img1:hover {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
     opacity: 1;
   }
-  body .links .container .slider .slide .img2 {
+  body .content .links .container .slider .slide .img2 {
     width: 121.5px;
     height: 20.5px;
     -webkit-transition: 0.3s ease;
@@ -1633,12 +1715,12 @@ p {
     opacity: 0.7;
     margin-right: 0px;
   }
-  body .links .container .slider .slide .img2:hover {
+  body .content .links .container .slider .slide .img2:hover {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
     opacity: 1;
   }
-  body .links .container .slider .slide .img3 {
+  body .content .links .container .slider .slide .img3 {
     width: 90.5px;
     height: 24.5px;
     -webkit-transition: 0.3s ease;
@@ -1646,12 +1728,12 @@ p {
     opacity: 0.7;
     margin-top: 7px;
   }
-  body .links .container .slider .slide .img3:hover {
+  body .content .links .container .slider .slide .img3:hover {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
     opacity: 1;
   }
-  body .links .container .slider .slide .img4 {
+  body .content .links .container .slider .slide .img4 {
     width: 76px;
     height: 11px;
     -webkit-transition: 0.3s ease;
@@ -1662,12 +1744,12 @@ p {
     margin-left: -5px;
     margin-right: -5px;
   }
-  body .links .container .slider .slide .img4:hover {
+  body .content .links .container .slider .slide .img4:hover {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
     opacity: 1;
   }
-  body .links .container .slider .slide .img5 {
+  body .content .links .container .slider .slide .img5 {
     width: 105.5px;
     height: 21.5px;
     -webkit-transition: 0.3s ease;
@@ -1676,12 +1758,12 @@ p {
     margin-top: 7px;
     margin-right: -5px;
   }
-  body .links .container .slider .slide .img5:hover {
+  body .content .links .container .slider .slide .img5:hover {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
     opacity: 1;
   }
-  body footer {
+  body .content footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1695,7 +1777,7 @@ p {
     background-position: top center;
     background-repeat: no-repeat;
   }
-  body footer .up {
+  body .content footer .up {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1708,11 +1790,11 @@ p {
             justify-content: center;
     margin: 0 auto;
   }
-  body footer .up .left img {
+  body .content footer .up .left img {
     width: 100px;
     margin-top: 308px;
   }
-  body footer .up .mid .down {
+  body .content footer .up .mid .down {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1723,7 +1805,7 @@ p {
     margin: auto;
     margin-top: 250px;
   }
-  body footer .up .mid .down .socials {
+  body .content footer .up .mid .down .socials {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1746,11 +1828,11 @@ p {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  body footer .up .mid .down .socials a {
+  body .content footer .up .mid .down .socials a {
     margin: 0;
     padding: 0;
   }
-  body footer .up .mid .down .socials a .s1 {
+  body .content footer .up .mid .down .socials a .s1 {
     width: 25px;
     height: 25px;
     padding: 12px 15px;
@@ -1761,11 +1843,11 @@ p {
     -webkit-transition: background-color 0.5s;
     transition: background-color 0.5s;
   }
-  body footer .up .mid .down .socials a .s1:hover {
+  body .content footer .up .mid .down .socials a .s1:hover {
     opacity: 1;
     background-color: #0097ec;
   }
-  body footer .up .mid .down .socials a .s2 {
+  body .content footer .up .mid .down .socials a .s2 {
     width: 25px;
     height: 25px;
     padding: 12px 15px;
@@ -1776,11 +1858,11 @@ p {
     -webkit-transition: background-color 0.5s;
     transition: background-color 0.5s;
   }
-  body footer .up .mid .down .socials a .s2:hover {
+  body .content footer .up .mid .down .socials a .s2:hover {
     opacity: 1;
     background-color: #0097ec;
   }
-  body footer .up .mid .down .socials a .s3 {
+  body .content footer .up .mid .down .socials a .s3 {
     width: 25px;
     height: 25px;
     padding: 12px 15px;
@@ -1791,11 +1873,11 @@ p {
     -webkit-transition: background-color 0.5s;
     transition: background-color 0.5s;
   }
-  body footer .up .mid .down .socials a .s3:hover {
+  body .content footer .up .mid .down .socials a .s3:hover {
     opacity: 1;
     background-color: #0097ec;
   }
-  body footer .up .mid .down .socials a .s4 {
+  body .content footer .up .mid .down .socials a .s4 {
     width: 25px;
     height: 25px;
     padding: 12px 15px;
@@ -1806,24 +1888,58 @@ p {
     -webkit-transition: background-color 0.5s;
     transition: background-color 0.5s;
   }
-  body footer .up .mid .down .socials a .s4:hover {
+  body .content footer .up .mid .down .socials a .s4:hover {
     opacity: 1;
     background-color: #0097ec;
   }
-  body footer .up .right img {
+  body .content footer .up .right img {
     width: 100px;
     margin-top: 280px;
   }
-  body footer .downs {
+  body .content footer .downs {
     text-align: center;
     background: #0f84df;
   }
-  body footer .downs p {
+  body .content footer .downs p {
     margin-top: 14px;
     margin-bottom: 14px;
     font-family: "FuturaPTMedium";
     font-size: 12px;
     line-height: 23.91px;
+  }
+  body .loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #242f3f;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .loader-wrapper .loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #Fff;
+    -webkit-animation: loader 2s infinite ease;
+            animation: loader 2s infinite ease;
+  }
+  body .loader-wrapper .loader .loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    -webkit-animation: loader-inner 2s infinite ease-in;
+            animation: loader-inner 2s infinite ease-in;
   }
 }
 
@@ -1836,7 +1952,7 @@ p {
     overflow-x: hidden;
     background-color: black;
   }
-  body .firstpart {
+  body .content .firstpart {
     background-image: url(../img/firstbg.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -1848,12 +1964,12 @@ p {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  body .firstpart .nav {
+  body .content .firstpart .nav {
     background: rgba(19, 19, 19, 0.85);
     height: 100px;
     display: none;
   }
-  body .firstpart .nav .container {
+  body .content .firstpart .nav .container {
     width: 80%;
     margin: 0 auto;
     -webkit-box-pack: center;
@@ -1867,10 +1983,10 @@ p {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  body .firstpart .nav .container .elem {
+  body .content .firstpart .nav .container .elem {
     padding: 15px 60px 5px 60px;
   }
-  body .firstpart .nav .container .elem p {
+  body .content .firstpart .nav .container .elem p {
     font-family: "FuturaPTHeavy";
     font-size: 16px;
     color: #cbcbcb;
@@ -1878,7 +1994,7 @@ p {
     transition: 0.2s;
     padding-top: 10px;
   }
-  body .firstpart .nav .container .elem p:hover {
+  body .content .firstpart .nav .container .elem p:hover {
     font-family: "FuturaPTHeavy";
     font-size: 16px;
     padding-top: 10px;
@@ -1886,11 +2002,11 @@ p {
     -webkit-transform: scale(1.05);
             transform: scale(1.05);
   }
-  body .firstpart .nav .container .elem img {
+  body .content .firstpart .nav .container .elem img {
     width: 104.24px;
     height: 70.28px;
   }
-  body .firstpart .navmobile {
+  body .content .firstpart .navmobile {
     width: 80%;
     margin: 0 auto;
     -webkit-box-pack: center;
@@ -1904,7 +2020,7 @@ p {
         align-self: center;
     background: transparent;
   }
-  body .firstpart .navmobile img {
+  body .content .firstpart .navmobile img {
     width: 100px;
     margin: 0 auto;
     display: block;
@@ -1922,16 +2038,16 @@ p {
     -webkit-filter: drop-shadow(0px 5px 18px black);
             filter: drop-shadow(0px 5px 18px black);
   }
-  body .firstpart .bg {
+  body .content .firstpart .bg {
     height: 700px;
   }
-  body .secondpart {
+  body .content .secondpart {
     background-image: url(../img/secondbg.png);
     background-size: 100%;
     background-repeat: no-repeat;
     margin-top: 100px;
   }
-  body .secondpart .container {
+  body .content .secondpart .container {
     width: 70%;
     margin: 0 auto;
     display: -webkit-box;
@@ -1942,12 +2058,12 @@ p {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  body .secondpart .container .up {
+  body .content .secondpart .container .up {
     font-family: "Brandon Grotesque Medium";
     margin-top: 80px;
     font-size: 38px;
   }
-  body .secondpart .container .mid p {
+  body .content .secondpart .container .mid p {
     font-size: 26px;
     line-height: 44px;
     color: #ffffff;
@@ -1957,12 +2073,12 @@ p {
     font-style: normal;
     font-weight: 100;
   }
-  body .secondpart .container .bottom {
+  body .content .secondpart .container .bottom {
     margin-top: 50px;
     margin-bottom: 50px;
     margin-left: 20px;
   }
-  body .secondpart .container .bottom a {
+  body .content .secondpart .container .bottom a {
     font-family: "Brandon Grotesque Medium";
     font-size: 18px;
     height: 50px;
@@ -1973,7 +2089,7 @@ p {
     -webkit-transition: 0.5s;
     transition: 0.5s;
   }
-  body .secondpart .container .bottom a:hover {
+  body .content .secondpart .container .bottom a:hover {
     font-family: "Brandon Grotesque Medium";
     font-size: 18px;
     height: 50px;
@@ -1982,15 +2098,15 @@ p {
     background: -webkit-gradient(linear, left top, right top, from(#0f92f1), color-stop(105.43%, #04aff9));
     background: linear-gradient(90deg, #0f92f1 0%, #04aff9 105.43%);
   }
-  body .tokenomics {
+  body .content .tokenomics {
     margin-bottom: 150px;
   }
-  body .tokenomics .container {
+  body .content .tokenomics .container {
     background-image: url(../img/tokenomics1.png);
     background-size: 100%;
     background-repeat: no-repeat;
   }
-  body .tokenomics .container .countdown {
+  body .content .tokenomics .container .countdown {
     width: 55%;
     margin: 0 auto;
     -webkit-box-pack: justify;
@@ -2007,7 +2123,7 @@ p {
         flex-wrap: wrap;
     padding-top: 300px;
   }
-  body .tokenomics .container .countdown .box {
+  body .content .tokenomics .container .countdown .box {
     margin-top: 100px;
     background: -webkit-gradient(linear, left bottom, left top, color-stop(19.8%, rgba(0, 0, 0, 0.19)), color-stop(29.89%, rgba(17, 17, 17, 0.19)), color-stop(50.04%, rgba(62, 62, 63, 0.19)), color-stop(78.05%, rgba(133, 134, 135, 0.19)), color-stop(98.32%, rgba(188, 190, 192, 0.19)));
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.19) 19.8%, rgba(17, 17, 17, 0.19) 29.89%, rgba(62, 62, 63, 0.19) 50.04%, rgba(133, 134, 135, 0.19) 78.05%, rgba(188, 190, 192, 0.19) 98.32%);
@@ -2017,44 +2133,44 @@ p {
     height: 249.37px;
     text-align: center;
   }
-  body .tokenomics .container .countdown .box .minibox1 {
+  body .content .tokenomics .container .countdown .box .minibox1 {
     opacity: 1;
     font-size: 65px;
   }
-  body .tokenomics .container .countdown .box .minibox1 p {
+  body .content .tokenomics .container .countdown .box .minibox1 p {
     margin-top: 40px;
     margin-bottom: -15px;
     font-family: "Brandon Grotesque Medium";
   }
-  body .tokenomics .container .countdown .box .minibox2 {
+  body .content .tokenomics .container .countdown .box .minibox2 {
     opacity: 1;
     font-size: 30px;
   }
-  body .tokenomics .container .countdown .box .minibox2 p {
+  body .content .tokenomics .container .countdown .box .minibox2 p {
     margin-top: 0px;
     margin-bottom: 14px;
     font-family: "Brandon Grotesque Medium";
   }
-  body .tokenomics .container .countdown .box .minibox3 .timer1 {
+  body .content .tokenomics .container .countdown .box .minibox3 .timer1 {
     width: 57.87px;
     height: 57.87px;
   }
-  body .tokenomics .container .countdown .box .minibox3 .timer2 {
+  body .content .tokenomics .container .countdown .box .minibox3 .timer2 {
     margin-top: 15px;
     width: 73.85px;
     height: 30.34px;
   }
-  body .tokenomics .container .countdown .box .minibox3 .timer3 {
+  body .content .tokenomics .container .countdown .box .minibox3 .timer3 {
     margin-top: 15px;
     width: 40.92px;
     height: 39.28px;
   }
-  body .tokenomics .container .countdown .box .minibox3 .timer4 {
+  body .content .tokenomics .container .countdown .box .minibox3 .timer4 {
     margin-top: 15px;
     width: 34.36px;
     height: 36.51px;
   }
-  body .tokenomics .container .fuel {
+  body .content .tokenomics .container .fuel {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2066,12 +2182,12 @@ p {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  body .tokenomics .container .fuel .right img {
+  body .content .tokenomics .container .fuel .right img {
     margin-top: 58px;
     width: 438.07px;
     margin-bottom: 100px;
   }
-  body .tokenomics .container .buttons {
+  body .content .tokenomics .container .buttons {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2087,7 +2203,7 @@ p {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  body .tokenomics .container .buttons .box {
+  body .content .tokenomics .container .buttons .box {
     text-align: center;
     font-family: "FuturaPTMedium";
     margin-top: 52px;
@@ -2095,47 +2211,47 @@ p {
     transition: all 1s ease-in-out;
     margin: 30px 10px;
   }
-  body .tokenomics .container .buttons .box .up {
+  body .content .tokenomics .container .buttons .box .up {
     background: -webkit-gradient(linear, left top, right top, from(#0f92f1), to(#24bdff));
     background: linear-gradient(90deg, #0f92f1 0%, #24bdff 100%);
     margin-bottom: 0;
     -webkit-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
   }
-  body .tokenomics .container .buttons .box .up p {
+  body .content .tokenomics .container .buttons .box .up p {
     padding: 17px 46px;
     margin: 0px;
   }
-  body .tokenomics .container .buttons .box .down {
+  body .content .tokenomics .container .buttons .box .down {
     background: linear-gradient(179.36deg, #262829 0.55%, rgba(18, 20, 22, 0) 145.88%);
     -webkit-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
   }
-  body .tokenomics .container .buttons .box .down p {
+  body .content .tokenomics .container .buttons .box .down p {
     margin: 0px;
     padding: 32px 27px;
   }
-  body .tokenomics .container .buttons .box:hover .up {
+  body .content .tokenomics .container .buttons .box:hover .up {
     background: linear-gradient(179.36deg, #262829 0.55%, rgba(18, 20, 22, 0) 145.88%);
     margin-bottom: 0;
   }
-  body .tokenomics .container .buttons .box:hover .up p {
+  body .content .tokenomics .container .buttons .box:hover .up p {
     padding: 17px 46px;
     margin: 0px;
   }
-  body .tokenomics .container .buttons .box:hover .down {
+  body .content .tokenomics .container .buttons .box:hover .down {
     background: -webkit-gradient(linear, left top, right top, from(#0f92f1), to(#24bdff));
     background: linear-gradient(90deg, #0f92f1 0%, #24bdff 100%);
   }
-  body .tokenomics .container .buttons .box:hover .down p {
+  body .content .tokenomics .container .buttons .box:hover .down p {
     margin: 0px;
     padding: 32px 27px;
   }
-  body .tokenomics .container .buynow {
+  body .content .tokenomics .container .buynow {
     text-align: center;
     margin-top: 50px;
   }
-  body .tokenomics .container .buynow a {
+  body .content .tokenomics .container .buynow a {
     font-family: "Brandon Grotesque Medium";
     font-size: 18px;
     padding: 13px 50px;
@@ -2143,32 +2259,32 @@ p {
     -webkit-transition: 1s;
     transition: 1s;
   }
-  body .tokenomics .container .buynow a:hover {
+  body .content .tokenomics .container .buynow a:hover {
     background: -webkit-gradient(linear, left top, right top, from(#0f92f1), to(#24bdff));
     background: linear-gradient(90deg, #0f92f1 0%, #24bdff 100%);
     -webkit-transition: 2s;
     transition: 2s;
   }
-  body .thirdpart img {
+  body .content .thirdpart img {
     width: 100%;
     margin: auto;
     display: block;
     overflow-x: hidden;
     margin-top: -50px;
   }
-  body .thirdpart .imgrespo {
+  body .content .thirdpart .imgrespo {
     width: 100%;
   }
-  body .thirdpart .imgnorespo {
+  body .content .thirdpart .imgnorespo {
     width: 100%;
     display: none;
   }
-  body .thirdpart .con {
+  body .content .thirdpart .con {
     background-image: url(../img/bgnft.png);
     background-size: 100%;
     background-repeat: repeat;
   }
-  body .thirdpart .con .container {
+  body .content .thirdpart .con .container {
     width: 80%;
     margin: 0 auto;
     text-align: center;
@@ -2176,22 +2292,22 @@ p {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  body .thirdpart .con .container .title p {
+  body .content .thirdpart .con .container .title p {
     font-family: "Brandon Grotesque Bold";
     font-size: 46px;
   }
-  body .thirdpart .con .container .downtitle {
+  body .content .thirdpart .con .container .downtitle {
     margin-top: -30px;
   }
-  body .thirdpart .con .container .downtitle p {
+  body .content .thirdpart .con .container .downtitle p {
     font-family: "Brandon Grotesque Regular";
     font-size: 28px;
   }
-  body .thirdpart .con .container .downtitle p span {
+  body .content .thirdpart .con .container .downtitle p span {
     font-family: "Brandon Grotesque Medium";
     color: #50b5ff;
   }
-  body .thirdpart .con .container .boxes {
+  body .content .thirdpart .con .container .boxes {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2206,7 +2322,7 @@ p {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  body .thirdpart .con .container .boxes .box1 {
+  body .content .thirdpart .con .container .boxes .box1 {
     background: rgba(255, 255, 255, 0.1);
     padding: 36px 94px;
     display: -webkit-box;
@@ -2222,7 +2338,7 @@ p {
     margin-top: 20px;
     margin-bottom: 10px;
   }
-  body .thirdpart .con .container .boxes .box1 .up {
+  body .content .thirdpart .con .container .boxes .box1 .up {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2235,27 +2351,27 @@ p {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  body .thirdpart .con .container .boxes .box1 .up img {
+  body .content .thirdpart .con .container .boxes .box1 .up img {
     width: 33px;
     height: 33px;
     margin: auto;
     display: block;
   }
-  body .thirdpart .con .container .boxes .box1 .up p {
+  body .content .thirdpart .con .container .boxes .box1 .up p {
     font-size: 46px;
     font-family: "Brandon Grotesque Black";
   }
-  body .thirdpart .con .container .boxes .box1 .down p {
+  body .content .thirdpart .con .container .boxes .box1 .down p {
     font-size: 24px;
     font-family: "Brandon Grotesque Regular";
     margin-top: -30px;
   }
-  body .thirdpart .con .container .boxes .box1:hover {
+  body .content .thirdpart .con .container .boxes .box1:hover {
     background-color: #0097ec;
     border: 2px solid #ffffff;
     cursor: pointer;
   }
-  body .thirdpart .con .container .boxes .box2 {
+  body .content .thirdpart .con .container .boxes .box2 {
     background: rgba(255, 255, 255, 0.1);
     padding: 36px 84px;
     display: -webkit-box;
@@ -2271,7 +2387,7 @@ p {
     margin-top: 20px;
     margin-bottom: 10px;
   }
-  body .thirdpart .con .container .boxes .box2 .up {
+  body .content .thirdpart .con .container .boxes .box2 .up {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2283,27 +2399,27 @@ p {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  body .thirdpart .con .container .boxes .box2 .up img {
+  body .content .thirdpart .con .container .boxes .box2 .up img {
     width: 33px;
     height: 33px;
     margin: auto;
     display: block;
   }
-  body .thirdpart .con .container .boxes .box2 .up p {
+  body .content .thirdpart .con .container .boxes .box2 .up p {
     font-size: 46px;
     font-family: "Brandon Grotesque Black";
   }
-  body .thirdpart .con .container .boxes .box2 .down p {
+  body .content .thirdpart .con .container .boxes .box2 .down p {
     font-size: 24px;
     font-family: "Brandon Grotesque Regular";
     margin-top: -30px;
   }
-  body .thirdpart .con .container .boxes .box2:hover {
+  body .content .thirdpart .con .container .boxes .box2:hover {
     background-color: #0097ec;
     border: 2px solid #ffffff;
     cursor: pointer;
   }
-  body .thirdpart .con .container .boxes .box3 {
+  body .content .thirdpart .con .container .boxes .box3 {
     background: rgba(255, 255, 255, 0.1);
     padding: 26px 46px;
     display: -webkit-box;
@@ -2319,7 +2435,7 @@ p {
     margin-top: 20px;
     margin-bottom: 10px;
   }
-  body .thirdpart .con .container .boxes .box3 .up {
+  body .content .thirdpart .con .container .boxes .box3 .up {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2332,27 +2448,27 @@ p {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  body .thirdpart .con .container .boxes .box3 .up img {
+  body .content .thirdpart .con .container .boxes .box3 .up img {
     width: 33px;
     height: 33px;
     margin: auto;
     display: block;
   }
-  body .thirdpart .con .container .boxes .box3 .up p {
+  body .content .thirdpart .con .container .boxes .box3 .up p {
     font-size: 46px;
     font-family: "Brandon Grotesque Black";
   }
-  body .thirdpart .con .container .boxes .box3 .down p {
+  body .content .thirdpart .con .container .boxes .box3 .down p {
     font-size: 24px;
     font-family: "Brandon Grotesque Regular";
     margin-top: -30px;
   }
-  body .thirdpart .con .container .boxes .box3:hover {
+  body .content .thirdpart .con .container .boxes .box3:hover {
     background-color: #0097ec;
     border: 2px solid #ffffff;
     cursor: pointer;
   }
-  body .thirdpart .con .container .boxes .box4 {
+  body .content .thirdpart .con .container .boxes .box4 {
     background: rgba(255, 255, 255, 0.1);
     padding: 26px 44px;
     display: -webkit-box;
@@ -2368,7 +2484,7 @@ p {
     margin-top: 20px;
     margin-bottom: 10px;
   }
-  body .thirdpart .con .container .boxes .box4 .up {
+  body .content .thirdpart .con .container .boxes .box4 .up {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2381,32 +2497,32 @@ p {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  body .thirdpart .con .container .boxes .box4 .up img {
+  body .content .thirdpart .con .container .boxes .box4 .up img {
     width: 33px;
     height: 33px;
     margin: auto;
     display: block;
   }
-  body .thirdpart .con .container .boxes .box4 .up p {
+  body .content .thirdpart .con .container .boxes .box4 .up p {
     font-size: 46px;
     font-family: "Brandon Grotesque Black";
   }
-  body .thirdpart .con .container .boxes .box4 .down p {
+  body .content .thirdpart .con .container .boxes .box4 .down p {
     font-size: 24px;
     font-family: "Brandon Grotesque Regular";
     margin-top: -30px;
   }
-  body .thirdpart .con .container .boxes .box4:hover {
+  body .content .thirdpart .con .container .boxes .box4:hover {
     background-color: #0097ec;
     border: 2px solid #ffffff;
     cursor: pointer;
   }
-  body .thirdpart .con .container .txt {
+  body .content .thirdpart .con .container .txt {
     width: 80%;
     margin: 0 auto;
     margin-top: 50px;
   }
-  body .thirdpart .con .container .txt p {
+  body .content .thirdpart .con .container .txt p {
     font-family: "FuturaPTLight";
     font-size: 18px;
     line-height: 44.2px;
@@ -2415,7 +2531,7 @@ p {
     opacity: 0.9;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
-  body .thirdpart .con .container .socials {
+  body .content .thirdpart .con .container .socials {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2432,11 +2548,11 @@ p {
     margin-top: 60px;
     margin-bottom: 60px;
   }
-  body .thirdpart .con .container .socials a {
+  body .content .thirdpart .con .container .socials a {
     margin: 0;
     padding: 0;
   }
-  body .thirdpart .con .container .socials a .s1 {
+  body .content .thirdpart .con .container .socials a .s1 {
     width: 25px;
     height: 25px;
     padding: 12px 15px;
@@ -2449,11 +2565,11 @@ p {
     -webkit-transition: background-color 0.5s;
     transition: background-color 0.5s;
   }
-  body .thirdpart .con .container .socials a .s1:hover {
+  body .content .thirdpart .con .container .socials a .s1:hover {
     opacity: 1;
     background-color: #0097ec;
   }
-  body .thirdpart .con .container .socials a .s2 {
+  body .content .thirdpart .con .container .socials a .s2 {
     width: 25px;
     height: 25px;
     padding: 12px 15px;
@@ -2466,11 +2582,11 @@ p {
     -webkit-transition: background-color 0.5s;
     transition: background-color 0.5s;
   }
-  body .thirdpart .con .container .socials a .s2:hover {
+  body .content .thirdpart .con .container .socials a .s2:hover {
     opacity: 1;
     background-color: #0097ec;
   }
-  body .thirdpart .con .container .socials a .s3 {
+  body .content .thirdpart .con .container .socials a .s3 {
     width: 25px;
     height: 25px;
     padding: 12px 15px;
@@ -2483,11 +2599,11 @@ p {
     -webkit-transition: background-color 0.5s;
     transition: background-color 0.5s;
   }
-  body .thirdpart .con .container .socials a .s3:hover {
+  body .content .thirdpart .con .container .socials a .s3:hover {
     opacity: 1;
     background-color: #0097ec;
   }
-  body .thirdpart .con .container .socials a .s4 {
+  body .content .thirdpart .con .container .socials a .s4 {
     width: 25px;
     height: 25px;
     padding: 12px 15px;
@@ -2500,30 +2616,30 @@ p {
     -webkit-transition: background-color 0.5s;
     transition: background-color 0.5s;
   }
-  body .thirdpart .con .container .socials a .s4:hover {
+  body .content .thirdpart .con .container .socials a .s4:hover {
     opacity: 1;
     background-color: #0097ec;
   }
-  body .thirdpart .con .container .nft .title P {
+  body .content .thirdpart .con .container .nft .title P {
     font-family: "Brandon Grotesque Bold";
     font-size: 36px;
   }
-  body .thirdpart .con .container .nft .title5k {
+  body .content .thirdpart .con .container .nft .title5k {
     text-align: center;
   }
-  body .thirdpart .con .container .nft .title5k P {
+  body .content .thirdpart .con .container .nft .title5k P {
     font-family: "Brandon Grotesque Bold";
     font-size: 18px;
     color: #9da5ac;
   }
-  body .thirdpart .con .container .nft .container {
+  body .content .thirdpart .con .container .nft .container {
     position: relative;
     width: 150px;
     margin: 0px auto 0 auto;
     -webkit-perspective: 1000px;
             perspective: 1000px;
   }
-  body .thirdpart .con .container .nft .container .carousel {
+  body .content .thirdpart .con .container .nft .container .carousel {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -2532,7 +2648,7 @@ p {
     -webkit-animation: rotate360 60s infinite forwards linear;
             animation: rotate360 60s infinite forwards linear;
   }
-  body .thirdpart .con .container .nft .container .carousel .carousel__face {
+  body .content .thirdpart .con .container .nft .container .carousel .carousel__face {
     position: absolute;
     width: 150px;
     height: 150px;
@@ -2545,47 +2661,47 @@ p {
     display: flex;
     border: 5px solid rgba(255, 255, 255, 0.5);
   }
-  body .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(1) {
+  body .content .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(1) {
     background-image: url("../img/1.png");
     -webkit-transform: rotateY(0deg) translateZ(300px);
             transform: rotateY(0deg) translateZ(300px);
   }
-  body .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(2) {
+  body .content .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(2) {
     background-image: url("../img/2.png");
     -webkit-transform: rotateY(40deg) translateZ(300px);
             transform: rotateY(40deg) translateZ(300px);
   }
-  body .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(3) {
+  body .content .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(3) {
     background-image: url("../img/3.png");
     -webkit-transform: rotateY(80deg) translateZ(300px);
             transform: rotateY(80deg) translateZ(300px);
   }
-  body .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(4) {
+  body .content .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(4) {
     background-image: url("../img/4.png");
     -webkit-transform: rotateY(120deg) translateZ(300px);
             transform: rotateY(120deg) translateZ(300px);
   }
-  body .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(5) {
+  body .content .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(5) {
     background-image: url("../img/5.png");
     -webkit-transform: rotateY(160deg) translateZ(300px);
             transform: rotateY(160deg) translateZ(300px);
   }
-  body .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(6) {
+  body .content .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(6) {
     background-image: url("../img/6.png");
     -webkit-transform: rotateY(200deg) translateZ(300px);
             transform: rotateY(200deg) translateZ(300px);
   }
-  body .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(7) {
+  body .content .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(7) {
     background-image: url("../img/7.png");
     -webkit-transform: rotateY(240deg) translateZ(300px);
             transform: rotateY(240deg) translateZ(300px);
   }
-  body .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(8) {
+  body .content .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(8) {
     background-image: url("../img/8.png");
     -webkit-transform: rotateY(280deg) translateZ(300px);
             transform: rotateY(280deg) translateZ(300px);
   }
-  body .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(9) {
+  body .content .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(9) {
     background-image: url("../img/9.png");
     -webkit-transform: rotateY(320deg) translateZ(300px);
             transform: rotateY(320deg) translateZ(300px);
@@ -2610,7 +2726,7 @@ p {
               transform: rotateY(360deg);
     }
   }
-  body .thirdpart .con .container .nft .coni {
+  body .content .thirdpart .con .container .nft .coni {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2624,7 +2740,7 @@ p {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  body .thirdpart .con .container .nft .coni .box {
+  body .content .thirdpart .con .container .nft .coni .box {
     padding: 10px;
     background: #1d1d1d;
     border: 2.2px solid #494949;
@@ -2633,12 +2749,12 @@ p {
     height: 410px;
     margin-bottom: 136px;
   }
-  body .thirdpart .con .container .nft .coni .box img {
+  body .content .thirdpart .con .container .nft .coni .box img {
     margin-top: 0px;
     width: 280px;
     height: 280px;
   }
-  body .thirdpart .con .container .nft .coni .box .txtup {
+  body .content .thirdpart .con .container .nft .coni .box .txtup {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2650,12 +2766,12 @@ p {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  body .thirdpart .con .container .nft .coni .box .txtup p {
+  body .content .thirdpart .con .container .nft .coni .box .txtup p {
     font-family: "FuturaPTMedium";
     font-size: 14px;
     color: #9da6ac;
   }
-  body .thirdpart .con .container .nft .coni .box .txtdown {
+  body .content .thirdpart .con .container .nft .coni .box .txtdown {
     margin-top: -20px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2668,12 +2784,12 @@ p {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  body .thirdpart .con .container .nft .coni .box .txtdown p {
+  body .content .thirdpart .con .container .nft .coni .box .txtdown p {
     font-family: "FuturaPTMedium";
     font-size: 14px;
     color: #ffffff;
   }
-  body .thirdpart .con .container .nft .coni .box .txtdown .right {
+  body .content .thirdpart .con .container .nft .coni .box .txtdown .right {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2682,49 +2798,49 @@ p {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  body .thirdpart .con .container .nft .coni .box .txtdown .right img {
+  body .content .thirdpart .con .container .nft .coni .box .txtdown .right img {
     width: 14px;
     height: 14px;
     margin: auto;
     display: block;
   }
-  body .thirdpart .con .container .nft .coni .box .button {
+  body .content .thirdpart .con .container .nft .coni .box .button {
     visibility: hidden;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
   }
-  body .thirdpart .con .container .nft .coni .box .button a {
+  body .content .thirdpart .con .container .nft .coni .box .button a {
     font-family: "Brandon Grotesque Black";
     font-size: 18px;
     line-height: 26px;
     color: #3aacff;
     opacity: 0;
   }
-  body .thirdpart .con .container .nft .coni .box:hover {
+  body .content .thirdpart .con .container .nft .coni .box:hover {
     height: 420px;
     margin-bottom: 40px;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
   }
-  body .thirdpart .con .container .nft .coni .box:hover .button {
+  body .content .thirdpart .con .container .nft .coni .box:hover .button {
     -webkit-transition: all 1s;
     transition: all 1s;
     visibility: visible;
     margin-top: 20px;
     margin-bottom: 8px;
   }
-  body .thirdpart .con .container .nft .coni .box:hover .button a {
+  body .content .thirdpart .con .container .nft .coni .box:hover .button a {
     font-family: "Brandon Grotesque Black";
     font-size: 18px;
     line-height: 26px;
     color: #3aacff;
     opacity: 1;
   }
-  body .thirdpart .con .container .nft .view {
+  body .content .thirdpart .con .container .nft .view {
     padding-bottom: 100px;
     margin-top: 410px;
   }
-  body .thirdpart .con .container .nft .view a {
+  body .content .thirdpart .con .container .nft .view a {
     font-family: "Brandon Grotesque Medium";
     font-size: 24px;
     padding: 10px 35px;
@@ -2733,31 +2849,31 @@ p {
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-  body .thirdpart .con .container .nft .view a:hover {
+  body .content .thirdpart .con .container .nft .view a:hover {
     font-family: "Brandon Grotesque Medium";
     font-size: 25px;
     padding: 10px 35px;
     background: -webkit-gradient(linear, left top, right top, from(#0f92f1), color-stop(105.43%, #04aff9));
     background: linear-gradient(90deg, #0f92f1 0%, #04aff9 105.43%);
   }
-  body .roadmapmobile {
+  body .content .roadmapmobile {
     margin: 0px;
     padding: 0px;
   }
-  body .roadmapmobile .upimg {
+  body .content .roadmapmobile .upimg {
     width: 100%;
     margin-top: -8px;
     margin-bottom: -4px;
   }
-  body .roadmapmobile .downimg {
+  body .content .roadmapmobile .downimg {
     width: 100%;
     margin-top: -1px;
   }
-  body .roadmapmobile .container {
+  body .content .roadmapmobile .container {
     background-image: url(../img/roadmapbgmobile.png);
     background-size: 100%;
   }
-  body .roadmapmobile .container .con {
+  body .content .roadmapmobile .container .con {
     width: 90%;
     margin: auto;
     -webkit-box-pack: center;
@@ -2768,12 +2884,12 @@ p {
             align-items: center;
     padding-top: 50px;
   }
-  body .roadmapmobile .container .con img {
+  body .content .roadmapmobile .container .con img {
     display: block;
     margin: auto;
     width: 219px;
   }
-  body .roadmapmobile .container .con .stages {
+  body .content .roadmapmobile .container .con .stages {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2792,7 +2908,7 @@ p {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  body .roadmapmobile .container .con .stages .left .box1 {
+  body .content .roadmapmobile .container .con .stages .left .box1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2803,13 +2919,13 @@ p {
     width: 278px;
     margin-bottom: 5%;
   }
-  body .roadmapmobile .container .con .stages .left .box1 .up {
+  body .content .roadmapmobile .container .con .stages .left .box1 .up {
     background: #282843;
     border: 2.2px solid #ffffff;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  body .roadmapmobile .container .con .stages .left .box1 .up .con {
+  body .content .roadmapmobile .container .con .stages .left .box1 .up .con {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2824,41 +2940,41 @@ p {
     height: 54px;
     padding-top: 0px;
   }
-  body .roadmapmobile .container .con .stages .left .box1 .up .con .lefts p {
+  body .content .roadmapmobile .container .con .stages .left .box1 .up .con .lefts p {
     font-family: "Brandon Grotesque Medium";
     font-size: 20px;
   }
-  body .roadmapmobile .container .con .stages .left .box1 .up .con .rights img {
+  body .content .roadmapmobile .container .con .stages .left .box1 .up .con .rights img {
     width: 18.13px;
     height: 18.56px;
   }
-  body .roadmapmobile .container .con .stages .left .box1 .down {
+  body .content .roadmapmobile .container .con .stages .left .box1 .down {
     background: #1f1f34;
   }
-  body .roadmapmobile .container .con .stages .left .box1 .down .con {
+  body .content .roadmapmobile .container .con .stages .left .box1 .down .con {
     width: 90%;
     padding-top: 10px;
   }
-  body .roadmapmobile .container .con .stages .left .box1 .down .con p {
+  body .content .roadmapmobile .container .con .stages .left .box1 .down .con p {
     font-family: "FuturaPTMedium";
     font-size: 18px;
     line-height: 23.8px;
   }
-  body .roadmap {
+  body .content .roadmap {
     margin: 0px;
     padding: 0px;
     display: none;
   }
-  body .roadmap img {
+  body .content .roadmap img {
     width: 100%;
     margin-top: 0px;
     margin-bottom: -4px;
   }
-  body .roadmap .container {
+  body .content .roadmap .container {
     background-image: url(../img/roadmapbg.png);
     background-size: 100%;
   }
-  body .roadmap .container .con {
+  body .content .roadmap .container .con {
     width: 90%;
     margin: auto;
     -webkit-box-pack: center;
@@ -2869,13 +2985,13 @@ p {
             align-items: center;
     padding-top: 50px;
   }
-  body .roadmap .container .con img {
+  body .content .roadmap .container .con img {
     display: block;
     margin: auto;
     width: 419px;
     height: 141px;
   }
-  body .roadmap .container .con .stages {
+  body .content .roadmap .container .con .stages {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2894,7 +3010,7 @@ p {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  body .roadmap .container .con .stages .left .box1 {
+  body .content .roadmap .container .con .stages .left .box1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2905,13 +3021,13 @@ p {
     width: 278px;
     margin-bottom: 5%;
   }
-  body .roadmap .container .con .stages .left .box1 .up {
+  body .content .roadmap .container .con .stages .left .box1 .up {
     background: #282843;
     border: 2.2px solid #ffffff;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  body .roadmap .container .con .stages .left .box1 .up .con {
+  body .content .roadmap .container .con .stages .left .box1 .up .con {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2926,27 +3042,27 @@ p {
     height: 54px;
     padding-top: 0px;
   }
-  body .roadmap .container .con .stages .left .box1 .up .con .lefts p {
+  body .content .roadmap .container .con .stages .left .box1 .up .con .lefts p {
     font-family: "Brandon Grotesque Medium";
     font-size: 20px;
   }
-  body .roadmap .container .con .stages .left .box1 .up .con .rights img {
+  body .content .roadmap .container .con .stages .left .box1 .up .con .rights img {
     width: 18.13px;
     height: 18.56px;
   }
-  body .roadmap .container .con .stages .left .box1 .down {
+  body .content .roadmap .container .con .stages .left .box1 .down {
     background: #1f1f34;
   }
-  body .roadmap .container .con .stages .left .box1 .down .con {
+  body .content .roadmap .container .con .stages .left .box1 .down .con {
     width: 90%;
     padding-top: 10px;
   }
-  body .roadmap .container .con .stages .left .box1 .down .con p {
+  body .content .roadmap .container .con .stages .left .box1 .down .con p {
     font-family: "FuturaPTMedium";
     font-size: 14px;
     line-height: 23.8px;
   }
-  body .roadmap .container .con .stages .left .box2 {
+  body .content .roadmap .container .con .stages .left .box2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2959,13 +3075,13 @@ p {
     margin-left: 80%;
     margin-bottom: 5%;
   }
-  body .roadmap .container .con .stages .left .box2 .up {
+  body .content .roadmap .container .con .stages .left .box2 .up {
     background: #282843;
     border: 2.2px solid #ffffff;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  body .roadmap .container .con .stages .left .box2 .up .con {
+  body .content .roadmap .container .con .stages .left .box2 .up .con {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2980,27 +3096,27 @@ p {
     height: 54px;
     padding-top: 0px;
   }
-  body .roadmap .container .con .stages .left .box2 .up .con .lefts p {
+  body .content .roadmap .container .con .stages .left .box2 .up .con .lefts p {
     font-family: "Brandon Grotesque Medium";
     font-size: 20px;
   }
-  body .roadmap .container .con .stages .left .box2 .up .con .rights img {
+  body .content .roadmap .container .con .stages .left .box2 .up .con .rights img {
     width: 18.13px;
     height: 18.56px;
   }
-  body .roadmap .container .con .stages .left .box2 .down {
+  body .content .roadmap .container .con .stages .left .box2 .down {
     background: #1f1f34;
   }
-  body .roadmap .container .con .stages .left .box2 .down .con {
+  body .content .roadmap .container .con .stages .left .box2 .down .con {
     width: 90%;
     padding-top: 10px;
   }
-  body .roadmap .container .con .stages .left .box2 .down .con p {
+  body .content .roadmap .container .con .stages .left .box2 .down .con p {
     font-family: "FuturaPTMedium";
     font-size: 14px;
     line-height: 23.8px;
   }
-  body .roadmap .container .con .stages .left .box3 {
+  body .content .roadmap .container .con .stages .left .box3 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3013,13 +3129,13 @@ p {
     margin-left: 200%;
     margin-bottom: 25%;
   }
-  body .roadmap .container .con .stages .left .box3 .up {
+  body .content .roadmap .container .con .stages .left .box3 .up {
     background: #282843;
     border: 2.2px solid #ffffff;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  body .roadmap .container .con .stages .left .box3 .up .con {
+  body .content .roadmap .container .con .stages .left .box3 .up .con {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3034,30 +3150,30 @@ p {
     height: 54px;
     padding-top: 0px;
   }
-  body .roadmap .container .con .stages .left .box3 .up .con .lefts p {
+  body .content .roadmap .container .con .stages .left .box3 .up .con .lefts p {
     font-family: "Brandon Grotesque Medium";
     font-size: 20px;
   }
-  body .roadmap .container .con .stages .left .box3 .up .con .rights img {
+  body .content .roadmap .container .con .stages .left .box3 .up .con .rights img {
     width: 18.13px;
     height: 18.56px;
   }
-  body .roadmap .container .con .stages .left .box3 .down {
+  body .content .roadmap .container .con .stages .left .box3 .down {
     background: #1f1f34;
   }
-  body .roadmap .container .con .stages .left .box3 .down .con {
+  body .content .roadmap .container .con .stages .left .box3 .down .con {
     width: 90%;
     padding-top: 10px;
   }
-  body .roadmap .container .con .stages .left .box3 .down .con p {
+  body .content .roadmap .container .con .stages .left .box3 .down .con p {
     font-family: "FuturaPTMedium";
     font-size: 14px;
     line-height: 23.8px;
   }
-  body .roadmap .container .con .stages .right {
+  body .content .roadmap .container .con .stages .right {
     right: 50px;
   }
-  body .roadmap .container .con .stages .right .box1 {
+  body .content .roadmap .container .con .stages .right .box1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3070,13 +3186,13 @@ p {
     margin-left: 270%;
     margin-bottom: 5%;
   }
-  body .roadmap .container .con .stages .right .box1 .up {
+  body .content .roadmap .container .con .stages .right .box1 .up {
     background: #282843;
     border: 2.2px solid #ffffff;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  body .roadmap .container .con .stages .right .box1 .up .con {
+  body .content .roadmap .container .con .stages .right .box1 .up .con {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3091,27 +3207,27 @@ p {
     height: 54px;
     padding-top: 0px;
   }
-  body .roadmap .container .con .stages .right .box1 .up .con .lefts p {
+  body .content .roadmap .container .con .stages .right .box1 .up .con .lefts p {
     font-family: "Brandon Grotesque Medium";
     font-size: 20px;
   }
-  body .roadmap .container .con .stages .right .box1 .up .con .rights img {
+  body .content .roadmap .container .con .stages .right .box1 .up .con .rights img {
     width: 18.13px;
     height: 18.56px;
   }
-  body .roadmap .container .con .stages .right .box1 .down {
+  body .content .roadmap .container .con .stages .right .box1 .down {
     background: #1f1f34;
   }
-  body .roadmap .container .con .stages .right .box1 .down .con {
+  body .content .roadmap .container .con .stages .right .box1 .down .con {
     width: 90%;
     padding-top: 10px;
   }
-  body .roadmap .container .con .stages .right .box1 .down .con p {
+  body .content .roadmap .container .con .stages .right .box1 .down .con p {
     font-family: "FuturaPTMedium";
     font-size: 14px;
     line-height: 23.8px;
   }
-  body .roadmap .container .con .stages .right .box2 {
+  body .content .roadmap .container .con .stages .right .box2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3124,13 +3240,13 @@ p {
     margin-left: 290%;
     margin-bottom: 5%;
   }
-  body .roadmap .container .con .stages .right .box2 .up {
+  body .content .roadmap .container .con .stages .right .box2 .up {
     background: #282843;
     border: 2.2px solid #ffffff;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  body .roadmap .container .con .stages .right .box2 .up .con {
+  body .content .roadmap .container .con .stages .right .box2 .up .con {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3145,27 +3261,27 @@ p {
     height: 54px;
     padding-top: 0px;
   }
-  body .roadmap .container .con .stages .right .box2 .up .con .lefts p {
+  body .content .roadmap .container .con .stages .right .box2 .up .con .lefts p {
     font-family: "Brandon Grotesque Medium";
     font-size: 20px;
   }
-  body .roadmap .container .con .stages .right .box2 .up .con .rights img {
+  body .content .roadmap .container .con .stages .right .box2 .up .con .rights img {
     width: 18.13px;
     height: 18.56px;
   }
-  body .roadmap .container .con .stages .right .box2 .down {
+  body .content .roadmap .container .con .stages .right .box2 .down {
     background: #1f1f34;
   }
-  body .roadmap .container .con .stages .right .box2 .down .con {
+  body .content .roadmap .container .con .stages .right .box2 .down .con {
     width: 90%;
     padding-top: 10px;
   }
-  body .roadmap .container .con .stages .right .box2 .down .con p {
+  body .content .roadmap .container .con .stages .right .box2 .down .con p {
     font-family: "FuturaPTMedium";
     font-size: 14px;
     line-height: 23.8px;
   }
-  body .roadmap .container .con .stages .right .box {
+  body .content .roadmap .container .con .stages .right .box {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3175,13 +3291,13 @@ p {
             flex-direction: column;
     width: 278px;
   }
-  body .roadmap .container .con .stages .right .box .up {
+  body .content .roadmap .container .con .stages .right .box .up {
     background: #282843;
     border: 2.2px solid #ffffff;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  body .roadmap .container .con .stages .right .box .up .con {
+  body .content .roadmap .container .con .stages .right .box .up .con {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3196,34 +3312,34 @@ p {
     height: 54px;
     padding-top: 0px;
   }
-  body .roadmap .container .con .stages .right .box .up .con .lefts p {
+  body .content .roadmap .container .con .stages .right .box .up .con .lefts p {
     font-family: "Brandon Grotesque Medium";
     font-size: 20px;
   }
-  body .roadmap .container .con .stages .right .box .up .con .rights img {
+  body .content .roadmap .container .con .stages .right .box .up .con .rights img {
     width: 18.13px;
     height: 18.56px;
   }
-  body .roadmap .container .con .stages .right .box .down {
+  body .content .roadmap .container .con .stages .right .box .down {
     background: #1f1f34;
   }
-  body .roadmap .container .con .stages .right .box .down .con {
+  body .content .roadmap .container .con .stages .right .box .down .con {
     width: 90%;
     padding-top: 10px;
   }
-  body .roadmap .container .con .stages .right .box .down .con p {
+  body .content .roadmap .container .con .stages .right .box .down .con p {
     font-family: "FuturaPTMedium";
     font-size: 14px;
     line-height: 23.8px;
   }
-  body .game {
+  body .content .game {
     background-image: url(../img/metacarsgame.png);
     background-size: 170%;
     background-repeat: no-repeat;
     background-position: right top;
     margin-top: 60px;
   }
-  body .game .container {
+  body .content .game .container {
     width: 80%;
     margin: auto;
     display: -webkit-box;
@@ -3234,26 +3350,26 @@ p {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  body .game .container .left {
+  body .content .game .container .left {
     -webkit-box-flex: 5;
         -ms-flex: 5;
             flex: 5;
   }
-  body .game .container .left .up p {
+  body .content .game .container .left .up p {
     font-family: "Brandon Grotesque Medium";
     font-size: 38px;
     margin-top: 710px;
   }
-  body .game .container .left .mid p {
+  body .content .game .container .left .mid p {
     font-family: "FuturaPTLight";
     line-height: 170%;
     font-size: 18px;
     padding-bottom: 60px;
   }
-  body .game .container .left .down {
+  body .content .game .container .left .down {
     margin-bottom: 50px;
   }
-  body .game .container .left .down a {
+  body .content .game .container .left .down a {
     font-family: "Brandon Grotesque Medium";
     font-size: 24px;
     background: -webkit-gradient(linear, left top, right top, from(#0f92f1), color-stop(105.43%, #04aff9));
@@ -3262,21 +3378,21 @@ p {
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-  body .game .container .left .down a:hover {
+  body .content .game .container .left .down a:hover {
     font-family: "Brandon Grotesque Medium";
     font-size: 26px;
     background: -webkit-gradient(linear, left top, right top, from(#0f92f1), color-stop(105.43%, #04aff9));
     background: linear-gradient(90deg, #0f92f1 0%, #04aff9 105.43%);
     padding: 13px 55px;
   }
-  body .contract margin .bxslider {
+  body .content .contract margin .bxslider {
     width: 100%;
     background-color: transparent;
     margin: 0px;
     padding: 0px;
     border: 0px;
   }
-  body .contract .bx-wrapper {
+  body .content .contract .bx-wrapper {
     height: 150px !important;
     background-color: transparent;
     margin: 0px;
@@ -3285,19 +3401,19 @@ p {
     -webkit-box-shadow: none;
             box-shadow: none;
   }
-  body .contract .bx-wrapper .bx-pager.bx-default-pager a:hover,
-  body .contract .bx-wrapper .bx-pager.bx-default-pager a.active,
-  body .contract .bx-wrapper .bx-pager.bx-default-pager a:focus {
+  body .content .contract .bx-wrapper .bx-pager.bx-default-pager a:hover,
+  body .content .contract .bx-wrapper .bx-pager.bx-default-pager a.active,
+  body .content .contract .bx-wrapper .bx-pager.bx-default-pager a:focus {
     background: #fff;
   }
-  body .contract img {
+  body .content .contract img {
     width: 100%;
     background-color: transparent;
     margin: 0px;
     padding: 0px;
     border: 0px;
   }
-  body .mcqueen {
+  body .content .mcqueen {
     padding-top: 350px;
     background-image: url(../img/foterroad.png);
     background-size: 100% 100%;
@@ -3312,7 +3428,7 @@ p {
         -ms-flex-align: center;
             align-items: center;
   }
-  body .mcqueen img {
+  body .content .mcqueen img {
     display: block;
     margin: auto;
     width: 349px;
@@ -3324,11 +3440,11 @@ p {
             align-items: center;
     padding-bottom: 250px;
   }
-  body .links {
+  body .content .links {
     margin-bottom: 50px;
     margin-top: 30px;
   }
-  body .links .container {
+  body .content .links .container {
     width: 100%;
     margin: auto;
     -webkit-box-pack: justify;
@@ -3362,7 +3478,7 @@ p {
               transform: translateX(calc(-250px * 4));
     }
   }
-  body .links .container .slider {
+  body .content .links .container .slider {
     background: transparent;
     -webkit-box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
             box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
@@ -3372,17 +3488,17 @@ p {
     position: relative;
     width: 100%;
   }
-  body .links .container .slider::after {
+  body .content .links .container .slider::after {
     right: 0;
     top: 0;
     -webkit-transform: rotateZ(180deg);
             transform: rotateZ(180deg);
   }
-  body .links .container .slider::before {
+  body .content .links .container .slider::before {
     left: 0;
     top: 0;
   }
-  body .links .container .slider .slide-track {
+  body .content .links .container .slider .slide-track {
     -webkit-animation: scroll 40s linear infinite;
     animation: scroll 40s linear infinite;
     display: -webkit-box;
@@ -3390,10 +3506,10 @@ p {
     display: flex;
     width: 100%;
   }
-  body .links .container .slider .slide img {
+  body .content .links .container .slider .slide img {
     margin: 0px 20px;
   }
-  body .links .container .slider .slide .img1 {
+  body .content .links .container .slider .slide .img1 {
     width: 112px;
     height: 17.5px;
     -webkit-transition: 0.3s ease;
@@ -3402,12 +3518,12 @@ p {
     opacity: 0.7;
     margin-right: 0px;
   }
-  body .links .container .slider .slide .img1:hover {
+  body .content .links .container .slider .slide .img1:hover {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
     opacity: 1;
   }
-  body .links .container .slider .slide .img2 {
+  body .content .links .container .slider .slide .img2 {
     width: 121.5px;
     height: 20.5px;
     -webkit-transition: 0.3s ease;
@@ -3416,12 +3532,12 @@ p {
     opacity: 0.7;
     margin-right: 0px;
   }
-  body .links .container .slider .slide .img2:hover {
+  body .content .links .container .slider .slide .img2:hover {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
     opacity: 1;
   }
-  body .links .container .slider .slide .img3 {
+  body .content .links .container .slider .slide .img3 {
     width: 90.5px;
     height: 24.5px;
     -webkit-transition: 0.3s ease;
@@ -3429,12 +3545,12 @@ p {
     opacity: 0.7;
     margin-top: 7px;
   }
-  body .links .container .slider .slide .img3:hover {
+  body .content .links .container .slider .slide .img3:hover {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
     opacity: 1;
   }
-  body .links .container .slider .slide .img4 {
+  body .content .links .container .slider .slide .img4 {
     width: 76px;
     height: 11px;
     -webkit-transition: 0.3s ease;
@@ -3445,12 +3561,12 @@ p {
     margin-left: -5px;
     margin-right: -5px;
   }
-  body .links .container .slider .slide .img4:hover {
+  body .content .links .container .slider .slide .img4:hover {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
     opacity: 1;
   }
-  body .links .container .slider .slide .img5 {
+  body .content .links .container .slider .slide .img5 {
     width: 105.5px;
     height: 21.5px;
     -webkit-transition: 0.3s ease;
@@ -3459,12 +3575,12 @@ p {
     margin-top: 7px;
     margin-right: -5px;
   }
-  body .links .container .slider .slide .img5:hover {
+  body .content .links .container .slider .slide .img5:hover {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
     opacity: 1;
   }
-  body footer {
+  body .content footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3478,7 +3594,7 @@ p {
     background-position: top center;
     background-repeat: no-repeat;
   }
-  body footer .up {
+  body .content footer .up {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3491,11 +3607,11 @@ p {
             justify-content: center;
     margin: 0 auto;
   }
-  body footer .up .left img {
+  body .content footer .up .left img {
     width: 250px;
     margin-top: 308px;
   }
-  body footer .up .mid .down {
+  body .content footer .up .mid .down {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -3506,7 +3622,7 @@ p {
     margin: auto;
     margin-top: 390px;
   }
-  body footer .up .mid .down .socials {
+  body .content footer .up .mid .down .socials {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3529,11 +3645,11 @@ p {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  body footer .up .mid .down .socials a {
+  body .content footer .up .mid .down .socials a {
     margin: 0;
     padding: 0;
   }
-  body footer .up .mid .down .socials a .s1 {
+  body .content footer .up .mid .down .socials a .s1 {
     width: 25px;
     height: 25px;
     padding: 12px 15px;
@@ -3544,11 +3660,11 @@ p {
     -webkit-transition: background-color 0.5s;
     transition: background-color 0.5s;
   }
-  body footer .up .mid .down .socials a .s1:hover {
+  body .content footer .up .mid .down .socials a .s1:hover {
     opacity: 1;
     background-color: #0097ec;
   }
-  body footer .up .mid .down .socials a .s2 {
+  body .content footer .up .mid .down .socials a .s2 {
     width: 25px;
     height: 25px;
     padding: 12px 15px;
@@ -3559,11 +3675,11 @@ p {
     -webkit-transition: background-color 0.5s;
     transition: background-color 0.5s;
   }
-  body footer .up .mid .down .socials a .s2:hover {
+  body .content footer .up .mid .down .socials a .s2:hover {
     opacity: 1;
     background-color: #0097ec;
   }
-  body footer .up .mid .down .socials a .s3 {
+  body .content footer .up .mid .down .socials a .s3 {
     width: 25px;
     height: 25px;
     padding: 12px 15px;
@@ -3574,11 +3690,11 @@ p {
     -webkit-transition: background-color 0.5s;
     transition: background-color 0.5s;
   }
-  body footer .up .mid .down .socials a .s3:hover {
+  body .content footer .up .mid .down .socials a .s3:hover {
     opacity: 1;
     background-color: #0097ec;
   }
-  body footer .up .mid .down .socials a .s4 {
+  body .content footer .up .mid .down .socials a .s4 {
     width: 25px;
     height: 25px;
     padding: 12px 15px;
@@ -3589,24 +3705,58 @@ p {
     -webkit-transition: background-color 0.5s;
     transition: background-color 0.5s;
   }
-  body footer .up .mid .down .socials a .s4:hover {
+  body .content footer .up .mid .down .socials a .s4:hover {
     opacity: 1;
     background-color: #0097ec;
   }
-  body footer .up .right img {
+  body .content footer .up .right img {
     width: 250px;
     margin-top: 280px;
   }
-  body footer .downs {
+  body .content footer .downs {
     text-align: center;
     background: #0f84df;
   }
-  body footer .downs p {
+  body .content footer .downs p {
     margin-top: 14px;
     margin-bottom: 14px;
     font-family: "FuturaPTMedium";
     font-size: 12px;
     line-height: 23.91px;
+  }
+  body .loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #242f3f;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .loader-wrapper .loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #Fff;
+    -webkit-animation: loader 2s infinite ease;
+            animation: loader 2s infinite ease;
+  }
+  body .loader-wrapper .loader .loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    -webkit-animation: loader-inner 2s infinite ease-in;
+            animation: loader-inner 2s infinite ease-in;
   }
 }
 
@@ -3619,7 +3769,7 @@ p {
     overflow-x: hidden;
     background-color: black;
   }
-  body .firstpart {
+  body .content .firstpart {
     background-image: url(../img/firstbg.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -3631,11 +3781,11 @@ p {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  body .firstpart .nav {
+  body .content .firstpart .nav {
     background: rgba(19, 19, 19, 0.85);
     height: 100px;
   }
-  body .firstpart .nav .container {
+  body .content .firstpart .nav .container {
     width: 80%;
     margin: 0 auto;
     -webkit-box-pack: center;
@@ -3649,10 +3799,10 @@ p {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  body .firstpart .nav .container .elem {
+  body .content .firstpart .nav .container .elem {
     padding: 15px 60px 5px 60px;
   }
-  body .firstpart .nav .container .elem p {
+  body .content .firstpart .nav .container .elem p {
     font-family: "FuturaPTHeavy";
     font-size: 16px;
     color: #cbcbcb;
@@ -3660,7 +3810,7 @@ p {
     transition: 0.2s;
     padding-top: 10px;
   }
-  body .firstpart .nav .container .elem p:hover {
+  body .content .firstpart .nav .container .elem p:hover {
     font-family: "FuturaPTHeavy";
     font-size: 16px;
     padding-top: 10px;
@@ -3668,23 +3818,23 @@ p {
     -webkit-transform: scale(1.05);
             transform: scale(1.05);
   }
-  body .firstpart .nav .container .elem img {
+  body .content .firstpart .nav .container .elem img {
     width: 104.24px;
     height: 70.28px;
   }
-  body .firstpart .navmobile {
+  body .content .firstpart .navmobile {
     display: none;
   }
-  body .firstpart .bg {
+  body .content .firstpart .bg {
     height: 980px;
   }
-  body .secondpart {
+  body .content .secondpart {
     background-image: url(../img/secondbg.png);
     background-size: 100%;
     background-repeat: no-repeat;
     margin-top: 100px;
   }
-  body .secondpart .container {
+  body .content .secondpart .container {
     width: 70%;
     margin: 0 auto;
     display: -webkit-box;
@@ -3695,12 +3845,12 @@ p {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  body .secondpart .container .up {
+  body .content .secondpart .container .up {
     font-family: "Brandon Grotesque Medium";
     margin-top: 80px;
     font-size: 38px;
   }
-  body .secondpart .container .mid p {
+  body .content .secondpart .container .mid p {
     font-size: 26px;
     line-height: 44px;
     color: #ffffff;
@@ -3710,12 +3860,12 @@ p {
     font-style: normal;
     font-weight: 100;
   }
-  body .secondpart .container .bottom {
+  body .content .secondpart .container .bottom {
     margin-top: 50px;
     margin-bottom: 50px;
     margin-left: 20px;
   }
-  body .secondpart .container .bottom a {
+  body .content .secondpart .container .bottom a {
     font-family: "Brandon Grotesque Medium";
     font-size: 18px;
     height: 50px;
@@ -3726,7 +3876,7 @@ p {
     -webkit-transition: 0.5s;
     transition: 0.5s;
   }
-  body .secondpart .container .bottom a:hover {
+  body .content .secondpart .container .bottom a:hover {
     font-family: "Brandon Grotesque Medium";
     font-size: 18px;
     height: 50px;
@@ -3735,15 +3885,15 @@ p {
     background: -webkit-gradient(linear, left top, right top, from(#0f92f1), color-stop(105.43%, #04aff9));
     background: linear-gradient(90deg, #0f92f1 0%, #04aff9 105.43%);
   }
-  body .tokenomics {
+  body .content .tokenomics {
     margin-bottom: 150px;
   }
-  body .tokenomics .container {
+  body .content .tokenomics .container {
     background-image: url(../img/tokenomics1.png);
     background-size: 100%;
     background-repeat: no-repeat;
   }
-  body .tokenomics .container .countdown {
+  body .content .tokenomics .container .countdown {
     width: 55%;
     margin: 0 auto;
     -webkit-box-pack: justify;
@@ -3759,7 +3909,7 @@ p {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  body .tokenomics .container .countdown .box {
+  body .content .tokenomics .container .countdown .box {
     margin-top: 100px;
     background: -webkit-gradient(linear, left bottom, left top, color-stop(19.8%, rgba(0, 0, 0, 0.19)), color-stop(29.89%, rgba(17, 17, 17, 0.19)), color-stop(50.04%, rgba(62, 62, 63, 0.19)), color-stop(78.05%, rgba(133, 134, 135, 0.19)), color-stop(98.32%, rgba(188, 190, 192, 0.19)));
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.19) 19.8%, rgba(17, 17, 17, 0.19) 29.89%, rgba(62, 62, 63, 0.19) 50.04%, rgba(133, 134, 135, 0.19) 78.05%, rgba(188, 190, 192, 0.19) 98.32%);
@@ -3769,44 +3919,44 @@ p {
     height: 249.37px;
     text-align: center;
   }
-  body .tokenomics .container .countdown .box .minibox1 {
+  body .content .tokenomics .container .countdown .box .minibox1 {
     opacity: 1;
     font-size: 65px;
   }
-  body .tokenomics .container .countdown .box .minibox1 p {
+  body .content .tokenomics .container .countdown .box .minibox1 p {
     margin-top: 40px;
     margin-bottom: -15px;
     font-family: "Brandon Grotesque Medium";
   }
-  body .tokenomics .container .countdown .box .minibox2 {
+  body .content .tokenomics .container .countdown .box .minibox2 {
     opacity: 1;
     font-size: 30px;
   }
-  body .tokenomics .container .countdown .box .minibox2 p {
+  body .content .tokenomics .container .countdown .box .minibox2 p {
     margin-top: 0px;
     margin-bottom: 14px;
     font-family: "Brandon Grotesque Medium";
   }
-  body .tokenomics .container .countdown .box .minibox3 .timer1 {
+  body .content .tokenomics .container .countdown .box .minibox3 .timer1 {
     width: 57.87px;
     height: 57.87px;
   }
-  body .tokenomics .container .countdown .box .minibox3 .timer2 {
+  body .content .tokenomics .container .countdown .box .minibox3 .timer2 {
     margin-top: 15px;
     width: 73.85px;
     height: 30.34px;
   }
-  body .tokenomics .container .countdown .box .minibox3 .timer3 {
+  body .content .tokenomics .container .countdown .box .minibox3 .timer3 {
     margin-top: 15px;
     width: 40.92px;
     height: 39.28px;
   }
-  body .tokenomics .container .countdown .box .minibox3 .timer4 {
+  body .content .tokenomics .container .countdown .box .minibox3 .timer4 {
     margin-top: 15px;
     width: 34.36px;
     height: 36.51px;
   }
-  body .tokenomics .container .fuel {
+  body .content .tokenomics .container .fuel {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3815,24 +3965,24 @@ p {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  body .tokenomics .container .fuel .left {
+  body .content .tokenomics .container .fuel .left {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
   }
-  body .tokenomics .container .fuel .right {
+  body .content .tokenomics .container .fuel .right {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
   }
-  body .tokenomics .container .fuel .right img {
+  body .content .tokenomics .container .fuel .right img {
     margin-top: 218px;
     margin-left: 120px;
     width: 438.07px;
     height: 250.23px;
     margin-bottom: 100px;
   }
-  body .tokenomics .container .buttons {
+  body .content .tokenomics .container .buttons {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3846,54 +3996,54 @@ p {
     width: 65%;
     margin: auto;
   }
-  body .tokenomics .container .buttons .box {
+  body .content .tokenomics .container .buttons .box {
     text-align: center;
     font-family: "FuturaPTMedium";
     margin-top: 52px;
     -webkit-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
   }
-  body .tokenomics .container .buttons .box .up {
+  body .content .tokenomics .container .buttons .box .up {
     background: -webkit-gradient(linear, left top, right top, from(#0f92f1), to(#24bdff));
     background: linear-gradient(90deg, #0f92f1 0%, #24bdff 100%);
     margin-bottom: 0;
     -webkit-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
   }
-  body .tokenomics .container .buttons .box .up p {
+  body .content .tokenomics .container .buttons .box .up p {
     padding: 17px 46px;
     margin: 0px;
   }
-  body .tokenomics .container .buttons .box .down {
+  body .content .tokenomics .container .buttons .box .down {
     background: linear-gradient(179.36deg, #262829 0.55%, rgba(18, 20, 22, 0) 145.88%);
     -webkit-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
   }
-  body .tokenomics .container .buttons .box .down p {
+  body .content .tokenomics .container .buttons .box .down p {
     margin: 0px;
     padding: 32px 27px;
   }
-  body .tokenomics .container .buttons .box:hover .up {
+  body .content .tokenomics .container .buttons .box:hover .up {
     background: linear-gradient(179.36deg, #262829 0.55%, rgba(18, 20, 22, 0) 145.88%);
     margin-bottom: 0;
   }
-  body .tokenomics .container .buttons .box:hover .up p {
+  body .content .tokenomics .container .buttons .box:hover .up p {
     padding: 17px 46px;
     margin: 0px;
   }
-  body .tokenomics .container .buttons .box:hover .down {
+  body .content .tokenomics .container .buttons .box:hover .down {
     background: -webkit-gradient(linear, left top, right top, from(#0f92f1), to(#24bdff));
     background: linear-gradient(90deg, #0f92f1 0%, #24bdff 100%);
   }
-  body .tokenomics .container .buttons .box:hover .down p {
+  body .content .tokenomics .container .buttons .box:hover .down p {
     margin: 0px;
     padding: 32px 27px;
   }
-  body .tokenomics .container .buynow {
+  body .content .tokenomics .container .buynow {
     text-align: center;
     margin-top: 60px;
   }
-  body .tokenomics .container .buynow a {
+  body .content .tokenomics .container .buynow a {
     font-family: "Brandon Grotesque Medium";
     font-size: 18px;
     padding: 13px 50px;
@@ -3901,24 +4051,24 @@ p {
     -webkit-transition: 1s;
     transition: 1s;
   }
-  body .tokenomics .container .buynow a:hover {
+  body .content .tokenomics .container .buynow a:hover {
     background: -webkit-gradient(linear, left top, right top, from(#0f92f1), to(#24bdff));
     background: linear-gradient(90deg, #0f92f1 0%, #24bdff 100%);
     -webkit-transition: 2s;
     transition: 2s;
   }
-  body .thirdpart .imgnorespo {
+  body .content .thirdpart .imgnorespo {
     width: 100%;
   }
-  body .thirdpart .imgrespo {
+  body .content .thirdpart .imgrespo {
     display: none;
   }
-  body .thirdpart .con {
+  body .content .thirdpart .con {
     background-image: url(../img/bgnft.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
-  body .thirdpart .con .container {
+  body .content .thirdpart .con .container {
     width: 80%;
     margin: 0 auto;
     text-align: center;
@@ -3926,22 +4076,22 @@ p {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  body .thirdpart .con .container .title p {
+  body .content .thirdpart .con .container .title p {
     font-family: "Brandon Grotesque Bold";
     font-size: 46px;
   }
-  body .thirdpart .con .container .downtitle {
+  body .content .thirdpart .con .container .downtitle {
     margin-top: -30px;
   }
-  body .thirdpart .con .container .downtitle p {
+  body .content .thirdpart .con .container .downtitle p {
     font-family: "Brandon Grotesque Regular";
     font-size: 28px;
   }
-  body .thirdpart .con .container .downtitle p span {
+  body .content .thirdpart .con .container .downtitle p span {
     font-family: "Brandon Grotesque Medium";
     color: #50b5ff;
   }
-  body .thirdpart .con .container .boxes {
+  body .content .thirdpart .con .container .boxes {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3954,7 +4104,7 @@ p {
             justify-content: center;
     text-align: center;
   }
-  body .thirdpart .con .container .boxes .box1 {
+  body .content .thirdpart .con .container .boxes .box1 {
     background: rgba(255, 255, 255, 0.1);
     padding: 36px 94px;
     display: -webkit-box;
@@ -3968,7 +4118,7 @@ p {
     -webkit-transition: background-color 0.5s ease-out;
     transition: background-color 0.5s ease-out;
   }
-  body .thirdpart .con .container .boxes .box1 .up {
+  body .content .thirdpart .con .container .boxes .box1 .up {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3981,27 +4131,27 @@ p {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  body .thirdpart .con .container .boxes .box1 .up img {
+  body .content .thirdpart .con .container .boxes .box1 .up img {
     width: 33px;
     height: 33px;
     margin: auto;
     display: block;
   }
-  body .thirdpart .con .container .boxes .box1 .up p {
+  body .content .thirdpart .con .container .boxes .box1 .up p {
     font-size: 46px;
     font-family: "Brandon Grotesque Black";
   }
-  body .thirdpart .con .container .boxes .box1 .down p {
+  body .content .thirdpart .con .container .boxes .box1 .down p {
     font-size: 24px;
     font-family: "Brandon Grotesque Regular";
     margin-top: -50px;
   }
-  body .thirdpart .con .container .boxes .box1:hover {
+  body .content .thirdpart .con .container .boxes .box1:hover {
     background-color: #0097ec;
     border: 2px solid #ffffff;
     cursor: pointer;
   }
-  body .thirdpart .con .container .boxes .box2 {
+  body .content .thirdpart .con .container .boxes .box2 {
     background: rgba(255, 255, 255, 0.1);
     padding: 36px 94px;
     display: -webkit-box;
@@ -4015,7 +4165,7 @@ p {
     -webkit-transition: background-color 0.5s ease-out;
     transition: background-color 0.5s ease-out;
   }
-  body .thirdpart .con .container .boxes .box2 .up {
+  body .content .thirdpart .con .container .boxes .box2 .up {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4027,27 +4177,27 @@ p {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  body .thirdpart .con .container .boxes .box2 .up img {
+  body .content .thirdpart .con .container .boxes .box2 .up img {
     width: 33px;
     height: 33px;
     margin: auto;
     display: block;
   }
-  body .thirdpart .con .container .boxes .box2 .up p {
+  body .content .thirdpart .con .container .boxes .box2 .up p {
     font-size: 46px;
     font-family: "Brandon Grotesque Black";
   }
-  body .thirdpart .con .container .boxes .box2 .down p {
+  body .content .thirdpart .con .container .boxes .box2 .down p {
     font-size: 24px;
     font-family: "Brandon Grotesque Regular";
     margin-top: -50px;
   }
-  body .thirdpart .con .container .boxes .box2:hover {
+  body .content .thirdpart .con .container .boxes .box2:hover {
     background-color: #0097ec;
     border: 2px solid #ffffff;
     cursor: pointer;
   }
-  body .thirdpart .con .container .boxes .box3 {
+  body .content .thirdpart .con .container .boxes .box3 {
     background: rgba(255, 255, 255, 0.1);
     padding: 26px 46px;
     display: -webkit-box;
@@ -4061,7 +4211,7 @@ p {
     -webkit-transition: background-color 0.5s ease-out;
     transition: background-color 0.5s ease-out;
   }
-  body .thirdpart .con .container .boxes .box3 .up {
+  body .content .thirdpart .con .container .boxes .box3 .up {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4074,27 +4224,27 @@ p {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  body .thirdpart .con .container .boxes .box3 .up img {
+  body .content .thirdpart .con .container .boxes .box3 .up img {
     width: 33px;
     height: 33px;
     margin: auto;
     display: block;
   }
-  body .thirdpart .con .container .boxes .box3 .up p {
+  body .content .thirdpart .con .container .boxes .box3 .up p {
     font-size: 46px;
     font-family: "Brandon Grotesque Black";
   }
-  body .thirdpart .con .container .boxes .box3 .down p {
+  body .content .thirdpart .con .container .boxes .box3 .down p {
     font-size: 24px;
     font-family: "Brandon Grotesque Regular";
     margin-top: -50px;
   }
-  body .thirdpart .con .container .boxes .box3:hover {
+  body .content .thirdpart .con .container .boxes .box3:hover {
     background-color: #0097ec;
     border: 2px solid #ffffff;
     cursor: pointer;
   }
-  body .thirdpart .con .container .boxes .box4 {
+  body .content .thirdpart .con .container .boxes .box4 {
     background: rgba(255, 255, 255, 0.1);
     padding: 26px 46px;
     display: -webkit-box;
@@ -4108,7 +4258,7 @@ p {
     -webkit-transition: background-color 0.5s ease-in-out;
     transition: background-color 0.5s ease-in-out;
   }
-  body .thirdpart .con .container .boxes .box4 .up {
+  body .content .thirdpart .con .container .boxes .box4 .up {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4121,32 +4271,32 @@ p {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  body .thirdpart .con .container .boxes .box4 .up img {
+  body .content .thirdpart .con .container .boxes .box4 .up img {
     width: 33px;
     height: 33px;
     margin: auto;
     display: block;
   }
-  body .thirdpart .con .container .boxes .box4 .up p {
+  body .content .thirdpart .con .container .boxes .box4 .up p {
     font-size: 46px;
     font-family: "Brandon Grotesque Black";
   }
-  body .thirdpart .con .container .boxes .box4 .down p {
+  body .content .thirdpart .con .container .boxes .box4 .down p {
     font-size: 24px;
     font-family: "Brandon Grotesque Regular";
     margin-top: -50px;
   }
-  body .thirdpart .con .container .boxes .box4:hover {
+  body .content .thirdpart .con .container .boxes .box4:hover {
     background-color: #0097ec;
     border: 2px solid #ffffff;
     cursor: pointer;
   }
-  body .thirdpart .con .container .txt {
+  body .content .thirdpart .con .container .txt {
     width: 80%;
     margin: 0 auto;
     margin-top: 50px;
   }
-  body .thirdpart .con .container .txt p {
+  body .content .thirdpart .con .container .txt p {
     font-family: "FuturaPTLight";
     font-size: 26px;
     line-height: 44.2px;
@@ -4155,7 +4305,7 @@ p {
     opacity: 0.9;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
-  body .thirdpart .con .container .socials {
+  body .content .thirdpart .con .container .socials {
     margin: 0;
     padding: 0;
     margin-left: -5px;
@@ -4163,11 +4313,11 @@ p {
     margin-top: 60px;
     margin-bottom: 60px;
   }
-  body .thirdpart .con .container .socials a {
+  body .content .thirdpart .con .container .socials a {
     margin: 0;
     padding: 0;
   }
-  body .thirdpart .con .container .socials a .s1 {
+  body .content .thirdpart .con .container .socials a .s1 {
     width: 25px;
     height: 25px;
     padding: 12px 15px;
@@ -4180,11 +4330,11 @@ p {
     -webkit-transition: background-color 0.5s;
     transition: background-color 0.5s;
   }
-  body .thirdpart .con .container .socials a .s1:hover {
+  body .content .thirdpart .con .container .socials a .s1:hover {
     opacity: 1;
     background-color: #0097ec;
   }
-  body .thirdpart .con .container .socials a .s2 {
+  body .content .thirdpart .con .container .socials a .s2 {
     width: 25px;
     height: 25px;
     padding: 12px 15px;
@@ -4197,11 +4347,11 @@ p {
     -webkit-transition: background-color 0.5s;
     transition: background-color 0.5s;
   }
-  body .thirdpart .con .container .socials a .s2:hover {
+  body .content .thirdpart .con .container .socials a .s2:hover {
     opacity: 1;
     background-color: #0097ec;
   }
-  body .thirdpart .con .container .socials a .s3 {
+  body .content .thirdpart .con .container .socials a .s3 {
     width: 25px;
     height: 25px;
     padding: 12px 15px;
@@ -4214,11 +4364,11 @@ p {
     -webkit-transition: background-color 0.5s;
     transition: background-color 0.5s;
   }
-  body .thirdpart .con .container .socials a .s3:hover {
+  body .content .thirdpart .con .container .socials a .s3:hover {
     opacity: 1;
     background-color: #0097ec;
   }
-  body .thirdpart .con .container .socials a .s4 {
+  body .content .thirdpart .con .container .socials a .s4 {
     width: 25px;
     height: 25px;
     padding: 12px 15px;
@@ -4231,23 +4381,23 @@ p {
     -webkit-transition: background-color 0.5s;
     transition: background-color 0.5s;
   }
-  body .thirdpart .con .container .socials a .s4:hover {
+  body .content .thirdpart .con .container .socials a .s4:hover {
     opacity: 1;
     background-color: #0097ec;
   }
-  body .thirdpart .con .container .nft .title P {
+  body .content .thirdpart .con .container .nft .title P {
     font-family: "Brandon Grotesque Bold";
     font-size: 40px;
   }
-  body .thirdpart .con .container .nft .title5k {
+  body .content .thirdpart .con .container .nft .title5k {
     text-align: center;
   }
-  body .thirdpart .con .container .nft .title5k P {
+  body .content .thirdpart .con .container .nft .title5k P {
     font-family: "Brandon Grotesque Bold";
     font-size: 18px;
     color: #9da5ac;
   }
-  body .thirdpart .con .container .nft .coni {
+  body .content .thirdpart .con .container .nft .coni {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4259,7 +4409,7 @@ p {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  body .thirdpart .con .container .nft .coni .box {
+  body .content .thirdpart .con .container .nft .coni .box {
     padding: 10px;
     background: #1d1d1d;
     border: 2.2px solid #494949;
@@ -4268,11 +4418,11 @@ p {
     height: 410px;
     margin-bottom: 136px;
   }
-  body .thirdpart .con .container .nft .coni .box img {
+  body .content .thirdpart .con .container .nft .coni .box img {
     width: 320px;
     height: 320px;
   }
-  body .thirdpart .con .container .nft .coni .box .txtup {
+  body .content .thirdpart .con .container .nft .coni .box .txtup {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4284,12 +4434,12 @@ p {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  body .thirdpart .con .container .nft .coni .box .txtup p {
+  body .content .thirdpart .con .container .nft .coni .box .txtup p {
     font-family: "FuturaPTMedium";
     font-size: 14px;
     color: #9da6ac;
   }
-  body .thirdpart .con .container .nft .coni .box .txtdown {
+  body .content .thirdpart .con .container .nft .coni .box .txtdown {
     margin-top: -20px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4302,12 +4452,12 @@ p {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  body .thirdpart .con .container .nft .coni .box .txtdown p {
+  body .content .thirdpart .con .container .nft .coni .box .txtdown p {
     font-family: "FuturaPTMedium";
     font-size: 14px;
     color: #ffffff;
   }
-  body .thirdpart .con .container .nft .coni .box .txtdown .right {
+  body .content .thirdpart .con .container .nft .coni .box .txtdown .right {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4316,52 +4466,52 @@ p {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  body .thirdpart .con .container .nft .coni .box .txtdown .right img {
+  body .content .thirdpart .con .container .nft .coni .box .txtdown .right img {
     width: 14px;
     height: 14px;
     margin: auto;
     display: block;
   }
-  body .thirdpart .con .container .nft .coni .box .button {
+  body .content .thirdpart .con .container .nft .coni .box .button {
     visibility: hidden;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
   }
-  body .thirdpart .con .container .nft .coni .box .button a {
+  body .content .thirdpart .con .container .nft .coni .box .button a {
     font-family: "Brandon Grotesque Black";
     font-size: 18px;
     line-height: 26px;
     color: #3aacff;
     opacity: 0;
   }
-  body .thirdpart .con .container .nft .coni .box:hover {
+  body .content .thirdpart .con .container .nft .coni .box:hover {
     height: 470px;
     margin-bottom: 40px;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
   }
-  body .thirdpart .con .container .nft .coni .box:hover .button {
+  body .content .thirdpart .con .container .nft .coni .box:hover .button {
     -webkit-transition: all 1s;
     transition: all 1s;
     visibility: visible;
     margin-top: 20px;
     margin-bottom: 8px;
   }
-  body .thirdpart .con .container .nft .coni .box:hover .button a {
+  body .content .thirdpart .con .container .nft .coni .box:hover .button a {
     font-family: "Brandon Grotesque Black";
     font-size: 18px;
     line-height: 26px;
     color: #3aacff;
     opacity: 1;
   }
-  body .thirdpart .con .container .nft .container {
+  body .content .thirdpart .con .container .nft .container {
     position: relative;
     width: 200px;
     margin: 0px auto 0 auto;
     -webkit-perspective: 1000px;
             perspective: 1000px;
   }
-  body .thirdpart .con .container .nft .container .carousel {
+  body .content .thirdpart .con .container .nft .container .carousel {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -4370,7 +4520,7 @@ p {
     -webkit-animation: rotate360 60s infinite forwards linear;
             animation: rotate360 60s infinite forwards linear;
   }
-  body .thirdpart .con .container .nft .container .carousel .carousel__face {
+  body .content .thirdpart .con .container .nft .container .carousel .carousel__face {
     position: absolute;
     width: 200px;
     height: 200px;
@@ -4385,47 +4535,47 @@ p {
     display: flex;
     border: 5px solid rgba(255, 255, 255, 0.5);
   }
-  body .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(1) {
+  body .content .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(1) {
     background-image: url("../img/1.png");
     -webkit-transform: rotateY(0deg) translateZ(430px);
             transform: rotateY(0deg) translateZ(430px);
   }
-  body .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(2) {
+  body .content .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(2) {
     background-image: url("../img/2.png");
     -webkit-transform: rotateY(40deg) translateZ(430px);
             transform: rotateY(40deg) translateZ(430px);
   }
-  body .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(3) {
+  body .content .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(3) {
     background-image: url("../img/3.png");
     -webkit-transform: rotateY(80deg) translateZ(430px);
             transform: rotateY(80deg) translateZ(430px);
   }
-  body .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(4) {
+  body .content .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(4) {
     background-image: url("../img/4.png");
     -webkit-transform: rotateY(120deg) translateZ(430px);
             transform: rotateY(120deg) translateZ(430px);
   }
-  body .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(5) {
+  body .content .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(5) {
     background-image: url("../img/5.png");
     -webkit-transform: rotateY(160deg) translateZ(430px);
             transform: rotateY(160deg) translateZ(430px);
   }
-  body .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(6) {
+  body .content .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(6) {
     background-image: url("../img/6.png");
     -webkit-transform: rotateY(200deg) translateZ(430px);
             transform: rotateY(200deg) translateZ(430px);
   }
-  body .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(7) {
+  body .content .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(7) {
     background-image: url("../img/7.png");
     -webkit-transform: rotateY(240deg) translateZ(430px);
             transform: rotateY(240deg) translateZ(430px);
   }
-  body .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(8) {
+  body .content .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(8) {
     background-image: url("../img/8.png");
     -webkit-transform: rotateY(280deg) translateZ(430px);
             transform: rotateY(280deg) translateZ(430px);
   }
-  body .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(9) {
+  body .content .thirdpart .con .container .nft .container .carousel .carousel__face:nth-child(9) {
     background-image: url("../img/9.png");
     -webkit-transform: rotateY(320deg) translateZ(430px);
             transform: rotateY(320deg) translateZ(430px);
@@ -4450,11 +4600,11 @@ p {
               transform: rotateY(360deg);
     }
   }
-  body .thirdpart .con .container .nft .view {
+  body .content .thirdpart .con .container .nft .view {
     margin-top: 600px;
     margin-bottom: 100px;
   }
-  body .thirdpart .con .container .nft .view a {
+  body .content .thirdpart .con .container .nft .view a {
     font-family: "Brandon Grotesque Medium";
     font-size: 24px;
     padding: 10px 35px;
@@ -4463,27 +4613,27 @@ p {
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-  body .thirdpart .con .container .nft .view a:hover {
+  body .content .thirdpart .con .container .nft .view a:hover {
     font-family: "Brandon Grotesque Medium";
     font-size: 25px;
     padding: 10px 35px;
     background: -webkit-gradient(linear, left top, right top, from(#0f92f1), color-stop(105.43%, #04aff9));
     background: linear-gradient(90deg, #0f92f1 0%, #04aff9 105.43%);
   }
-  body .roadmap {
+  body .content .roadmap {
     margin: 0px;
     padding: 0px;
   }
-  body .roadmap img {
+  body .content .roadmap img {
     width: 100%;
     margin-top: 0px;
     margin-bottom: -4px;
   }
-  body .roadmap .container {
+  body .content .roadmap .container {
     background-image: url(../img/roadmapbg.png);
     background-size: 100%;
   }
-  body .roadmap .container .con {
+  body .content .roadmap .container .con {
     width: 90%;
     margin: auto;
     -webkit-box-pack: center;
@@ -4494,13 +4644,13 @@ p {
             align-items: center;
     padding-top: 50px;
   }
-  body .roadmap .container .con img {
+  body .content .roadmap .container .con img {
     display: block;
     margin: auto;
     width: 419px;
     height: 141px;
   }
-  body .roadmap .container .con .stages {
+  body .content .roadmap .container .con .stages {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4510,7 +4660,7 @@ p {
             flex-direction: row;
     padding-top: 90px;
   }
-  body .roadmap .container .con .stages .left .box1 {
+  body .content .roadmap .container .con .stages .left .box1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4522,13 +4672,13 @@ p {
     margin-left: 200%;
     margin-bottom: 5%;
   }
-  body .roadmap .container .con .stages .left .box1 .up {
+  body .content .roadmap .container .con .stages .left .box1 .up {
     background: #282843;
     border: 2.2px solid #ffffff;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  body .roadmap .container .con .stages .left .box1 .up .con {
+  body .content .roadmap .container .con .stages .left .box1 .up .con {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4543,27 +4693,27 @@ p {
     height: 54px;
     padding-top: 0px;
   }
-  body .roadmap .container .con .stages .left .box1 .up .con .lefts p {
+  body .content .roadmap .container .con .stages .left .box1 .up .con .lefts p {
     font-family: "Brandon Grotesque Medium";
     font-size: 20px;
   }
-  body .roadmap .container .con .stages .left .box1 .up .con .rights img {
+  body .content .roadmap .container .con .stages .left .box1 .up .con .rights img {
     width: 18.13px;
     height: 18.56px;
   }
-  body .roadmap .container .con .stages .left .box1 .down {
+  body .content .roadmap .container .con .stages .left .box1 .down {
     background: #1f1f34;
   }
-  body .roadmap .container .con .stages .left .box1 .down .con {
+  body .content .roadmap .container .con .stages .left .box1 .down .con {
     width: 90%;
     padding-top: 10px;
   }
-  body .roadmap .container .con .stages .left .box1 .down .con p {
+  body .content .roadmap .container .con .stages .left .box1 .down .con p {
     font-family: "FuturaPTMedium";
     font-size: 14px;
     line-height: 23.8px;
   }
-  body .roadmap .container .con .stages .left .box2 {
+  body .content .roadmap .container .con .stages .left .box2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4576,13 +4726,13 @@ p {
     margin-left: 80%;
     margin-bottom: 5%;
   }
-  body .roadmap .container .con .stages .left .box2 .up {
+  body .content .roadmap .container .con .stages .left .box2 .up {
     background: #282843;
     border: 2.2px solid #ffffff;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  body .roadmap .container .con .stages .left .box2 .up .con {
+  body .content .roadmap .container .con .stages .left .box2 .up .con {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4597,27 +4747,27 @@ p {
     height: 54px;
     padding-top: 0px;
   }
-  body .roadmap .container .con .stages .left .box2 .up .con .lefts p {
+  body .content .roadmap .container .con .stages .left .box2 .up .con .lefts p {
     font-family: "Brandon Grotesque Medium";
     font-size: 20px;
   }
-  body .roadmap .container .con .stages .left .box2 .up .con .rights img {
+  body .content .roadmap .container .con .stages .left .box2 .up .con .rights img {
     width: 18.13px;
     height: 18.56px;
   }
-  body .roadmap .container .con .stages .left .box2 .down {
+  body .content .roadmap .container .con .stages .left .box2 .down {
     background: #1f1f34;
   }
-  body .roadmap .container .con .stages .left .box2 .down .con {
+  body .content .roadmap .container .con .stages .left .box2 .down .con {
     width: 90%;
     padding-top: 10px;
   }
-  body .roadmap .container .con .stages .left .box2 .down .con p {
+  body .content .roadmap .container .con .stages .left .box2 .down .con p {
     font-family: "FuturaPTMedium";
     font-size: 14px;
     line-height: 23.8px;
   }
-  body .roadmap .container .con .stages .left .box3 {
+  body .content .roadmap .container .con .stages .left .box3 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4630,13 +4780,13 @@ p {
     margin-left: 200%;
     margin-bottom: 25%;
   }
-  body .roadmap .container .con .stages .left .box3 .up {
+  body .content .roadmap .container .con .stages .left .box3 .up {
     background: #282843;
     border: 2.2px solid #ffffff;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  body .roadmap .container .con .stages .left .box3 .up .con {
+  body .content .roadmap .container .con .stages .left .box3 .up .con {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4651,30 +4801,30 @@ p {
     height: 54px;
     padding-top: 0px;
   }
-  body .roadmap .container .con .stages .left .box3 .up .con .lefts p {
+  body .content .roadmap .container .con .stages .left .box3 .up .con .lefts p {
     font-family: "Brandon Grotesque Medium";
     font-size: 20px;
   }
-  body .roadmap .container .con .stages .left .box3 .up .con .rights img {
+  body .content .roadmap .container .con .stages .left .box3 .up .con .rights img {
     width: 18.13px;
     height: 18.56px;
   }
-  body .roadmap .container .con .stages .left .box3 .down {
+  body .content .roadmap .container .con .stages .left .box3 .down {
     background: #1f1f34;
   }
-  body .roadmap .container .con .stages .left .box3 .down .con {
+  body .content .roadmap .container .con .stages .left .box3 .down .con {
     width: 90%;
     padding-top: 10px;
   }
-  body .roadmap .container .con .stages .left .box3 .down .con p {
+  body .content .roadmap .container .con .stages .left .box3 .down .con p {
     font-family: "FuturaPTMedium";
     font-size: 14px;
     line-height: 23.8px;
   }
-  body .roadmap .container .con .stages .right {
+  body .content .roadmap .container .con .stages .right {
     right: 50px;
   }
-  body .roadmap .container .con .stages .right .box1 {
+  body .content .roadmap .container .con .stages .right .box1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4687,13 +4837,13 @@ p {
     margin-left: 270%;
     margin-bottom: 5%;
   }
-  body .roadmap .container .con .stages .right .box1 .up {
+  body .content .roadmap .container .con .stages .right .box1 .up {
     background: #282843;
     border: 2.2px solid #ffffff;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  body .roadmap .container .con .stages .right .box1 .up .con {
+  body .content .roadmap .container .con .stages .right .box1 .up .con {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4708,27 +4858,27 @@ p {
     height: 54px;
     padding-top: 0px;
   }
-  body .roadmap .container .con .stages .right .box1 .up .con .lefts p {
+  body .content .roadmap .container .con .stages .right .box1 .up .con .lefts p {
     font-family: "Brandon Grotesque Medium";
     font-size: 20px;
   }
-  body .roadmap .container .con .stages .right .box1 .up .con .rights img {
+  body .content .roadmap .container .con .stages .right .box1 .up .con .rights img {
     width: 18.13px;
     height: 18.56px;
   }
-  body .roadmap .container .con .stages .right .box1 .down {
+  body .content .roadmap .container .con .stages .right .box1 .down {
     background: #1f1f34;
   }
-  body .roadmap .container .con .stages .right .box1 .down .con {
+  body .content .roadmap .container .con .stages .right .box1 .down .con {
     width: 90%;
     padding-top: 10px;
   }
-  body .roadmap .container .con .stages .right .box1 .down .con p {
+  body .content .roadmap .container .con .stages .right .box1 .down .con p {
     font-family: "FuturaPTMedium";
     font-size: 14px;
     line-height: 23.8px;
   }
-  body .roadmap .container .con .stages .right .box2 {
+  body .content .roadmap .container .con .stages .right .box2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4741,13 +4891,13 @@ p {
     margin-left: 290%;
     margin-bottom: 5%;
   }
-  body .roadmap .container .con .stages .right .box2 .up {
+  body .content .roadmap .container .con .stages .right .box2 .up {
     background: #282843;
     border: 2.2px solid #ffffff;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  body .roadmap .container .con .stages .right .box2 .up .con {
+  body .content .roadmap .container .con .stages .right .box2 .up .con {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4762,27 +4912,27 @@ p {
     height: 54px;
     padding-top: 0px;
   }
-  body .roadmap .container .con .stages .right .box2 .up .con .lefts p {
+  body .content .roadmap .container .con .stages .right .box2 .up .con .lefts p {
     font-family: "Brandon Grotesque Medium";
     font-size: 20px;
   }
-  body .roadmap .container .con .stages .right .box2 .up .con .rights img {
+  body .content .roadmap .container .con .stages .right .box2 .up .con .rights img {
     width: 18.13px;
     height: 18.56px;
   }
-  body .roadmap .container .con .stages .right .box2 .down {
+  body .content .roadmap .container .con .stages .right .box2 .down {
     background: #1f1f34;
   }
-  body .roadmap .container .con .stages .right .box2 .down .con {
+  body .content .roadmap .container .con .stages .right .box2 .down .con {
     width: 90%;
     padding-top: 10px;
   }
-  body .roadmap .container .con .stages .right .box2 .down .con p {
+  body .content .roadmap .container .con .stages .right .box2 .down .con p {
     font-family: "FuturaPTMedium";
     font-size: 14px;
     line-height: 23.8px;
   }
-  body .roadmap .container .con .stages .right .box {
+  body .content .roadmap .container .con .stages .right .box {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4792,13 +4942,13 @@ p {
             flex-direction: column;
     width: 278px;
   }
-  body .roadmap .container .con .stages .right .box .up {
+  body .content .roadmap .container .con .stages .right .box .up {
     background: #282843;
     border: 2.2px solid #ffffff;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  body .roadmap .container .con .stages .right .box .up .con {
+  body .content .roadmap .container .con .stages .right .box .up .con {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4813,36 +4963,36 @@ p {
     height: 54px;
     padding-top: 0px;
   }
-  body .roadmap .container .con .stages .right .box .up .con .lefts p {
+  body .content .roadmap .container .con .stages .right .box .up .con .lefts p {
     font-family: "Brandon Grotesque Medium";
     font-size: 20px;
   }
-  body .roadmap .container .con .stages .right .box .up .con .rights img {
+  body .content .roadmap .container .con .stages .right .box .up .con .rights img {
     width: 18.13px;
     height: 18.56px;
   }
-  body .roadmap .container .con .stages .right .box .down {
+  body .content .roadmap .container .con .stages .right .box .down {
     background: #1f1f34;
   }
-  body .roadmap .container .con .stages .right .box .down .con {
+  body .content .roadmap .container .con .stages .right .box .down .con {
     width: 90%;
     padding-top: 10px;
   }
-  body .roadmap .container .con .stages .right .box .down .con p {
+  body .content .roadmap .container .con .stages .right .box .down .con p {
     font-family: "FuturaPTMedium";
     font-size: 14px;
     line-height: 23.8px;
   }
-  body .roadmapmobile {
+  body .content .roadmapmobile {
     display: none;
   }
-  body .game {
+  body .content .game {
     background-image: url(../img/metacarsgame.png);
     background-size: 100%;
     background-repeat: no-repeat;
     margin-top: 60px;
   }
-  body .game .container {
+  body .content .game .container {
     width: 80%;
     margin: auto;
     display: -webkit-box;
@@ -4853,26 +5003,26 @@ p {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  body .game .container .left {
+  body .content .game .container .left {
     -webkit-box-flex: 2.5;
         -ms-flex: 2.5;
             flex: 2.5;
   }
-  body .game .container .left .up p {
+  body .content .game .container .left .up p {
     font-family: "Brandon Grotesque Medium";
     font-size: 38px;
     margin-top: 150px;
   }
-  body .game .container .left .mid p {
+  body .content .game .container .left .mid p {
     font-family: "FuturaPTLight";
     line-height: 170%;
     font-size: 24px;
     padding-bottom: 60px;
   }
-  body .game .container .left .down {
+  body .content .game .container .left .down {
     margin-bottom: 300px;
   }
-  body .game .container .left .down a {
+  body .content .game .container .left .down a {
     font-family: "Brandon Grotesque Medium";
     font-size: 24px;
     background: -webkit-gradient(linear, left top, right top, from(#0f92f1), color-stop(105.43%, #04aff9));
@@ -4881,26 +5031,26 @@ p {
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-  body .game .container .left .down a:hover {
+  body .content .game .container .left .down a:hover {
     font-family: "Brandon Grotesque Medium";
     font-size: 26px;
     background: -webkit-gradient(linear, left top, right top, from(#0f92f1), color-stop(105.43%, #04aff9));
     background: linear-gradient(90deg, #0f92f1 0%, #04aff9 105.43%);
     padding: 13px 55px;
   }
-  body .game .container .right {
+  body .content .game .container .right {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
   }
-  body .contract .bxslider {
+  body .content .contract .bxslider {
     width: 100%;
     background-color: transparent;
     margin: 0px;
     padding: 0px;
     border: 0px;
   }
-  body .contract .bx-wrapper {
+  body .content .contract .bx-wrapper {
     height: 500px !important;
     background-color: transparent;
     margin: 0px;
@@ -4909,19 +5059,19 @@ p {
     -webkit-box-shadow: none;
             box-shadow: none;
   }
-  body .contract .bx-wrapper .bx-pager.bx-default-pager a:hover,
-  body .contract .bx-wrapper .bx-pager.bx-default-pager a.active,
-  body .contract .bx-wrapper .bx-pager.bx-default-pager a:focus {
+  body .content .contract .bx-wrapper .bx-pager.bx-default-pager a:hover,
+  body .content .contract .bx-wrapper .bx-pager.bx-default-pager a.active,
+  body .content .contract .bx-wrapper .bx-pager.bx-default-pager a:focus {
     background: #fff;
   }
-  body .contract img {
+  body .content .contract img {
     width: 100%;
     background-color: transparent;
     margin: 0px;
     padding: 0px;
     border: 0px;
   }
-  body .mcqueen {
+  body .content .mcqueen {
     padding-top: 150px;
     background-image: url(../img/foterroad.png);
     background-size: 100%;
@@ -4935,7 +5085,7 @@ p {
         -ms-flex-align: center;
             align-items: center;
   }
-  body .mcqueen img {
+  body .content .mcqueen img {
     display: block;
     margin: auto;
     width: 409px;
@@ -4948,10 +5098,10 @@ p {
     margin-top: 250px;
     padding-bottom: 310px;
   }
-  body .links {
+  body .content .links {
     margin-bottom: 50px;
   }
-  body .links .container {
+  body .content .links .container {
     width: 100%;
     margin: auto;
     -webkit-box-pack: justify;
@@ -4985,7 +5135,7 @@ p {
               transform: translateX(calc(-250px * 4));
     }
   }
-  body .links .container .slider {
+  body .content .links .container .slider {
     background: transparent;
     -webkit-box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
             box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
@@ -4995,17 +5145,17 @@ p {
     position: relative;
     width: 100%;
   }
-  body .links .container .slider::after {
+  body .content .links .container .slider::after {
     right: 0;
     top: 0;
     -webkit-transform: rotateZ(180deg);
             transform: rotateZ(180deg);
   }
-  body .links .container .slider::before {
+  body .content .links .container .slider::before {
     left: 0;
     top: 0;
   }
-  body .links .container .slider .slide-track {
+  body .content .links .container .slider .slide-track {
     -webkit-animation: scroll 40s linear infinite;
     animation: scroll 40s linear infinite;
     display: -webkit-box;
@@ -5013,10 +5163,10 @@ p {
     display: flex;
     width: 100%;
   }
-  body .links .container .slider .slide img {
+  body .content .links .container .slider .slide img {
     margin: 0px 50px;
   }
-  body .links .container .slider .slide .img1 {
+  body .content .links .container .slider .slide .img1 {
     width: 224px;
     height: 35px;
     -webkit-transition: 0.3s ease;
@@ -5025,12 +5175,12 @@ p {
     opacity: 0.7;
     margin-right: 0px;
   }
-  body .links .container .slider .slide .img1:hover {
+  body .content .links .container .slider .slide .img1:hover {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
     opacity: 1;
   }
-  body .links .container .slider .slide .img2 {
+  body .content .links .container .slider .slide .img2 {
     width: 243px;
     height: 41px;
     -webkit-transition: 0.3s ease;
@@ -5039,24 +5189,24 @@ p {
     opacity: 0.7;
     margin-right: 50px;
   }
-  body .links .container .slider .slide .img2:hover {
+  body .content .links .container .slider .slide .img2:hover {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
     opacity: 1;
   }
-  body .links .container .slider .slide .img3 {
+  body .content .links .container .slider .slide .img3 {
     width: 181px;
     height: 49px;
     -webkit-transition: 0.3s ease;
     transition: 0.3s ease;
     opacity: 0.7;
   }
-  body .links .container .slider .slide .img3:hover {
+  body .content .links .container .slider .slide .img3:hover {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
     opacity: 1;
   }
-  body .links .container .slider .slide .img4 {
+  body .content .links .container .slider .slide .img4 {
     width: 152px;
     height: 22px;
     -webkit-transition: 0.3s ease;
@@ -5064,24 +5214,24 @@ p {
     margin-top: 9px;
     opacity: 0.7;
   }
-  body .links .container .slider .slide .img4:hover {
+  body .content .links .container .slider .slide .img4:hover {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
     opacity: 1;
   }
-  body .links .container .slider .slide .img5 {
+  body .content .links .container .slider .slide .img5 {
     width: 211px;
     height: 43px;
     -webkit-transition: 0.3s ease;
     transition: 0.3s ease;
     opacity: 0.7;
   }
-  body .links .container .slider .slide .img5:hover {
+  body .content .links .container .slider .slide .img5:hover {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
     opacity: 1;
   }
-  body footer {
+  body .content footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -5094,7 +5244,7 @@ p {
     background-size: 100%;
     background-repeat: no-repeat;
   }
-  body footer .up {
+  body .content footer .up {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -5106,13 +5256,13 @@ p {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  body footer .up .left img {
+  body .content footer .up .left img {
     width: 329px;
     height: 261px;
     margin-top: 458px;
     margin-left: 15px;
   }
-  body footer .up .mid .down {
+  body .content footer .up .mid .down {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -5124,7 +5274,7 @@ p {
     margin-top: 650px;
     margin-left: -30px;
   }
-  body footer .up .mid .down .socials {
+  body .content footer .up .mid .down .socials {
     margin: 0;
     padding: 0;
     margin-left: -5px;
@@ -5132,11 +5282,11 @@ p {
     margin-top: 60px;
     margin-bottom: 60px;
   }
-  body footer .up .mid .down .socials a {
+  body .content footer .up .mid .down .socials a {
     margin: 0;
     padding: 0;
   }
-  body footer .up .mid .down .socials a .s1 {
+  body .content footer .up .mid .down .socials a .s1 {
     width: 25px;
     height: 25px;
     padding: 12px 15px;
@@ -5149,11 +5299,11 @@ p {
     -webkit-transition: background-color 0.5s;
     transition: background-color 0.5s;
   }
-  body footer .up .mid .down .socials a .s1:hover {
+  body .content footer .up .mid .down .socials a .s1:hover {
     opacity: 1;
     background-color: #0097ec;
   }
-  body footer .up .mid .down .socials a .s2 {
+  body .content footer .up .mid .down .socials a .s2 {
     width: 25px;
     height: 25px;
     padding: 12px 15px;
@@ -5166,11 +5316,11 @@ p {
     -webkit-transition: background-color 0.5s;
     transition: background-color 0.5s;
   }
-  body footer .up .mid .down .socials a .s2:hover {
+  body .content footer .up .mid .down .socials a .s2:hover {
     opacity: 1;
     background-color: #0097ec;
   }
-  body footer .up .mid .down .socials a .s3 {
+  body .content footer .up .mid .down .socials a .s3 {
     width: 25px;
     height: 25px;
     padding: 12px 15px;
@@ -5183,11 +5333,11 @@ p {
     -webkit-transition: background-color 0.5s;
     transition: background-color 0.5s;
   }
-  body footer .up .mid .down .socials a .s3:hover {
+  body .content footer .up .mid .down .socials a .s3:hover {
     opacity: 1;
     background-color: #0097ec;
   }
-  body footer .up .mid .down .socials a .s4 {
+  body .content footer .up .mid .down .socials a .s4 {
     width: 25px;
     height: 25px;
     padding: 12px 15px;
@@ -5200,25 +5350,59 @@ p {
     -webkit-transition: background-color 0.5s;
     transition: background-color 0.5s;
   }
-  body footer .up .mid .down .socials a .s4:hover {
+  body .content footer .up .mid .down .socials a .s4:hover {
     opacity: 1;
     background-color: #0097ec;
   }
-  body footer .up .right img {
+  body .content footer .up .right img {
     width: 329px;
     height: 444px;
     margin-top: 300px;
   }
-  body footer .downs {
+  body .content footer .downs {
     text-align: center;
     background: #0f84df;
   }
-  body footer .downs p {
+  body .content footer .downs p {
     margin-top: 14px;
     margin-bottom: 14px;
     font-family: "FuturaPTMedium";
     font-size: 18px;
     line-height: 23.91px;
+  }
+  body .loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #242f3f;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .loader-wrapper .loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #Fff;
+    -webkit-animation: loader 2s infinite ease;
+            animation: loader 2s infinite ease;
+  }
+  body .loader-wrapper .loader .loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    -webkit-animation: loader-inner 2s infinite ease-in;
+            animation: loader-inner 2s infinite ease-in;
   }
 }
 /*# sourceMappingURL=style.css.map */
