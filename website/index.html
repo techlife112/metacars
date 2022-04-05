@@ -861,13 +861,31 @@
       </footer>
     </div>
 
-    <div class="loader-wrapper">
-      <span class="loader"><span class="loader-inner"></span></span>
+    <div id="loader-wrapper" style="/*! display: none; */">
+      <div class="loader">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="subline"></div>
+        <div class="subline"></div>
+        <div class="subline"></div>
+        <div class="subline"></div>
+        <div class="subline"></div>
+        <div class="loader-circle-1">
+          <div class="loader-circle-2"></div>
+        </div>
+        <div class="needle"></div>
+        <div class="loading">MetaCars</div>
+      </div>
     </div>
+
 
     <script>
       $(window).on("load", function () {
-        $(".loader-wrapper").fadeOut("slow");
+        $("#loader-wrapper").delay(2900).fadeOut("slow");
       });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
