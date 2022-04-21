@@ -19,6 +19,10 @@
   src: url(../fonts/Brandon/Brandon_bld.otf);
 }
 @font-face {
+  font-family: "Brandon Grotesque Light";
+  src: url(../fonts/Brandon/Brandon_light.otf);
+}
+@font-face {
   font-family: "Brandon Grotesque Regular";
   src: url(../fonts/Brandon/Brandon_reg.otf);
 }
@@ -69,8 +73,15 @@ p {
   }
 }
 @keyframes flip {
-  0%,85% {
-    transform: rotateY(360deg) 
+  0%,
+  85% {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes flip2 {
+  0%,
+  85% {
+    transform: rotateY(360deg);
   }
 }
 @media only screen and (max-width: 669px) {
@@ -84,8 +95,8 @@ p {
     background-color: black;
     .content {
       .firstpart {
-        background-image: url(../img/firstbg.png);
-        background-size: 120%;
+        background-image: url(../img/firstbgrespo.png);
+        background-size: 100%;
         background-repeat: no-repeat;
         background-position: center;
         display: flex;
@@ -142,8 +153,55 @@ p {
             filter: drop-shadow(0px 5px 18px black);
           }
         }
+        .txtphoto {
+          text-align: center;
+          .txt1 {
+            margin-top: 70px;
+            .waviy {
+              position: relative;
+            }
+            .waviy span {
+              font-family: "Brandon Grotesque Light";
+              font-size: 16.25px;
+              line-height: 89px;
+              letter-spacing: 0.25em;
+              text-transform: uppercase;
+              color: #ffffff;
+              text-shadow: -1px 2px 6px rgba(0, 0, 0, 0.73);
+              margin-bottom: -300px;
+
+              display: inline-block;
+
+              color: #fff;
+              animation: flip2 5s infinite;
+              animation-delay: calc(0.2s * var(--i));
+            }
+          }
+          .txt2 {
+            margin-top: -50px;
+            .waviy {
+              position: relative;
+            }
+            .waviy span {
+              font-family: "Brandon Grotesque black";
+              font-size: 25px;
+              line-height: 143px;
+              letter-spacing: 0.2em;
+              text-transform: uppercase;
+              color: #ffffff;
+              text-shadow: -1px 2px 6px rgba(0, 0, 0, 0.73);
+              padding-bottom: 0px;
+
+              display: inline-block;
+
+              color: #fff;
+              animation: flip2 5s infinite;
+              animation-delay: calc(0.2s * var(--i));
+            }
+          }
+        }
         .bg {
-          height: 320px;
+          height: 120px;
         }
       }
 
@@ -158,20 +216,10 @@ p {
           display: flex;
           flex-direction: column;
           .up {
-            
-            .waviy {
-              position: relative;
-            }
-            .waviy span {
+            p {
               font-family: "Brandon Grotesque Medium";
-            margin-top: 140px;
-            font-size: 24px;
-              
-              display: inline-block;
-              
-              color: #fff;
-              animation: flip 5s infinite;
-              animation-delay: calc(.2s * var(--i))
+              margin-top: 140px;
+              font-size: 20px;
             }
           }
           .mid {
@@ -898,82 +946,190 @@ p {
         }
         .downimg {
           width: 100%;
-          margin-top: -1px;
+          margin-top: -5px;
         }
-        .container {
+        // .container {
+        //   background-image: url(../img/roadmapbgmobile.png);
+        //   background-size: 100%;
+        //   .con {
+        //     width: 90%;
+        //     margin: auto;
+        //     justify-content: center;
+        //     align-items: center;
+        //     padding-top: 50px;
+        //     img {
+        //       display: block;
+        //       margin: auto;
+        //       width: 219px;
+        //     }
+
+        //     .stages {
+        //       display: flex;
+        //       flex-direction: row;
+        //       padding-top: 90px;
+        //       justify-content: center;
+        //       align-items: center;
+        //       text-align: start;
+        //       flex-wrap: wrap;
+
+              // .left {
+              //   .box1 {
+              //     display: flex;
+              //     flex-direction: column;
+              //     width: 278px;
+              //     margin-bottom: 5%;
+              //     .up {
+              //       background: #282843;
+              //       border: 2.2px solid #ffffff;
+              //       box-sizing: border-box;
+
+              //       .con {
+              //         display: flex;
+              //         flex-direction: row;
+              //         justify-content: space-between;
+              //         width: 90%;
+              //         height: 54px;
+              //         padding-top: 0px;
+              //         .lefts {
+              //           p {
+              //             font-family: "Brandon Grotesque Medium";
+              //             font-size: 20px;
+              //           }
+              //         }
+              //         .rights {
+              //           img {
+              //             width: 18.13px;
+              //             height: 18.56px;
+              //           }
+              //         }
+              //       }
+              //     }
+
+              //     .down {
+              //       background: #1f1f34;
+              //       .con {
+              //         width: 90%;
+              //         padding-top: 10px;
+              //         p {
+              //           font-family: "FuturaPTMedium";
+              //           font-size: 18px;
+              //           line-height: 23.8px;
+              //         }
+              //       }
+              //     }
+              //   }
+              // }
+        //     }
+        //   }
+        // }
+
+        .slideshow-container {
+          position: relative;
           background-image: url(../img/roadmapbgmobile.png);
-          background-size: 100%;
-          .con {
-            width: 90%;
-            margin: auto;
-            justify-content: center;
-            align-items: center;
-            padding-top: 50px;
-            img {
-              display: block;
-              margin: auto;
-              width: 219px;
+          background-size: 100% ;
+          background-repeat: repeat;
+          margin-bottom: -10px;
+        }
+        
+        /* Slides */
+        .mySlides {
+          display: none;
+          padding: 80px;
+          text-align: center;
+          .box1 {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin: 0 auto;
+            margin-bottom: 5%;
+            .up {
+              background: #282843;
+              border: 2.2px solid #ffffff;
+              box-sizing: border-box;
+
+              .con {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 90%;
+                height: 54px;
+                padding-top: 0px;
+                .lefts {
+                  p {
+                    font-family: "Brandon Grotesque Medium";
+                    font-size: 20px;
+                  }
+                }
+                .rights {
+                  img {
+                    margin-top: 20px;
+                    width: 18.13px;
+                    height: 18.56px;
+                  }
+                }
+              }
             }
 
-            .stages {
-              display: flex;
-              flex-direction: row;
-              padding-top: 90px;
-              justify-content: center;
-              align-items: center;
-              text-align: start;
-              flex-wrap: wrap;
-
-              .left {
-                .box1 {
-                  display: flex;
-                  flex-direction: column;
-                  width: 278px;
-                  margin-bottom: 5%;
-                  .up {
-                    background: #282843;
-                    border: 2.2px solid #ffffff;
-                    box-sizing: border-box;
-
-                    .con {
-                      display: flex;
-                      flex-direction: row;
-                      justify-content: space-between;
-                      width: 90%;
-                      height: 54px;
-                      padding-top: 0px;
-                      .lefts {
-                        p {
-                          font-family: "Brandon Grotesque Medium";
-                          font-size: 20px;
-                        }
-                      }
-                      .rights {
-                        img {
-                          width: 18.13px;
-                          height: 18.56px;
-                        }
-                      }
-                    }
-                  }
-
-                  .down {
-                    background: #1f1f34;
-                    .con {
-                      width: 90%;
-                      padding-top: 10px;
-                      p {
-                        font-family: "FuturaPTMedium";
-                        font-size: 18px;
-                        line-height: 23.8px;
-                      }
-                    }
-                  }
+            .down {
+              background: #1f1f34;
+              
+              .con {
+                width: 90%;
+                padding-top: 10px;
+                p {
+                  font-family: "FuturaPTMedium";
+                  font-size: 18px;
+                  line-height: 23.8px;
                 }
               }
             }
           }
         }
+        
+        /* Next & previous buttons */
+        .prev, .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          margin-top: -30px;
+          padding: 16px;
+          color: rgb(4, 0, 226);
+          font-weight: bold;
+          font-size: 40px;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+        }
+        
+        /* Position the "next button" to the right */
+        .next {
+          position: absolute;
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+        
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+          background-color: rgba(0, 28, 119, 0.8);
+          color: rgb(0, 217, 255);
+        }
+        
+        /* The dot/bullet/indicator container */
+        .dot-container {
+            text-align: center;
+            padding: 20px;
+            background: #ddd;
+        }
+        
+        /* The dots/bullets/indicators */
+        
+        
+        /* Add an italic font style to all quotes */
+        q {font-style: italic;}
+        
+        /* Add a blue color to the author */
+        .author {color: cornflowerblue;}
+
       }
 
       .roadmap {
@@ -1351,6 +1507,153 @@ p {
         }
       }
 
+      .team {
+        background-image: url(../img/bgteam.png);
+        background-size: 100%;
+        background-repeat: repeat;
+        .container {
+          width: 80%;
+          margin: 0 auto;
+          .up {
+            p {
+              font-family: "Brandon Grotesque Medium";
+              font-size: 38px;
+              text-align: start;
+              margin-bottom: 40px;
+            }
+          }
+          .down{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            .box{
+              display: flex;
+              flex-direction: column;
+              text-align: center;
+              .up{
+                img{
+                  width: 226px;
+                  height: 226px;
+                } 
+              }
+              .mid{
+                text-align: center;
+                .title{
+                  font-family: "Brandon Grotesque Bold";
+                  font-size: 20px;
+                  color: #fff;
+                  margin-top: 5px;
+                }
+                .position{
+                  font-family: "Brandon Grotesque Medium";
+                  font-size: 18px;
+                  color:#59cbff;
+                  margin-top: -20px;
+                  margin-bottom: 5px;
+                }
+              }
+              .txt{
+                background: rgba(35, 34, 34, 0.38);
+                width: 200px;
+                padding: 0px 6px 0px 6px ;
+                margin: 0 auto;
+                text-align: start;
+                p{
+                  font-family: "Brandon Grotesque Regular";
+                  font-size: 14px;
+                  color: #fff;
+                  
+
+                }
+              }
+              .socials {
+                margin: 0;
+                padding: 0;
+                margin-left: -5px;
+                margin-right: -5px;
+                margin-top: 5px;
+                margin-bottom: 60px;
+                a {
+                  margin: 0;
+                  padding: 0;
+  
+                  .s1 {
+                    width: 15px;
+                    height: 15px;
+                    padding: 12px 15px;
+                    margin: 0;
+                    margin-left: -1px;
+                    margin-right: -1px;
+                    background: #282a2e;
+                    border: 1.3px solid #ffffff;
+                    opacity: 0.8;
+                    transition: background-color 0.5s;
+  
+                    &:hover {
+                      opacity: 1;
+                      background-color: #0097ec;
+                    }
+                  }
+                  .s2 {
+                    width: 15px;
+                    height: 15px;
+                    padding: 12px 15px;
+                    margin: 0;
+                    margin-left: -4px;
+                    margin-right: -1px;
+                    background: #282a2e;
+                    border: 1.3px solid #ffffff;
+                    opacity: 0.8;
+                    transition: background-color 0.5s;
+  
+                    &:hover {
+                      opacity: 1;
+                      background-color: #0097ec;
+                    }
+                  }
+                  .s3 {
+                    width: 15px;
+                    height: 15px;
+                    padding: 12px 15px;
+                    margin: 0;
+                    margin-left: -4px;
+                    margin-right: -1px;
+                    background: #282a2e;
+                    border: 1.3px solid #ffffff;
+                    opacity: 0.8;
+                    transition: background-color 0.5s;
+  
+                    &:hover {
+                      opacity: 1;
+                      background-color: #0097ec;
+                    }
+                  }
+                  .s4 {
+                    width: 15px;
+                    height: 15px;
+                    padding: 12px 15px;
+                    margin: 0;
+                    margin-left: -4px;
+                    margin-right: -1px;
+                    background: #282a2e;
+                    border: 1.3px solid #ffffff;
+                    opacity: 0.8;
+                    transition: background-color 0.5s;
+  
+                    &:hover {
+                      opacity: 1;
+                      background-color: #0097ec;
+                    }
+                  }
+                }
+              }
+
+            }
+          }
+        }
+      }
+
       .contract {
         margin .bxslider {
           width: 100%;
@@ -1717,7 +2020,7 @@ p {
       background: #000;
       z-index: 15000;
       overflow: hidden;
-      
+
       .loader {
         width: 150px;
         height: 150px;
@@ -1727,17 +2030,17 @@ p {
         top: 50%;
         margin: -75px 0 0 -75px;
         border-radius: 50%;
-        .loader-circle-1{
-          width:138px;
-          height:138px;
-          left:5px;
-          top:5px;
-          border:1px #fff solid;
-          border-radius:50%;
-          position:absolute;
-          border-right-color:transparent;
-          -webkit-animation:spin 3s linear infinite;
-          animation:spin 3s linear infinite;
+        .loader-circle-1 {
+          width: 138px;
+          height: 138px;
+          left: 5px;
+          top: 5px;
+          border: 1px #fff solid;
+          border-radius: 50%;
+          position: absolute;
+          border-right-color: transparent;
+          -webkit-animation: spin 3s linear infinite;
+          animation: spin 3s linear infinite;
           .loader-circle-2 {
             width: 126px;
             height: 126px;
@@ -1877,7 +2180,7 @@ p {
           z-index: 1;
           -webkit-animation: pegIt 3s infinite ease-in-out;
           animation: pegIt 3s infinite ease-in-out;
-          &::before{
+          &::before {
             content: "";
             width: 0;
             height: 0;
@@ -1891,7 +2194,6 @@ p {
             border-radius: 0 50% 50% 0;
           }
         }
-
       }
     }
   }
@@ -1966,9 +2268,54 @@ p {
             filter: drop-shadow(0px 5px 18px black);
           }
         }
+        .txtphoto {
+          text-align: center;
+          .txt1 {
+            .waviy {
+              position: relative;
+            }
+            .waviy span {
+              font-family: "Brandon Grotesque Light";
+              font-size: 32.5px;
+              line-height: 89px;
+              letter-spacing: 0.25em;
+              text-transform: uppercase;
+              color: #ffffff;
+              text-shadow: -1px 2px 6px rgba(0, 0, 0, 0.73);
+              margin-bottom: -100px;
+              margin-top: 250px;
 
+              display: inline-block;
+
+              color: #fff;
+              animation: flip2 5s infinite;
+              animation-delay: calc(0.2s * var(--i));
+            }
+          }
+          .txt2 {
+            .waviy {
+              position: relative;
+            }
+            .waviy span {
+              font-family: "Brandon Grotesque black";
+              font-size: 50px;
+              line-height: 143px;
+              letter-spacing: 0.2em;
+              text-transform: uppercase;
+              color: #ffffff;
+              text-shadow: -1px 2px 6px rgba(0, 0, 0, 0.73);
+              margin-bottom: 0px;
+
+              display: inline-block;
+
+              color: #fff;
+              animation: flip2 5s infinite;
+              animation-delay: calc(0.2s * var(--i));
+            }
+          }
+        }
         .bg {
-          height: 700px;
+          height: 200px;
         }
       }
 
@@ -1983,20 +2330,10 @@ p {
           display: flex;
           flex-direction: column;
           .up {
-            
-            .waviy {
-              position: relative;
-            }
-            .waviy span {
+            p {
               font-family: "Brandon Grotesque Medium";
-            margin-top: 80px;
-            font-size: 38px;
-              
-              display: inline-block;
-              
-              color: #fff;
-              animation: flip 5s infinite;
-              animation-delay: calc(.2s * var(--i))
+              margin-top: 80px;
+              font-size: 38px;
             }
           }
           .mid {
@@ -2723,80 +3060,187 @@ p {
           width: 100%;
           margin-top: -1px;
         }
-        .container {
+        // .container {
+        //   background-image: url(../img/roadmapbgmobile.png);
+        //   background-size: 100%;
+        //   .con {
+        //     width: 90%;
+        //     margin: auto;
+        //     justify-content: center;
+        //     align-items: center;
+        //     padding-top: 50px;
+        //     img {
+        //       display: block;
+        //       margin: auto;
+        //       width: 219px;
+        //     }
+
+        //     .stages {
+        //       display: flex;
+        //       flex-direction: row;
+        //       padding-top: 90px;
+        //       justify-content: center;
+        //       align-items: center;
+        //       text-align: start;
+        //       flex-wrap: wrap;
+
+        //       .left {
+        //         .box1 {
+        //           display: flex;
+        //           flex-direction: column;
+        //           width: 278px;
+        //           margin-bottom: 5%;
+        //           .up {
+        //             background: #282843;
+        //             border: 2.2px solid #ffffff;
+        //             box-sizing: border-box;
+
+        //             .con {
+        //               display: flex;
+        //               flex-direction: row;
+        //               justify-content: space-between;
+        //               width: 90%;
+        //               height: 54px;
+        //               padding-top: 0px;
+        //               .lefts {
+        //                 p {
+        //                   font-family: "Brandon Grotesque Medium";
+        //                   font-size: 20px;
+        //                 }
+        //               }
+        //               .rights {
+        //                 img {
+        //                   width: 18.13px;
+        //                   height: 18.56px;
+        //                 }
+        //               }
+        //             }
+        //           }
+
+        //           .down {
+        //             background: #1f1f34;
+        //             .con {
+        //               width: 90%;
+        //               padding-top: 10px;
+        //               p {
+        //                 font-family: "FuturaPTMedium";
+        //                 font-size: 18px;
+        //                 line-height: 23.8px;
+        //               }
+        //             }
+        //           }
+        //         }
+        //       }
+        //     }
+        //   }
+        // }
+        .slideshow-container {
+          position: relative;
           background-image: url(../img/roadmapbgmobile.png);
-          background-size: 100%;
-          .con {
-            width: 90%;
-            margin: auto;
-            justify-content: center;
-            align-items: center;
-            padding-top: 50px;
-            img {
-              display: block;
-              margin: auto;
-              width: 219px;
+          background-size: 100% ;
+          background-repeat: repeat;
+          margin-bottom: -10px;
+        }
+        
+        /* Slides */
+        .mySlides {
+          display: none;
+          padding: 80px;
+          text-align: center;
+          .box1 {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin: 0 auto;
+            margin-bottom: 5%;
+            .up {
+              background: #282843;
+              border: 2.2px solid #ffffff;
+              box-sizing: border-box;
+
+              .con {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 90%;
+                height: 54px;
+                padding-top: 0px;
+                .lefts {
+                  p {
+                    font-family: "Brandon Grotesque Medium";
+                    font-size: 20px;
+                    margin-left: 15px;
+                  }
+                }
+                .rights {
+                  img {
+                    margin-top: 20px;
+                    width: 18.13px;
+                    height: 18.56px;
+                  }
+                }
+              }
             }
 
-            .stages {
-              display: flex;
-              flex-direction: row;
-              padding-top: 90px;
-              justify-content: center;
-              align-items: center;
-              text-align: start;
-              flex-wrap: wrap;
-
-              .left {
-                .box1 {
-                  display: flex;
-                  flex-direction: column;
-                  width: 278px;
-                  margin-bottom: 5%;
-                  .up {
-                    background: #282843;
-                    border: 2.2px solid #ffffff;
-                    box-sizing: border-box;
-
-                    .con {
-                      display: flex;
-                      flex-direction: row;
-                      justify-content: space-between;
-                      width: 90%;
-                      height: 54px;
-                      padding-top: 0px;
-                      .lefts {
-                        p {
-                          font-family: "Brandon Grotesque Medium";
-                          font-size: 20px;
-                        }
-                      }
-                      .rights {
-                        img {
-                          width: 18.13px;
-                          height: 18.56px;
-                        }
-                      }
-                    }
-                  }
-
-                  .down {
-                    background: #1f1f34;
-                    .con {
-                      width: 90%;
-                      padding-top: 10px;
-                      p {
-                        font-family: "FuturaPTMedium";
-                        font-size: 18px;
-                        line-height: 23.8px;
-                      }
-                    }
-                  }
+            .down {
+              background: #1f1f34;
+              
+              .con {
+                width: 90%;
+                padding-top: 10px;
+                p {
+                  font-family: "FuturaPTMedium";
+                  font-size: 18px;
+                  line-height: 23.8px;
                 }
               }
             }
           }
         }
+        
+        /* Next & previous buttons */
+        .prev, .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          margin-top: -30px;
+          padding: 16px;
+          color: rgb(4, 0, 226);
+          font-weight: bold;
+          font-size: 40px;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+        }
+        
+        /* Position the "next button" to the right */
+        .next {
+          position: absolute;
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+        
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+          background-color: rgba(0, 28, 119, 0.8);
+          color: rgb(0, 217, 255);
+        }
+        
+        /* The dot/bullet/indicator container */
+        .dot-container {
+            text-align: center;
+            padding: 20px;
+            background: #ddd;
+        }
+        
+        /* The dots/bullets/indicators */
+        
+        
+        /* Add an italic font style to all quotes */
+        q {font-style: italic;}
+        
+        /* Add a blue color to the author */
+        .author {color: cornflowerblue;}
       }
 
       .roadmap {
@@ -3174,6 +3618,152 @@ p {
         }
       }
 
+      .team {
+        background-image: url(../img/bgteam.png);
+        background-size: 100%;
+        background-repeat: repeat;
+        .container {
+          width: 80%;
+          margin: 0 auto;
+          .up {
+            p {
+              font-family: "Brandon Grotesque Medium";
+              font-size: 38px;
+              text-align: start;
+              margin-bottom: 40px;
+            }
+          }
+          .down{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .box{
+              display: flex;
+              flex-direction: column;
+              text-align: center;
+              .up{
+                img{
+                  width: 226px;
+                  height: 226px;
+                } 
+              }
+              .mid{
+                text-align: center;
+                .title{
+                  font-family: "Brandon Grotesque Bold";
+                  font-size: 20px;
+                  color: #fff;
+                  margin-top: 5px;
+                }
+                .position{
+                  font-family: "Brandon Grotesque Medium";
+                  font-size: 18px;
+                  color:#59cbff;
+                  margin-top: -20px;
+                  margin-bottom: 5px;
+                }
+              }
+              .txt{
+                background: rgba(35, 34, 34, 0.38);
+                width: 200px;
+                padding: 0px 6px 0px 6px ;
+                text-align: start;
+                margin: 0 auto;
+                p{
+                  font-family: "Brandon Grotesque Regular";
+                  font-size: 14px;
+                  color: #fff;
+
+                }
+              }
+              .socials {
+                margin: 0;
+                padding: 0;
+                margin-left: -5px;
+                margin-right: -5px;
+                margin-top: 5px;
+                margin-bottom: 60px;
+                a {
+                  margin: 0;
+                  padding: 0;
+  
+                  .s1 {
+                    width: 15px;
+                    height: 15px;
+                    padding: 12px 15px;
+                    margin: 0;
+                    margin-left: -1px;
+                    margin-right: -1px;
+                    background: #282a2e;
+                    border: 1.3px solid #ffffff;
+                    opacity: 0.8;
+                    transition: background-color 0.5s;
+  
+                    &:hover {
+                      opacity: 1;
+                      background-color: #0097ec;
+                    }
+                  }
+                  .s2 {
+                    width: 15px;
+                    height: 15px;
+                    padding: 12px 15px;
+                    margin: 0;
+                    margin-left: -4px;
+                    margin-right: -1px;
+                    background: #282a2e;
+                    border: 1.3px solid #ffffff;
+                    opacity: 0.8;
+                    transition: background-color 0.5s;
+  
+                    &:hover {
+                      opacity: 1;
+                      background-color: #0097ec;
+                    }
+                  }
+                  .s3 {
+                    width: 15px;
+                    height: 15px;
+                    padding: 12px 15px;
+                    margin: 0;
+                    margin-left: -4px;
+                    margin-right: -1px;
+                    background: #282a2e;
+                    border: 1.3px solid #ffffff;
+                    opacity: 0.8;
+                    transition: background-color 0.5s;
+  
+                    &:hover {
+                      opacity: 1;
+                      background-color: #0097ec;
+                    }
+                  }
+                  .s4 {
+                    width: 15px;
+                    height: 15px;
+                    padding: 12px 15px;
+                    margin: 0;
+                    margin-left: -4px;
+                    margin-right: -1px;
+                    background: #282a2e;
+                    border: 1.3px solid #ffffff;
+                    opacity: 0.8;
+                    transition: background-color 0.5s;
+  
+                    &:hover {
+                      opacity: 1;
+                      background-color: #0097ec;
+                    }
+                  }
+                }
+              }
+
+            }
+          }
+        }
+      }
+
       .contract {
         margin .bxslider {
           width: 100%;
@@ -3542,7 +4132,7 @@ p {
       background: #000;
       z-index: 15000;
       overflow: hidden;
-      
+
       .loader {
         width: 300px;
         height: 300px;
@@ -3552,17 +4142,17 @@ p {
         top: 50%;
         margin: -150px 0 0 -150px;
         border-radius: 50%;
-        .loader-circle-1{
-          width:276px;
-          height:276px;
-          left:10px;
-          top:10px;
-          border:1px #fff solid;
-          border-radius:50%;
-          position:absolute;
-          border-right-color:transparent;
-          -webkit-animation:spin 3s linear infinite;
-          animation:spin 3s linear infinite;
+        .loader-circle-1 {
+          width: 276px;
+          height: 276px;
+          left: 10px;
+          top: 10px;
+          border: 1px #fff solid;
+          border-radius: 50%;
+          position: absolute;
+          border-right-color: transparent;
+          -webkit-animation: spin 3s linear infinite;
+          animation: spin 3s linear infinite;
           .loader-circle-2 {
             width: 252px;
             height: 252px;
@@ -3702,7 +4292,7 @@ p {
           z-index: 1;
           -webkit-animation: pegIt 3s infinite ease-in-out;
           animation: pegIt 3s infinite ease-in-out;
-          &::before{
+          &::before {
             content: "";
             width: 0;
             height: 0;
@@ -3716,7 +4306,6 @@ p {
             border-radius: 0 50% 50% 0;
           }
         }
-
       }
     }
   }
@@ -3759,7 +4348,7 @@ p {
                   font-family: "FuturaPTHeavy";
                   font-size: 16px;
                   padding-top: 10px;
-                  color: #ffffff;
+                  color: #43b1ff;
                   transform: scale(1.05);
                 }
               }
@@ -3773,8 +4362,54 @@ p {
         .navmobile {
           display: none;
         }
+        .txtphoto {
+          text-align: center;
+          .txt1 {
+            .waviy {
+              position: relative;
+            }
+            .waviy span {
+              font-family: "Brandon Grotesque Light";
+              font-size: 62.5px;
+              line-height: 89px;
+              letter-spacing: 0.5em;
+              text-transform: uppercase;
+              color: #ffffff;
+              text-shadow: -1px 2px 6px rgba(0, 0, 0, 0.73);
+              margin-bottom: -100px;
+              margin-top: 250px;
+
+              display: inline-block;
+
+              color: #fff;
+              animation: flip2 5s infinite;
+              animation-delay: calc(0.2s * var(--i));
+            }
+          }
+          .txt2 {
+            .waviy {
+              position: relative;
+            }
+            .waviy span {
+              font-family: "Brandon Grotesque black";
+              font-size: 100px;
+              line-height: 143px;
+              letter-spacing: 0.325em;
+              text-transform: uppercase;
+              color: #ffffff;
+              text-shadow: -1px 2px 6px rgba(0, 0, 0, 0.73);
+              margin-bottom: 200px;
+
+              display: inline-block;
+
+              color: #fff;
+              animation: flip2 5s infinite;
+              animation-delay: calc(0.2s * var(--i));
+            }
+          }
+        }
         .bg {
-          height: 980px;
+          height: 200px;
         }
       }
 
@@ -3789,20 +4424,10 @@ p {
           display: flex;
           flex-direction: column;
           .up {
-            
-            .waviy {
-              position: relative;
-            }
-            .waviy span {
+            p {
               font-family: "Brandon Grotesque Medium";
               margin-top: 80px;
               font-size: 38px;
-              
-              display: inline-block;
-              
-              color: #fff;
-              animation: flip 5s infinite;
-              animation-delay: calc(.2s * var(--i))
             }
           }
           .mid {
@@ -4876,6 +5501,151 @@ p {
         }
       }
 
+      .team {
+        background-image: url(../img/bgteam.png);
+        background-size: 100% 100%;
+        .container {
+          width: 80%;
+          margin: 0 auto;
+          .up {
+            p {
+              font-family: "Brandon Grotesque Medium";
+              font-size: 38px;
+              text-align: start;
+              margin-bottom: 40px;
+            }
+          }
+          .down{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .box{
+              display: flex;
+              flex-direction: column;
+              text-align: center;
+              .up{
+                img{
+                  width: 226px;
+                  height: 226px;
+                } 
+              }
+              .mid{
+                text-align: center;
+                .title{
+                  font-family: "Brandon Grotesque Bold";
+                  font-size: 24px;
+                  color: #fff;
+                  margin-top: 5px;
+                }
+                .position{
+                  font-family: "Brandon Grotesque Medium";
+                  font-size: 22px;
+                  color:#59cbff;
+                  margin-top: -20px;
+                  margin-bottom: 5px;
+                }
+              }
+              .txt{
+                background: rgba(35, 34, 34, 0.38);
+                width: 200px;
+                padding: 0px 6px 0px 6px ;
+                text-align: start;
+                margin: 0 auto;
+                p{
+                  font-family: "Brandon Grotesque Regular";
+                  font-size: 16px;
+                  color: #fff;
+
+                }
+              }
+              .socials {
+                margin: 0;
+                padding: 0;
+                margin-left: -5px;
+                margin-right: -5px;
+                margin-top: 15px;
+                margin-bottom: 60px;
+                a {
+                  margin: 0;
+                  padding: 0;
+  
+                  .s1 {
+                    width: 15px;
+                    height: 15px;
+                    padding: 12px 15px;
+                    margin: 0;
+                    margin-left: -1px;
+                    margin-right: -1px;
+                    background: #282a2e;
+                    border: 1.3px solid #ffffff;
+                    opacity: 0.8;
+                    transition: background-color 0.5s;
+  
+                    &:hover {
+                      opacity: 1;
+                      background-color: #0097ec;
+                    }
+                  }
+                  .s2 {
+                    width: 15px;
+                    height: 15px;
+                    padding: 12px 15px;
+                    margin: 0;
+                    margin-left: -4px;
+                    margin-right: -1px;
+                    background: #282a2e;
+                    border: 1.3px solid #ffffff;
+                    opacity: 0.8;
+                    transition: background-color 0.5s;
+  
+                    &:hover {
+                      opacity: 1;
+                      background-color: #0097ec;
+                    }
+                  }
+                  .s3 {
+                    width: 15px;
+                    height: 15px;
+                    padding: 12px 15px;
+                    margin: 0;
+                    margin-left: -4px;
+                    margin-right: -1px;
+                    background: #282a2e;
+                    border: 1.3px solid #ffffff;
+                    opacity: 0.8;
+                    transition: background-color 0.5s;
+  
+                    &:hover {
+                      opacity: 1;
+                      background-color: #0097ec;
+                    }
+                  }
+                  .s4 {
+                    width: 15px;
+                    height: 15px;
+                    padding: 12px 15px;
+                    margin: 0;
+                    margin-left: -4px;
+                    margin-right: -1px;
+                    background: #282a2e;
+                    border: 1.3px solid #ffffff;
+                    opacity: 0.8;
+                    transition: background-color 0.5s;
+  
+                    &:hover {
+                      opacity: 1;
+                      background-color: #0097ec;
+                    }
+                  }
+                }
+              }
+
+            }
+          }
+        }
+      }
+
       .contract {
         .bxslider {
           width: 100%;
@@ -4909,7 +5679,7 @@ p {
       }
 
       .mcqueen {
-        padding-top: 150px;
+        margin-top: -200px;
         background-image: url(../img/foterroad.png);
         background-size: 100%;
         background-repeat: no-repeat;
@@ -4919,6 +5689,7 @@ p {
         justify-content: center;
         align-items: center;
         img {
+          padding-top: 450px;
           display: block;
           margin: auto;
           width: 409px;
@@ -5234,7 +6005,7 @@ p {
       background: #000;
       z-index: 15000;
       overflow: hidden;
-      
+
       .loader {
         width: 300px;
         height: 300px;
@@ -5244,17 +6015,17 @@ p {
         top: 50%;
         margin: -150px 0 0 -150px;
         border-radius: 50%;
-        .loader-circle-1{
-          width:276px;
-          height:276px;
-          left:10px;
-          top:10px;
-          border:1px #fff solid;
-          border-radius:50%;
-          position:absolute;
-          border-right-color:transparent;
-          -webkit-animation:spin 3s linear infinite;
-          animation:spin 3s linear infinite;
+        .loader-circle-1 {
+          width: 276px;
+          height: 276px;
+          left: 10px;
+          top: 10px;
+          border: 1px #fff solid;
+          border-radius: 50%;
+          position: absolute;
+          border-right-color: transparent;
+          -webkit-animation: spin 3s linear infinite;
+          animation: spin 3s linear infinite;
           .loader-circle-2 {
             width: 252px;
             height: 252px;
@@ -5393,7 +6164,7 @@ p {
           z-index: 1;
           -webkit-animation: pegIt 3s infinite ease-in-out;
           animation: pegIt 3s infinite ease-in-out;
-          &::before{
+          &::before {
             content: "";
             width: 0;
             height: 0;
@@ -5407,12 +6178,7 @@ p {
             border-radius: 0 50% 50% 0;
           }
         }
-
       }
     }
-
-    
-
-    
   }
 }

@@ -23,51 +23,190 @@
   src: url(../Brandon_blk.otf);
 }
 
-@media only screen and (max-width: 750px) {
+@font-face {
+  font-family: "FuturaPTLight";
+  src: url(../fonts/FuturaPT/FuturaPTLight.otf);
+}
+
+@font-face {
+  font-family: "FuturaPTMedium";
+  src: url(../fonts/FuturaPT/FuturaPTMedium.otf);
+}
+
+@font-face {
+  font-family: "FuturaPTHeavy";
+  src: url(../fonts/FuturaPT/FuturaPTHeavy.otf);
+}
+
+@font-face {
+  font-family: "Brandon Grotesque Medium";
+  src: url(../fonts/Brandon/Brandon_med.otf);
+}
+
+@font-face {
+  font-family: "Brandon Grotesque Bold";
+  src: url(../fonts/Brandon/Brandon_bld.otf);
+}
+
+@font-face {
+  font-family: "Brandon Grotesque Regular";
+  src: url(../fonts/Brandon/Brandon_reg.otf);
+}
+
+@font-face {
+  font-family: "Brandon Grotesque Black";
+  src: url(../fonts/Brandon/Brandon_blk.otf);
+}
+
+@font-face {
+  font-family: "subwt";
+  src: url(../fonts/SUBWT.ttf);
+}
+
+@font-face {
+  font-family: "HIGHSPEED";
+  src: url(../fonts/HIGHSPEED.TTF);
+}
+
+a {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 669px) {
   body {
     margin: 0;
     padding: 0;
     overflow-y: 0;
-    color: #fff;
+    background-color: black;
   }
   body .container {
-    background-image: url(../img/COUNTDOWNmobile.png);
-    background-size: 100% 100%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    background-image: url(../img/bgcountdown.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
   }
   body .container .firstpart {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body .container .firstpart .left {
+    -webkit-box-flex: 0;
+        -ms-flex: 0;
+            flex: 0;
+  }
+  body .container .firstpart .mid {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  body .container .firstpart .mid img {
+    width: 125px;
+    margin: 20px 0px 30px 0px;
+  }
+  body .container .firstpart .right {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  body .container .firstpart .right .socials {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 auto;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    margin-top: 0px;
+    margin-bottom: 50px;
   }
-  body .container .firstpart img {
-    width: 165px;
-    display: block;
-    margin: 0 auto;
-    padding-top: 20px;
+  body .container .firstpart .right .socials a {
+    margin: 0;
+    padding: 0;
+  }
+  body .container .firstpart .right .socials a .s1 {
+    width: 18px;
+    height: 18px;
+    padding: 12px 15px;
+    margin: 0;
+    margin-left: 0px;
+    margin-right: 0px;
+    background: #282a2e;
+    border: 1.3px solid #ffffff;
+    opacity: 0.8;
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+  }
+  body .container .firstpart .right .socials a .s1:hover {
+    opacity: 1;
+    background-color: #0097ec;
+  }
+  body .container .firstpart .right .socials a .s2 {
+    width: 18px;
+    height: 18px;
+    padding: 12px 15px;
+    margin: 0;
+    background: #282a2e;
+    border: 1.3px solid #ffffff;
+    opacity: 0.8;
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+  }
+  body .container .firstpart .right .socials a .s2:hover {
+    opacity: 1;
+    background-color: #0097ec;
+  }
+  body .container .firstpart .right .socials a .s3 {
+    width: 18px;
+    height: 18px;
+    padding: 12px 15px;
+    margin: 0;
+    background: #282a2e;
+    border: 1.3px solid #ffffff;
+    opacity: 0.8;
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+  }
+  body .container .firstpart .right .socials a .s3:hover {
+    opacity: 1;
+    background-color: #0097ec;
+  }
+  body .container .firstpart .right .socials a .s4 {
+    width: 18px;
+    height: 18px;
+    padding: 12px 15px;
+    margin: 0;
+    background: #282a2e;
+    border: 1.3px solid #ffffff;
+    opacity: 0.8;
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+  }
+  body .container .firstpart .right .socials a .s4:hover {
+    opacity: 1;
+    background-color: #0097ec;
   }
   body .container .secondpart {
-    margin-top: 40px;
+    margin-top: -50px;
     text-align: center;
   }
   body .container .secondpart .up {
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
     font-family: "BrandonGrotesqueRegular";
+    color: white;
   }
   body .container .secondpart .up span {
     font-family: "BrandonGrotesqueBold";
@@ -76,7 +215,7 @@
     margin-top: 100px;
   }
   body .container .secondpart .down {
-    width: 70%;
+    width: 100%;
     margin: auto;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -100,21 +239,24 @@
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center;
+    margin: 0px 25px 0px 25px;
   }
   body .container .secondpart .down .box .up {
-    font-size: 150px;
-    font-family: "FuturaBoldCon";
+    font-size: 100px;
+    font-family: "subwt";
     line-height: 0px;
     text-align: center;
+    color: #06adf9;
   }
   body .container .secondpart .down .box .down {
-    margin-top: -105px;
+    margin-top: -65px;
     font-family: "FuturaLightCon";
-    font-size: 20px;
+    font-size: 28px;
     text-align: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    color: white;
   }
   body .container .thirdpart {
     -webkit-box-pack: center;
@@ -125,7 +267,8 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-bottom: 140px;
+    margin-bottom: 40px;
+    opacity: 0.3;
   }
   body .container .thirdpart a {
     color: white;
@@ -142,43 +285,70 @@
     opacity: 0.5;
   }
   body .container .divo {
-    height: 1px;
+    height: 40px;
   }
-}
-
-@media only screen and (min-width: 669px) {
-  body {
-    margin: 0;
-    padding: 0;
-    overflow-y: 0;
-    color: #fff;
-  }
-  body .container {
-    background-image: url(../img/bgcountdown.png);
+  body .thirdpart2 {
+    background-image: url(../img/bgnft.png);
     background-size: 100% 100%;
+    background-repeat: no-repeat;
   }
-  body .container .firstpart img {
-    width: 165px;
-    margin: 20px 0px 0px 40px;
-  }
-  body .container .secondpart {
-    margin-top: -50px;
+  body .thirdpart2 .con .container {
+    width: 80%;
+    margin: 0 auto;
     text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: transparent;
   }
-  body .container .secondpart .up {
-    font-size: 30px;
-    text-align: center;
-    font-family: "BrandonGrotesqueRegular";
+  body .thirdpart2 .con .container .title p {
+    font-family: "Brandon Grotesque Bold";
+    font-size: 46px;
+    color: white;
   }
-  body .container .secondpart .up span {
-    font-family: "BrandonGrotesqueBold";
+  body .thirdpart2 .con .container .downtitle {
+    margin-top: -30px;
   }
-  body .container .secondpart .up p {
-    margin-top: 100px;
+  body .thirdpart2 .con .container .downtitle p {
+    font-family: "Brandon Grotesque Regular";
+    font-size: 28px;
+    color: white;
   }
-  body .container .secondpart .down {
-    width: 70%;
-    margin: auto;
+  body .thirdpart2 .con .container .downtitle p span {
+    font-family: "Brandon Grotesque Medium";
+    color: #50b5ff;
+  }
+  body .thirdpart2 .con .container .coni {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    color: white;
+  }
+  body .thirdpart2 .con .container .coni .box {
+    padding: 10px;
+    background: #1d1d1d;
+    border: 2.2px solid #494949;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    height: 410px;
+    margin: 0px 20px 0px 20px;
+    margin-bottom: 136px;
+  }
+  body .thirdpart2 .con .container .coni .box img {
+    margin-top: 0px;
+    width: 280px;
+    height: 280px;
+  }
+  body .thirdpart2 .con .container .coni .box .txtup {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -189,6 +359,234 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  body .thirdpart2 .con .container .coni .box .txtup p {
+    font-family: "FuturaPTMedium";
+    font-size: 14px;
+    color: #9da6ac;
+  }
+  body .thirdpart2 .con .container .coni .box .txtdown {
+    margin-top: -20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body .thirdpart2 .con .container .coni .box .txtdown p {
+    font-family: "FuturaPTMedium";
+    font-size: 14px;
+    color: #ffffff;
+  }
+  body .thirdpart2 .con .container .coni .box .txtdown .right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  body .thirdpart2 .con .container .coni .box .txtdown .right img {
+    width: 14px;
+    height: 14px;
+    margin: auto;
+    display: block;
+  }
+  body .thirdpart2 .con .container .coni .box .button {
+    visibility: hidden;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  body .thirdpart2 .con .container .coni .box .button a {
+    font-family: "Brandon Grotesque Black";
+    font-size: 18px;
+    line-height: 26px;
+    color: #3aacff;
+    opacity: 0;
+  }
+  body .thirdpart2 .con .container .coni .box:hover {
+    height: 420px;
+    margin-bottom: 40px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  body .thirdpart2 .con .container .coni .box:hover .button {
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    visibility: visible;
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+  body .thirdpart2 .con .container .coni .box:hover .button a {
+    font-family: "Brandon Grotesque Black";
+    font-size: 18px;
+    line-height: 26px;
+    color: #3aacff;
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 670px) {
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-y: 0;
+    background-color: black;
+  }
+  body .container {
+    background-image: url(../img/bgcountdown.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  body .container .firstpart {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body .container .firstpart .left {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  body .container .firstpart .mid {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  body .container .firstpart .mid img {
+    width: 125px;
+    margin: 20px 0px 50px 0px;
+  }
+  body .container .firstpart .right {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  body .container .firstpart .right .socials {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+  body .container .firstpart .right .socials a {
+    margin: 0;
+    padding: 0;
+  }
+  body .container .firstpart .right .socials a .s1 {
+    width: 18px;
+    height: 18px;
+    padding: 12px 15px;
+    margin: 0;
+    margin-left: 0px;
+    margin-right: 0px;
+    background: #282a2e;
+    border: 1.3px solid #ffffff;
+    opacity: 0.8;
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+  }
+  body .container .firstpart .right .socials a .s1:hover {
+    opacity: 1;
+    background-color: #0097ec;
+  }
+  body .container .firstpart .right .socials a .s2 {
+    width: 18px;
+    height: 18px;
+    padding: 12px 15px;
+    margin: 0;
+    background: #282a2e;
+    border: 1.3px solid #ffffff;
+    opacity: 0.8;
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+  }
+  body .container .firstpart .right .socials a .s2:hover {
+    opacity: 1;
+    background-color: #0097ec;
+  }
+  body .container .firstpart .right .socials a .s3 {
+    width: 18px;
+    height: 18px;
+    padding: 12px 15px;
+    margin: 0;
+    background: #282a2e;
+    border: 1.3px solid #ffffff;
+    opacity: 0.8;
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+  }
+  body .container .firstpart .right .socials a .s3:hover {
+    opacity: 1;
+    background-color: #0097ec;
+  }
+  body .container .firstpart .right .socials a .s4 {
+    width: 18px;
+    height: 18px;
+    padding: 12px 15px;
+    margin: 0;
+    background: #282a2e;
+    border: 1.3px solid #ffffff;
+    opacity: 0.8;
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+  }
+  body .container .firstpart .right .socials a .s4:hover {
+    opacity: 1;
+    background-color: #0097ec;
+  }
+  body .container .secondpart {
+    margin-top: -50px;
+    text-align: center;
+  }
+  body .container .secondpart .up {
+    font-size: 30px;
+    text-align: center;
+    font-family: "BrandonGrotesqueRegular";
+    color: white;
+  }
+  body .container .secondpart .up span {
+    font-family: "BrandonGrotesqueBold";
+  }
+  body .container .secondpart .up p {
+    margin-top: 100px;
+  }
+  body .container .secondpart .down {
+    width: 100%;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -201,21 +599,24 @@
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center;
+    margin: 0px 25px 0px 25px;
   }
   body .container .secondpart .down .box .up {
-    font-size: 250px;
-    font-family: "FuturaBoldCon";
+    font-size: 140px;
+    font-family: "subwt";
     line-height: 0px;
     text-align: center;
+    color: #06adf9;
   }
   body .container .secondpart .down .box .down {
-    margin-top: -165px;
+    margin-top: -85px;
     font-family: "FuturaLightCon";
     font-size: 28px;
     text-align: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    color: white;
   }
   body .container .thirdpart {
     -webkit-box-pack: center;
@@ -227,6 +628,7 @@
         -ms-flex-align: center;
             align-items: center;
     margin-bottom: 140px;
+    opacity: 0.3;
   }
   body .container .thirdpart a {
     color: white;
@@ -243,7 +645,150 @@
     opacity: 0.5;
   }
   body .container .divo {
-    height: 1px;
+    height: 400px;
+  }
+  body .thirdpart2 {
+    background-image: url(../img/bgnft.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  body .thirdpart2 .con .container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: transparent;
+  }
+  body .thirdpart2 .con .container .title p {
+    font-family: "Brandon Grotesque Bold";
+    font-size: 46px;
+    color: white;
+  }
+  body .thirdpart2 .con .container .downtitle {
+    margin-top: -30px;
+  }
+  body .thirdpart2 .con .container .downtitle p {
+    font-family: "Brandon Grotesque Regular";
+    font-size: 28px;
+    color: white;
+  }
+  body .thirdpart2 .con .container .downtitle p span {
+    font-family: "Brandon Grotesque Medium";
+    color: #50b5ff;
+  }
+  body .thirdpart2 .con .container .coni {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    color: white;
+  }
+  body .thirdpart2 .con .container .coni .box {
+    padding: 10px;
+    background: #1d1d1d;
+    border: 2.2px solid #494949;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    height: 410px;
+    margin: 0px 20px 0px 20px;
+    margin-bottom: 136px;
+  }
+  body .thirdpart2 .con .container .coni .box img {
+    margin-top: 0px;
+    width: 280px;
+    height: 280px;
+  }
+  body .thirdpart2 .con .container .coni .box .txtup {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body .thirdpart2 .con .container .coni .box .txtup p {
+    font-family: "FuturaPTMedium";
+    font-size: 14px;
+    color: #9da6ac;
+  }
+  body .thirdpart2 .con .container .coni .box .txtdown {
+    margin-top: -20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body .thirdpart2 .con .container .coni .box .txtdown p {
+    font-family: "FuturaPTMedium";
+    font-size: 14px;
+    color: #ffffff;
+  }
+  body .thirdpart2 .con .container .coni .box .txtdown .right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  body .thirdpart2 .con .container .coni .box .txtdown .right img {
+    width: 14px;
+    height: 14px;
+    margin: auto;
+    display: block;
+  }
+  body .thirdpart2 .con .container .coni .box .button {
+    visibility: hidden;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  body .thirdpart2 .con .container .coni .box .button a {
+    font-family: "Brandon Grotesque Black";
+    font-size: 18px;
+    line-height: 26px;
+    color: #3aacff;
+    opacity: 0;
+  }
+  body .thirdpart2 .con .container .coni .box:hover {
+    height: 420px;
+    margin-bottom: 40px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  body .thirdpart2 .con .container .coni .box:hover .button {
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    visibility: visible;
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+  body .thirdpart2 .con .container .coni .box:hover .button a {
+    font-family: "Brandon Grotesque Black";
+    font-size: 18px;
+    line-height: 26px;
+    color: #3aacff;
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=style.css.map */

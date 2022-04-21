@@ -24,6 +24,11 @@
 }
 
 @font-face {
+  font-family: "Brandon Grotesque Light";
+  src: url(../fonts/Brandon/Brandon_light.otf);
+}
+
+@font-face {
   font-family: "Brandon Grotesque Regular";
   src: url(../fonts/Brandon/Brandon_reg.otf);
 }
@@ -135,14 +140,32 @@ p {
 }
 
 @-webkit-keyframes flip {
-  0%, 85% {
+  0%,
+  85% {
     -webkit-transform: rotateY(360deg);
             transform: rotateY(360deg);
   }
 }
 
 @keyframes flip {
-  0%, 85% {
+  0%,
+  85% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@-webkit-keyframes flip2 {
+  0%,
+  85% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@keyframes flip2 {
+  0%,
+  85% {
     -webkit-transform: rotateY(360deg);
             transform: rotateY(360deg);
   }
@@ -158,8 +181,8 @@ p {
     background-color: black;
   }
   body .content .firstpart {
-    background-image: url(../img/firstbg.png);
-    background-size: 120%;
+    background-image: url(../img/firstbgrespo.png);
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
     display: -webkit-box;
@@ -244,8 +267,55 @@ p {
     -webkit-filter: drop-shadow(0px 5px 18px black);
             filter: drop-shadow(0px 5px 18px black);
   }
+  body .content .firstpart .txtphoto {
+    text-align: center;
+  }
+  body .content .firstpart .txtphoto .txt1 {
+    margin-top: 70px;
+  }
+  body .content .firstpart .txtphoto .txt1 .waviy {
+    position: relative;
+  }
+  body .content .firstpart .txtphoto .txt1 .waviy span {
+    font-family: "Brandon Grotesque Light";
+    font-size: 16.25px;
+    line-height: 89px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: -1px 2px 6px rgba(0, 0, 0, 0.73);
+    margin-bottom: -300px;
+    display: inline-block;
+    color: #fff;
+    -webkit-animation: flip2 5s infinite;
+            animation: flip2 5s infinite;
+    -webkit-animation-delay: calc(0.2s * var(--i));
+            animation-delay: calc(0.2s * var(--i));
+  }
+  body .content .firstpart .txtphoto .txt2 {
+    margin-top: -50px;
+  }
+  body .content .firstpart .txtphoto .txt2 .waviy {
+    position: relative;
+  }
+  body .content .firstpart .txtphoto .txt2 .waviy span {
+    font-family: "Brandon Grotesque black";
+    font-size: 25px;
+    line-height: 143px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: -1px 2px 6px rgba(0, 0, 0, 0.73);
+    padding-bottom: 0px;
+    display: inline-block;
+    color: #fff;
+    -webkit-animation: flip2 5s infinite;
+            animation: flip2 5s infinite;
+    -webkit-animation-delay: calc(0.2s * var(--i));
+            animation-delay: calc(0.2s * var(--i));
+  }
   body .content .firstpart .bg {
-    height: 320px;
+    height: 120px;
   }
   body .content .secondpart {
     background-image: url(../img/secondbg.png);
@@ -264,19 +334,10 @@ p {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  body .content .secondpart .container .up .waviy {
-    position: relative;
-  }
-  body .content .secondpart .container .up .waviy span {
+  body .content .secondpart .container .up p {
     font-family: "Brandon Grotesque Medium";
     margin-top: 140px;
-    font-size: 24px;
-    display: inline-block;
-    color: #fff;
-    -webkit-animation: flip 5s infinite;
-            animation: flip 5s infinite;
-    -webkit-animation-delay: calc(.2s * var(--i));
-            animation-delay: calc(.2s * var(--i));
+    font-size: 20px;
   }
   body .content .secondpart .container .mid p {
     font-size: 18px;
@@ -1076,6 +1137,14 @@ p {
   body .content .roadmapmobile {
     margin: 0px;
     padding: 0px;
+    /* Slides */
+    /* Next & previous buttons */
+    /* Position the "next button" to the right */
+    /* On hover, add a black background color with a little bit see-through */
+    /* The dot/bullet/indicator container */
+    /* The dots/bullets/indicators */
+    /* Add an italic font style to all quotes */
+    /* Add a blue color to the author */
   }
   body .content .roadmapmobile .upimg {
     width: 100%;
@@ -1084,48 +1153,21 @@ p {
   }
   body .content .roadmapmobile .downimg {
     width: 100%;
-    margin-top: -1px;
+    margin-top: -5px;
   }
-  body .content .roadmapmobile .container {
+  body .content .roadmapmobile .slideshow-container {
+    position: relative;
     background-image: url(../img/roadmapbgmobile.png);
     background-size: 100%;
+    background-repeat: repeat;
+    margin-bottom: -10px;
   }
-  body .content .roadmapmobile .container .con {
-    width: 90%;
-    margin: auto;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding-top: 50px;
+  body .content .roadmapmobile .mySlides {
+    display: none;
+    padding: 80px;
+    text-align: center;
   }
-  body .content .roadmapmobile .container .con img {
-    display: block;
-    margin: auto;
-    width: 219px;
-  }
-  body .content .roadmapmobile .container .con .stages {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    padding-top: 90px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: start;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  body .content .roadmapmobile .container .con .stages .left .box1 {
+  body .content .roadmapmobile .mySlides .box1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1133,16 +1175,17 @@ p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 278px;
+    width: 100%;
+    margin: 0 auto;
     margin-bottom: 5%;
   }
-  body .content .roadmapmobile .container .con .stages .left .box1 .up {
+  body .content .roadmapmobile .mySlides .box1 .up {
     background: #282843;
     border: 2.2px solid #ffffff;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  body .content .roadmapmobile .container .con .stages .left .box1 .up .con {
+  body .content .roadmapmobile .mySlides .box1 .up .con {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1157,25 +1200,62 @@ p {
     height: 54px;
     padding-top: 0px;
   }
-  body .content .roadmapmobile .container .con .stages .left .box1 .up .con .lefts p {
+  body .content .roadmapmobile .mySlides .box1 .up .con .lefts p {
     font-family: "Brandon Grotesque Medium";
     font-size: 20px;
   }
-  body .content .roadmapmobile .container .con .stages .left .box1 .up .con .rights img {
+  body .content .roadmapmobile .mySlides .box1 .up .con .rights img {
+    margin-top: 20px;
     width: 18.13px;
     height: 18.56px;
   }
-  body .content .roadmapmobile .container .con .stages .left .box1 .down {
+  body .content .roadmapmobile .mySlides .box1 .down {
     background: #1f1f34;
   }
-  body .content .roadmapmobile .container .con .stages .left .box1 .down .con {
+  body .content .roadmapmobile .mySlides .box1 .down .con {
     width: 90%;
     padding-top: 10px;
   }
-  body .content .roadmapmobile .container .con .stages .left .box1 .down .con p {
+  body .content .roadmapmobile .mySlides .box1 .down .con p {
     font-family: "FuturaPTMedium";
     font-size: 18px;
     line-height: 23.8px;
+  }
+  body .content .roadmapmobile .prev, body .content .roadmapmobile .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #0400e2;
+    font-weight: bold;
+    font-size: 40px;
+    border-radius: 0 3px 3px 0;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  body .content .roadmapmobile .next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  body .content .roadmapmobile .prev:hover, body .content .roadmapmobile .next:hover {
+    background-color: rgba(0, 28, 119, 0.8);
+    color: #00d9ff;
+  }
+  body .content .roadmapmobile .dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+  }
+  body .content .roadmapmobile q {
+    font-style: italic;
+  }
+  body .content .roadmapmobile .author {
+    color: cornflowerblue;
   }
   body .content .roadmap {
     margin: 0px;
@@ -1601,6 +1681,157 @@ p {
     background: -webkit-gradient(linear, left top, right top, from(#0f92f1), color-stop(105.43%, #04aff9));
     background: linear-gradient(90deg, #0f92f1 0%, #04aff9 105.43%);
     padding: 13px 55px;
+  }
+  body .content .team {
+    background-image: url(../img/bgteam.png);
+    background-size: 100%;
+    background-repeat: repeat;
+  }
+  body .content .team .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  body .content .team .container .up p {
+    font-family: "Brandon Grotesque Medium";
+    font-size: 38px;
+    text-align: start;
+    margin-bottom: 40px;
+  }
+  body .content .team .container .down {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .content .team .container .down .box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  body .content .team .container .down .box .up img {
+    width: 226px;
+    height: 226px;
+  }
+  body .content .team .container .down .box .mid {
+    text-align: center;
+  }
+  body .content .team .container .down .box .mid .title {
+    font-family: "Brandon Grotesque Bold";
+    font-size: 20px;
+    color: #fff;
+    margin-top: 5px;
+  }
+  body .content .team .container .down .box .mid .position {
+    font-family: "Brandon Grotesque Medium";
+    font-size: 18px;
+    color: #59cbff;
+    margin-top: -20px;
+    margin-bottom: 5px;
+  }
+  body .content .team .container .down .box .txt {
+    background: rgba(35, 34, 34, 0.38);
+    width: 200px;
+    padding: 0px 6px 0px 6px;
+    margin: 0 auto;
+    text-align: start;
+  }
+  body .content .team .container .down .box .txt p {
+    font-family: "Brandon Grotesque Regular";
+    font-size: 14px;
+    color: #fff;
+  }
+  body .content .team .container .down .box .socials {
+    margin: 0;
+    padding: 0;
+    margin-left: -5px;
+    margin-right: -5px;
+    margin-top: 5px;
+    margin-bottom: 60px;
+  }
+  body .content .team .container .down .box .socials a {
+    margin: 0;
+    padding: 0;
+  }
+  body .content .team .container .down .box .socials a .s1 {
+    width: 15px;
+    height: 15px;
+    padding: 12px 15px;
+    margin: 0;
+    margin-left: -1px;
+    margin-right: -1px;
+    background: #282a2e;
+    border: 1.3px solid #ffffff;
+    opacity: 0.8;
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+  }
+  body .content .team .container .down .box .socials a .s1:hover {
+    opacity: 1;
+    background-color: #0097ec;
+  }
+  body .content .team .container .down .box .socials a .s2 {
+    width: 15px;
+    height: 15px;
+    padding: 12px 15px;
+    margin: 0;
+    margin-left: -4px;
+    margin-right: -1px;
+    background: #282a2e;
+    border: 1.3px solid #ffffff;
+    opacity: 0.8;
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+  }
+  body .content .team .container .down .box .socials a .s2:hover {
+    opacity: 1;
+    background-color: #0097ec;
+  }
+  body .content .team .container .down .box .socials a .s3 {
+    width: 15px;
+    height: 15px;
+    padding: 12px 15px;
+    margin: 0;
+    margin-left: -4px;
+    margin-right: -1px;
+    background: #282a2e;
+    border: 1.3px solid #ffffff;
+    opacity: 0.8;
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+  }
+  body .content .team .container .down .box .socials a .s3:hover {
+    opacity: 1;
+    background-color: #0097ec;
+  }
+  body .content .team .container .down .box .socials a .s4 {
+    width: 15px;
+    height: 15px;
+    padding: 12px 15px;
+    margin: 0;
+    margin-left: -4px;
+    margin-right: -1px;
+    background: #282a2e;
+    border: 1.3px solid #ffffff;
+    opacity: 0.8;
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+  }
+  body .content .team .container .down .box .socials a .s4:hover {
+    opacity: 1;
+    background-color: #0097ec;
   }
   body .content .contract margin .bxslider {
     width: 100%;
@@ -2224,8 +2455,50 @@ p {
     -webkit-filter: drop-shadow(0px 5px 18px black);
             filter: drop-shadow(0px 5px 18px black);
   }
+  body .content .firstpart .txtphoto {
+    text-align: center;
+  }
+  body .content .firstpart .txtphoto .txt1 .waviy {
+    position: relative;
+  }
+  body .content .firstpart .txtphoto .txt1 .waviy span {
+    font-family: "Brandon Grotesque Light";
+    font-size: 32.5px;
+    line-height: 89px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: -1px 2px 6px rgba(0, 0, 0, 0.73);
+    margin-bottom: -100px;
+    margin-top: 250px;
+    display: inline-block;
+    color: #fff;
+    -webkit-animation: flip2 5s infinite;
+            animation: flip2 5s infinite;
+    -webkit-animation-delay: calc(0.2s * var(--i));
+            animation-delay: calc(0.2s * var(--i));
+  }
+  body .content .firstpart .txtphoto .txt2 .waviy {
+    position: relative;
+  }
+  body .content .firstpart .txtphoto .txt2 .waviy span {
+    font-family: "Brandon Grotesque black";
+    font-size: 50px;
+    line-height: 143px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: -1px 2px 6px rgba(0, 0, 0, 0.73);
+    margin-bottom: 0px;
+    display: inline-block;
+    color: #fff;
+    -webkit-animation: flip2 5s infinite;
+            animation: flip2 5s infinite;
+    -webkit-animation-delay: calc(0.2s * var(--i));
+            animation-delay: calc(0.2s * var(--i));
+  }
   body .content .firstpart .bg {
-    height: 700px;
+    height: 200px;
   }
   body .content .secondpart {
     background-image: url(../img/secondbg.png);
@@ -2244,19 +2517,10 @@ p {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  body .content .secondpart .container .up .waviy {
-    position: relative;
-  }
-  body .content .secondpart .container .up .waviy span {
+  body .content .secondpart .container .up p {
     font-family: "Brandon Grotesque Medium";
     margin-top: 80px;
     font-size: 38px;
-    display: inline-block;
-    color: #fff;
-    -webkit-animation: flip 5s infinite;
-            animation: flip 5s infinite;
-    -webkit-animation-delay: calc(.2s * var(--i));
-            animation-delay: calc(.2s * var(--i));
   }
   body .content .secondpart .container .mid p {
     font-size: 26px;
@@ -3054,6 +3318,14 @@ p {
   body .content .roadmapmobile {
     margin: 0px;
     padding: 0px;
+    /* Slides */
+    /* Next & previous buttons */
+    /* Position the "next button" to the right */
+    /* On hover, add a black background color with a little bit see-through */
+    /* The dot/bullet/indicator container */
+    /* The dots/bullets/indicators */
+    /* Add an italic font style to all quotes */
+    /* Add a blue color to the author */
   }
   body .content .roadmapmobile .upimg {
     width: 100%;
@@ -3064,46 +3336,19 @@ p {
     width: 100%;
     margin-top: -1px;
   }
-  body .content .roadmapmobile .container {
+  body .content .roadmapmobile .slideshow-container {
+    position: relative;
     background-image: url(../img/roadmapbgmobile.png);
     background-size: 100%;
+    background-repeat: repeat;
+    margin-bottom: -10px;
   }
-  body .content .roadmapmobile .container .con {
-    width: 90%;
-    margin: auto;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding-top: 50px;
+  body .content .roadmapmobile .mySlides {
+    display: none;
+    padding: 80px;
+    text-align: center;
   }
-  body .content .roadmapmobile .container .con img {
-    display: block;
-    margin: auto;
-    width: 219px;
-  }
-  body .content .roadmapmobile .container .con .stages {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    padding-top: 90px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: start;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  body .content .roadmapmobile .container .con .stages .left .box1 {
+  body .content .roadmapmobile .mySlides .box1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3111,16 +3356,17 @@ p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 278px;
+    width: 100%;
+    margin: 0 auto;
     margin-bottom: 5%;
   }
-  body .content .roadmapmobile .container .con .stages .left .box1 .up {
+  body .content .roadmapmobile .mySlides .box1 .up {
     background: #282843;
     border: 2.2px solid #ffffff;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  body .content .roadmapmobile .container .con .stages .left .box1 .up .con {
+  body .content .roadmapmobile .mySlides .box1 .up .con {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3135,25 +3381,63 @@ p {
     height: 54px;
     padding-top: 0px;
   }
-  body .content .roadmapmobile .container .con .stages .left .box1 .up .con .lefts p {
+  body .content .roadmapmobile .mySlides .box1 .up .con .lefts p {
     font-family: "Brandon Grotesque Medium";
     font-size: 20px;
+    margin-left: 15px;
   }
-  body .content .roadmapmobile .container .con .stages .left .box1 .up .con .rights img {
+  body .content .roadmapmobile .mySlides .box1 .up .con .rights img {
+    margin-top: 20px;
     width: 18.13px;
     height: 18.56px;
   }
-  body .content .roadmapmobile .container .con .stages .left .box1 .down {
+  body .content .roadmapmobile .mySlides .box1 .down {
     background: #1f1f34;
   }
-  body .content .roadmapmobile .container .con .stages .left .box1 .down .con {
+  body .content .roadmapmobile .mySlides .box1 .down .con {
     width: 90%;
     padding-top: 10px;
   }
-  body .content .roadmapmobile .container .con .stages .left .box1 .down .con p {
+  body .content .roadmapmobile .mySlides .box1 .down .con p {
     font-family: "FuturaPTMedium";
     font-size: 18px;
     line-height: 23.8px;
+  }
+  body .content .roadmapmobile .prev, body .content .roadmapmobile .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #0400e2;
+    font-weight: bold;
+    font-size: 40px;
+    border-radius: 0 3px 3px 0;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  body .content .roadmapmobile .next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  body .content .roadmapmobile .prev:hover, body .content .roadmapmobile .next:hover {
+    background-color: rgba(0, 28, 119, 0.8);
+    color: #00d9ff;
+  }
+  body .content .roadmapmobile .dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+  }
+  body .content .roadmapmobile q {
+    font-style: italic;
+  }
+  body .content .roadmapmobile .author {
+    color: cornflowerblue;
   }
   body .content .roadmap {
     margin: 0px;
@@ -3579,6 +3863,157 @@ p {
     background: -webkit-gradient(linear, left top, right top, from(#0f92f1), color-stop(105.43%, #04aff9));
     background: linear-gradient(90deg, #0f92f1 0%, #04aff9 105.43%);
     padding: 13px 55px;
+  }
+  body .content .team {
+    background-image: url(../img/bgteam.png);
+    background-size: 100%;
+    background-repeat: repeat;
+  }
+  body .content .team .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  body .content .team .container .up p {
+    font-family: "Brandon Grotesque Medium";
+    font-size: 38px;
+    text-align: start;
+    margin-bottom: 40px;
+  }
+  body .content .team .container .down {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body .content .team .container .down .box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  body .content .team .container .down .box .up img {
+    width: 226px;
+    height: 226px;
+  }
+  body .content .team .container .down .box .mid {
+    text-align: center;
+  }
+  body .content .team .container .down .box .mid .title {
+    font-family: "Brandon Grotesque Bold";
+    font-size: 20px;
+    color: #fff;
+    margin-top: 5px;
+  }
+  body .content .team .container .down .box .mid .position {
+    font-family: "Brandon Grotesque Medium";
+    font-size: 18px;
+    color: #59cbff;
+    margin-top: -20px;
+    margin-bottom: 5px;
+  }
+  body .content .team .container .down .box .txt {
+    background: rgba(35, 34, 34, 0.38);
+    width: 200px;
+    padding: 0px 6px 0px 6px;
+    text-align: start;
+    margin: 0 auto;
+  }
+  body .content .team .container .down .box .txt p {
+    font-family: "Brandon Grotesque Regular";
+    font-size: 14px;
+    color: #fff;
+  }
+  body .content .team .container .down .box .socials {
+    margin: 0;
+    padding: 0;
+    margin-left: -5px;
+    margin-right: -5px;
+    margin-top: 5px;
+    margin-bottom: 60px;
+  }
+  body .content .team .container .down .box .socials a {
+    margin: 0;
+    padding: 0;
+  }
+  body .content .team .container .down .box .socials a .s1 {
+    width: 15px;
+    height: 15px;
+    padding: 12px 15px;
+    margin: 0;
+    margin-left: -1px;
+    margin-right: -1px;
+    background: #282a2e;
+    border: 1.3px solid #ffffff;
+    opacity: 0.8;
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+  }
+  body .content .team .container .down .box .socials a .s1:hover {
+    opacity: 1;
+    background-color: #0097ec;
+  }
+  body .content .team .container .down .box .socials a .s2 {
+    width: 15px;
+    height: 15px;
+    padding: 12px 15px;
+    margin: 0;
+    margin-left: -4px;
+    margin-right: -1px;
+    background: #282a2e;
+    border: 1.3px solid #ffffff;
+    opacity: 0.8;
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+  }
+  body .content .team .container .down .box .socials a .s2:hover {
+    opacity: 1;
+    background-color: #0097ec;
+  }
+  body .content .team .container .down .box .socials a .s3 {
+    width: 15px;
+    height: 15px;
+    padding: 12px 15px;
+    margin: 0;
+    margin-left: -4px;
+    margin-right: -1px;
+    background: #282a2e;
+    border: 1.3px solid #ffffff;
+    opacity: 0.8;
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+  }
+  body .content .team .container .down .box .socials a .s3:hover {
+    opacity: 1;
+    background-color: #0097ec;
+  }
+  body .content .team .container .down .box .socials a .s4 {
+    width: 15px;
+    height: 15px;
+    padding: 12px 15px;
+    margin: 0;
+    margin-left: -4px;
+    margin-right: -1px;
+    background: #282a2e;
+    border: 1.3px solid #ffffff;
+    opacity: 0.8;
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+  }
+  body .content .team .container .down .box .socials a .s4:hover {
+    opacity: 1;
+    background-color: #0097ec;
   }
   body .content .contract margin .bxslider {
     width: 100%;
@@ -4162,7 +4597,7 @@ p {
     font-family: "FuturaPTHeavy";
     font-size: 16px;
     padding-top: 10px;
-    color: #ffffff;
+    color: #43b1ff;
     -webkit-transform: scale(1.05);
             transform: scale(1.05);
   }
@@ -4173,8 +4608,50 @@ p {
   body .content .firstpart .navmobile {
     display: none;
   }
+  body .content .firstpart .txtphoto {
+    text-align: center;
+  }
+  body .content .firstpart .txtphoto .txt1 .waviy {
+    position: relative;
+  }
+  body .content .firstpart .txtphoto .txt1 .waviy span {
+    font-family: "Brandon Grotesque Light";
+    font-size: 62.5px;
+    line-height: 89px;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: -1px 2px 6px rgba(0, 0, 0, 0.73);
+    margin-bottom: -100px;
+    margin-top: 250px;
+    display: inline-block;
+    color: #fff;
+    -webkit-animation: flip2 5s infinite;
+            animation: flip2 5s infinite;
+    -webkit-animation-delay: calc(0.2s * var(--i));
+            animation-delay: calc(0.2s * var(--i));
+  }
+  body .content .firstpart .txtphoto .txt2 .waviy {
+    position: relative;
+  }
+  body .content .firstpart .txtphoto .txt2 .waviy span {
+    font-family: "Brandon Grotesque black";
+    font-size: 100px;
+    line-height: 143px;
+    letter-spacing: 0.325em;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: -1px 2px 6px rgba(0, 0, 0, 0.73);
+    margin-bottom: 200px;
+    display: inline-block;
+    color: #fff;
+    -webkit-animation: flip2 5s infinite;
+            animation: flip2 5s infinite;
+    -webkit-animation-delay: calc(0.2s * var(--i));
+            animation-delay: calc(0.2s * var(--i));
+  }
   body .content .firstpart .bg {
-    height: 980px;
+    height: 200px;
   }
   body .content .secondpart {
     background-image: url(../img/secondbg.png);
@@ -4193,19 +4670,10 @@ p {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  body .content .secondpart .container .up .waviy {
-    position: relative;
-  }
-  body .content .secondpart .container .up .waviy span {
+  body .content .secondpart .container .up p {
     font-family: "Brandon Grotesque Medium";
     margin-top: 80px;
     font-size: 38px;
-    display: inline-block;
-    color: #fff;
-    -webkit-animation: flip 5s infinite;
-            animation: flip 5s infinite;
-    -webkit-animation-delay: calc(.2s * var(--i));
-            animation-delay: calc(.2s * var(--i));
   }
   body .content .secondpart .container .mid p {
     font-size: 26px;
@@ -5400,6 +5868,156 @@ p {
         -ms-flex: 1;
             flex: 1;
   }
+  body .content .team {
+    background-image: url(../img/bgteam.png);
+    background-size: 100% 100%;
+  }
+  body .content .team .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  body .content .team .container .up p {
+    font-family: "Brandon Grotesque Medium";
+    font-size: 38px;
+    text-align: start;
+    margin-bottom: 40px;
+  }
+  body .content .team .container .down {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body .content .team .container .down .box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  body .content .team .container .down .box .up img {
+    width: 226px;
+    height: 226px;
+  }
+  body .content .team .container .down .box .mid {
+    text-align: center;
+  }
+  body .content .team .container .down .box .mid .title {
+    font-family: "Brandon Grotesque Bold";
+    font-size: 24px;
+    color: #fff;
+    margin-top: 5px;
+  }
+  body .content .team .container .down .box .mid .position {
+    font-family: "Brandon Grotesque Medium";
+    font-size: 22px;
+    color: #59cbff;
+    margin-top: -20px;
+    margin-bottom: 5px;
+  }
+  body .content .team .container .down .box .txt {
+    background: rgba(35, 34, 34, 0.38);
+    width: 200px;
+    padding: 0px 6px 0px 6px;
+    text-align: start;
+    margin: 0 auto;
+  }
+  body .content .team .container .down .box .txt p {
+    font-family: "Brandon Grotesque Regular";
+    font-size: 16px;
+    color: #fff;
+  }
+  body .content .team .container .down .box .socials {
+    margin: 0;
+    padding: 0;
+    margin-left: -5px;
+    margin-right: -5px;
+    margin-top: 15px;
+    margin-bottom: 60px;
+  }
+  body .content .team .container .down .box .socials a {
+    margin: 0;
+    padding: 0;
+  }
+  body .content .team .container .down .box .socials a .s1 {
+    width: 15px;
+    height: 15px;
+    padding: 12px 15px;
+    margin: 0;
+    margin-left: -1px;
+    margin-right: -1px;
+    background: #282a2e;
+    border: 1.3px solid #ffffff;
+    opacity: 0.8;
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+  }
+  body .content .team .container .down .box .socials a .s1:hover {
+    opacity: 1;
+    background-color: #0097ec;
+  }
+  body .content .team .container .down .box .socials a .s2 {
+    width: 15px;
+    height: 15px;
+    padding: 12px 15px;
+    margin: 0;
+    margin-left: -4px;
+    margin-right: -1px;
+    background: #282a2e;
+    border: 1.3px solid #ffffff;
+    opacity: 0.8;
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+  }
+  body .content .team .container .down .box .socials a .s2:hover {
+    opacity: 1;
+    background-color: #0097ec;
+  }
+  body .content .team .container .down .box .socials a .s3 {
+    width: 15px;
+    height: 15px;
+    padding: 12px 15px;
+    margin: 0;
+    margin-left: -4px;
+    margin-right: -1px;
+    background: #282a2e;
+    border: 1.3px solid #ffffff;
+    opacity: 0.8;
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+  }
+  body .content .team .container .down .box .socials a .s3:hover {
+    opacity: 1;
+    background-color: #0097ec;
+  }
+  body .content .team .container .down .box .socials a .s4 {
+    width: 15px;
+    height: 15px;
+    padding: 12px 15px;
+    margin: 0;
+    margin-left: -4px;
+    margin-right: -1px;
+    background: #282a2e;
+    border: 1.3px solid #ffffff;
+    opacity: 0.8;
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+  }
+  body .content .team .container .down .box .socials a .s4:hover {
+    opacity: 1;
+    background-color: #0097ec;
+  }
   body .content .contract .bxslider {
     width: 100%;
     background-color: transparent;
@@ -5429,7 +6047,7 @@ p {
     border: 0px;
   }
   body .content .mcqueen {
-    padding-top: 150px;
+    margin-top: -200px;
     background-image: url(../img/foterroad.png);
     background-size: 100%;
     background-repeat: no-repeat;
@@ -5443,6 +6061,7 @@ p {
             align-items: center;
   }
   body .content .mcqueen img {
+    padding-top: 450px;
     display: block;
     margin: auto;
     width: 409px;

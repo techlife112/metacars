@@ -4,14 +4,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>MetaCars</title>
+    <link rel="icon" type="image/x-icon" href="/favicons/16x16.png">
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
     <div class="container">
       <div class="firstpart">
-        <img src="assets/img/logo.png" alt="" />
+        <div class="left">
+
+        </div>
+        <div class="mid">
+          <img src="assets/img/logo.png" alt="" />
+        </div>
+        <div class="right">
+          <div class="socials" >
+            <a href="https://t.me/metacarseth">
+              <img class="s1" src="assets/img/telegram.png" alt="" />
+            </a>
+            <a href="https://twitter.com/MetaCarsETH">
+              <img class="s2" src="assets/img/twitter.png" alt="" />
+            </a>
+            <a href="https://www.instagram.com/MetaCarsETH/">
+              <img class="s3" src="assets/img/instagram.png" alt="" />
+            </a>
+            <a href="https://discord.gg/DxvWu6pXga">
+              <img class="s4" src="assets/img/discord.png" alt="" />
+            </a>
+          </div>
+        </div>
+        
       </div>
+      
       <div class="secondpart">
           <div class="up">
               <p><span>WEBSITE</span> LAUNCH IN</p>
@@ -52,17 +76,114 @@
           </div>
       </div>
 
+      
       <div class="thirdpart">
-          <a href="website/index.html">WEBSITE</a>
+          <a href="">WEBSITE</a>
       </div>
+
+      <!-- <div class="thirdpart">
+          <a href="website/index.html">WEBSITE</a>
+      </div> -->
+      
       <div class="divo"></div>
     </div>
+    
+    <section class="thirdpart2" id="metacarsnft">
+      <div class="con">
+        <div class="container">
+          <div class="title" data-aos="flip-up">
+            <p>McQueen and his Buddies</p>
+          </div>
+          <div class="downtitle" data-aos="flip-up">
+            <p>
+              Created by <a href="https://twitter.com/MetaCarsETH"><span>@MetaCarsETH</span></a>
+            </p>
+          </div>
+
+    
+            
+          <div class="coni">
+            <div class="box">
+              <img src="assets/img/72.png" alt="" />
+
+              <div class="txtup">
+                <p>McQueen and his Buddies</p>
+                <p>Price</p>
+              </div>
+
+              <div class="txtdown">
+                <p>Lightning McQueen #1/420</p>
+
+                <div class="right">
+                  <img src="assets/img/ethlogo.png" alt="" />
+                  <p>4.26K</p>
+                </div>
+              </div>
+
+              <div class="button">
+                <a href="">Buy now</a>
+              </div>
+            </div>
+
+            <div class="box">
+              <img src="assets/img/42.png" alt="" />
+
+              <div class="txtup">
+                <p>McQueen and his Buddies</p>
+                <p>Price</p>
+              </div>
+
+              <div class="txtdown">
+                <p>Doc Hudson #18/420</p>
+
+                <div class="right">
+                  <img src="assets/img/ethlogo.png" alt="" />
+                  <p>2.00K</p>
+                </div>
+              </div>
+
+              <div class="button">
+                <a href="">Buy now</a>
+              </div>
+            </div>
+
+            <div class="box">
+              <img src="assets/img/12.png" alt="" />
+
+              <div class="txtup">
+                <p>McQueen and his Buddies</p>
+                <p>Price</p>
+              </div>
+
+              <div class="txtdown">
+                <p>Mack The Transporter #12/420</p>
+
+                <div class="right">
+                  <img src="assets/img/ethlogo.png" alt="" />
+                  <p>1.526K</p>
+                </div>
+              </div>
+
+              <div class="button">
+                <a href="">Buy now</a>
+              </div>
+            </div>
+          </div>
+
+
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+
   </body>
 </html>
 
 <script>
     // Set the date we're counting down to
-var countDownDate = new Date("April 5, 2022 15:37:25").getTime();
+var countDownDate = new Date("April 28, 2022 15:37:25 UTC").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function () {
@@ -78,6 +199,18 @@ var x = setInterval(function () {
   var minute = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var second = Math.floor((distance % (1000 * 60)) / 1000);
 
+  if (day < 10) {
+    day = "0"+day;
+  }
+  if (hour < 10) {
+    hour = "0"+hour;
+  }
+  if (minute < 10) {
+    minute = "0"+minute;
+  }
+  if (second < 10) {
+    second = "0"+second;
+  }
   
 
   // Output the result in an element with id="demo"

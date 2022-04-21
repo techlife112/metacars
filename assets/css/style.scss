@@ -18,120 +18,156 @@
   font-family: "BrandonGrotesqueBold";
   src: url(../Brandon_blk.otf);
 }
-
-@media only screen and (max-width: 750px) {
-  body {
-    margin: 0;
-    padding: 0;
-    overflow-y: 0;
-    color: #fff;
-    .container {
-      background-image: url(../img/COUNTDOWNmobile.png);
-      background-size: 100% 100%;
-      justify-content: center;
-      align-items: center;
-      align-self: center;
-      .firstpart {
-        justify-content: center;
-        align-items: center;
-        align-self: center;
-        img {
-          width: 165px;
-        display: block;
-          margin: 0 auto;
-
-          padding-top: 20px;
-        }
-      }
-
-      .secondpart {
-        margin-top: 40px;
-        text-align: center;
-        .up {
-          font-size: 25px;
-          text-align: center;
-          font-family: "BrandonGrotesqueRegular";
-          span {
-            font-family: "BrandonGrotesqueBold";
-          }
-
-          p {
-            margin-top: 100px;
-          }
-        }
-        .down {
-          width: 70%;
-          margin: auto;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          flex-wrap: wrap;
-          .box {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-
-            .up {
-              font-size: 150px;
-              font-family: "FuturaBoldCon";
-              line-height: 0px;
-              text-align: center;
-            }
-            .down {
-              margin-top: -105px;
-              font-family: "FuturaLightCon";
-              font-size: 20px;
-              text-align: center;
-              justify-content: center;
-            }
-          }
-        }
-      }
-      .thirdpart {
-        justify-content: center;
-        margin-top: 30px;
-        text-align: center;
-        align-items: center;
-        margin-bottom: 140px;
-        a {
-          color: white;
-          font-style: normal;
-          text-decoration: none;
-          font-family: "BrandonGrotesqueMedium";
-          font-size: 22px;
-          padding: 10px 50px;
-          background: radial-gradient(
-            47.54% 180.88% at 50% 50%,
-            #1f9eff 0.98%,
-            #1b9eff 36.79%,
-            #0f9fff 71.76%,
-            #009fff 100%
-          );
-          transition: 0.2s;
-          &:hover {
-            opacity: 0.5;
-          }
-        }
-      }
-      .divo {
-        height: 1px;
-      }
-    }
-  }
+@font-face {
+  font-family: "FuturaPTLight";
+  src: url(../fonts/FuturaPT/FuturaPTLight.otf);
 }
-@media only screen and (min-width: 669px) {
+@font-face {
+  font-family: "FuturaPTMedium";
+  src: url(../fonts/FuturaPT/FuturaPTMedium.otf);
+}
+@font-face {
+  font-family: "FuturaPTHeavy";
+  src: url(../fonts/FuturaPT/FuturaPTHeavy.otf);
+}
+@font-face {
+  font-family: "Brandon Grotesque Medium";
+  src: url(../fonts/Brandon/Brandon_med.otf);
+}
+@font-face {
+  font-family: "Brandon Grotesque Bold";
+  src: url(../fonts/Brandon/Brandon_bld.otf);
+}
+@font-face {
+  font-family: "Brandon Grotesque Regular";
+  src: url(../fonts/Brandon/Brandon_reg.otf);
+}
+@font-face {
+  font-family: "Brandon Grotesque Black";
+  src: url(../fonts/Brandon/Brandon_blk.otf);
+}
+@font-face {
+  font-family: "subwt";
+  src: url(../fonts/SUBWT.ttf);
+}
+@font-face {
+  font-family: "HIGHSPEED";
+  src: url(../fonts/HIGHSPEED.TTF);
+}
+a {
+  text-decoration: none;
+}
+
+
+@media only screen and (max-width: 669px) {
   body {
     margin: 0;
     padding: 0;
     overflow-y: 0;
-    color: #fff;
+
+    background-color: black;
     .container {
       background-image: url(../img/bgcountdown.png);
-      background-size: 100% 100%;
+      background-size: 100%;
+      background-repeat: no-repeat;
+
       .firstpart {
-        img {
-          width: 165px;
-          margin: 20px 0px 0px 40px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        .left {
+          flex: 0;
+        }
+        .mid {
+          flex: 1;
+          img {
+            width: 125px;
+            margin: 20px 0px 30px 0px;
+          }
+        }
+        .right {
+          flex: 1;
+          .socials {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            justify-content: center;
+
+            margin-top: 0px;
+            margin-bottom: 50px;
+            a {
+              margin: 0;
+              padding: 0;
+
+              .s1 {
+                width: 18px;
+                height: 18px;
+                padding: 12px 15px;
+                margin: 0;
+                margin-left: 0px;
+                margin-right: 0px;
+                background: #282a2e;
+                border: 1.3px solid #ffffff;
+                opacity: 0.8;
+                transition: background-color 0.5s;
+
+                &:hover {
+                  opacity: 1;
+                  background-color: #0097ec;
+                }
+              }
+              .s2 {
+                width: 18px;
+                height: 18px;
+                padding: 12px 15px;
+                margin: 0;
+
+                background: #282a2e;
+                border: 1.3px solid #ffffff;
+                opacity: 0.8;
+                transition: background-color 0.5s;
+
+                &:hover {
+                  opacity: 1;
+                  background-color: #0097ec;
+                }
+              }
+              .s3 {
+                width: 18px;
+                height: 18px;
+                padding: 12px 15px;
+                margin: 0;
+
+                background: #282a2e;
+                border: 1.3px solid #ffffff;
+                opacity: 0.8;
+                transition: background-color 0.5s;
+
+                &:hover {
+                  opacity: 1;
+                  background-color: #0097ec;
+                }
+              }
+              .s4 {
+                width: 18px;
+                height: 18px;
+                padding: 12px 15px;
+                margin: 0;
+
+                background: #282a2e;
+                border: 1.3px solid #ffffff;
+                opacity: 0.8;
+                transition: background-color 0.5s;
+
+                &:hover {
+                  opacity: 1;
+                  background-color: #0097ec;
+                }
+              }
+            }
+          }
         }
       }
 
@@ -142,6 +178,7 @@
           font-size: 30px;
           text-align: center;
           font-family: "BrandonGrotesqueRegular";
+          color: white;
           span {
             font-family: "BrandonGrotesqueBold";
           }
@@ -151,29 +188,31 @@
           }
         }
         .down {
-          width: 70%;
+          width: 100%;
           margin: auto;
           display: flex;
-          flex-direction: row;
-          justify-content: space-between;
+          flex-direction: column;
+          justify-content: center;
           flex-wrap: wrap;
           .box {
             display: flex;
             flex-direction: column;
             text-align: center;
-
+            margin: 0px 25px 0px 25px;
             .up {
-              font-size: 250px;
-              font-family: "FuturaBoldCon";
+              font-size: 100px;
+              font-family: "subwt";
               line-height: 0px;
               text-align: center;
+              color: #06adf9;
             }
             .down {
-              margin-top: -165px;
+              margin-top: -65px;
               font-family: "FuturaLightCon";
               font-size: 28px;
               text-align: center;
               justify-content: center;
+              color: white;
             }
           }
         }
@@ -183,7 +222,9 @@
         margin-top: 30px;
         text-align: center;
         align-items: center;
-        margin-bottom: 140px;
+        margin-bottom: 40px;
+        // remove opacity!
+        opacity: 0.3;
         a {
           color: white;
           font-style: normal;
@@ -204,8 +245,446 @@
           }
         }
       }
+
       .divo {
-        height: 1px;
+        height: 40px;
+      }
+    }
+
+    .thirdpart2 {
+      background-image: url(../img/bgnft.png);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      .con {
+        .container {
+          width: 80%;
+          margin: 0 auto;
+          text-align: center;
+          justify-content: center;
+          background: transparent;
+
+          .title {
+            p {
+              font-family: "Brandon Grotesque Bold";
+              font-size: 46px;
+              color: white;
+            }
+          }
+
+          .downtitle {
+            margin-top: -30px;
+            p {
+              font-family: "Brandon Grotesque Regular";
+              font-size: 28px;
+              color: white;
+              span {
+                font-family: "Brandon Grotesque Medium";
+                color: #50b5ff;
+              }
+            }
+          }
+
+          .coni {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            color: white;
+            .box {
+              padding: 10px;
+              background: #1d1d1d;
+              border: 2.2px solid #494949;
+              box-sizing: border-box;
+              height: 410px;
+              margin: 0px 20px 0px 20px;
+              img {
+                margin-top: 0px;
+                width: 280px;
+                height: 280px;
+              }
+              .txtup {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                p {
+                  font-family: "FuturaPTMedium";
+                  font-size: 14px;
+                  color: #9da6ac;
+                }
+              }
+              .txtdown {
+                margin-top: -20px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                p {
+                  font-family: "FuturaPTMedium";
+                  font-size: 14px;
+                  color: #ffffff;
+                }
+                .right {
+                  display: flex;
+                  flex-direction: row;
+                  img {
+                    width: 14px;
+                    height: 14px;
+                    margin: auto;
+                    display: block;
+                  }
+                }
+              }
+
+              .button {
+                visibility: hidden;
+                transition: all 0.2s ease-in-out;
+                a {
+                  font-family: "Brandon Grotesque Black";
+                  font-size: 18px;
+                  line-height: 26px;
+                  color: #3aacff;
+                  opacity: 0;
+                }
+              }
+              margin-bottom: 136px;
+              &:hover {
+                height: 420px;
+                margin-bottom: 40px;
+                transition: all 0.2s ease-in-out;
+                .button {
+                  transition: all 1s;
+                  visibility: visible;
+                  margin-top: 20px;
+                  margin-bottom: 8px;
+                  a {
+                    font-family: "Brandon Grotesque Black";
+                    font-size: 18px;
+                    line-height: 26px;
+                    color: #3aacff;
+                    opacity: 1;
+                  }
+                }
+              }
+            }
+          }
+
+          .nft {
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 670px) {
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-y: 0;
+
+    background-color: black;
+    .container {
+      background-image: url(../img/bgcountdown.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
+
+      .firstpart {
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .left {
+          flex: 1;
+        }
+        .mid {
+          flex: 1;
+          img {
+            width: 125px;
+            margin: 20px 0px 50px 0px;
+          }
+        }
+        .right {
+          flex: 1;
+          .socials {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            justify-content: center;
+
+            margin-top: 30px;
+            margin-bottom: 60px;
+            a {
+              margin: 0;
+              padding: 0;
+
+              .s1 {
+                width: 18px;
+                height: 18px;
+                padding: 12px 15px;
+                margin: 0;
+                margin-left: 0px;
+                margin-right: 0px;
+                background: #282a2e;
+                border: 1.3px solid #ffffff;
+                opacity: 0.8;
+                transition: background-color 0.5s;
+
+                &:hover {
+                  opacity: 1;
+                  background-color: #0097ec;
+                }
+              }
+              .s2 {
+                width: 18px;
+                height: 18px;
+                padding: 12px 15px;
+                margin: 0;
+
+                background: #282a2e;
+                border: 1.3px solid #ffffff;
+                opacity: 0.8;
+                transition: background-color 0.5s;
+
+                &:hover {
+                  opacity: 1;
+                  background-color: #0097ec;
+                }
+              }
+              .s3 {
+                width: 18px;
+                height: 18px;
+                padding: 12px 15px;
+                margin: 0;
+
+                background: #282a2e;
+                border: 1.3px solid #ffffff;
+                opacity: 0.8;
+                transition: background-color 0.5s;
+
+                &:hover {
+                  opacity: 1;
+                  background-color: #0097ec;
+                }
+              }
+              .s4 {
+                width: 18px;
+                height: 18px;
+                padding: 12px 15px;
+                margin: 0;
+
+                background: #282a2e;
+                border: 1.3px solid #ffffff;
+                opacity: 0.8;
+                transition: background-color 0.5s;
+
+                &:hover {
+                  opacity: 1;
+                  background-color: #0097ec;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .secondpart {
+        margin-top: -50px;
+        text-align: center;
+        .up {
+          font-size: 30px;
+          text-align: center;
+          font-family: "BrandonGrotesqueRegular";
+          color: white;
+          span {
+            font-family: "BrandonGrotesqueBold";
+          }
+
+          p {
+            margin-top: 100px;
+          }
+        }
+        .down {
+          width: 100%;
+          margin: auto;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          flex-wrap: wrap;
+          .box {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin: 0px 25px 0px 25px;
+            .up {
+              font-size: 140px;
+              font-family: "subwt";
+              line-height: 0px;
+              text-align: center;
+              color: #06adf9;
+            }
+            .down {
+              margin-top: -85px;
+              font-family: "FuturaLightCon";
+              font-size: 28px;
+              text-align: center;
+              justify-content: center;
+              color: white;
+            }
+          }
+        }
+      }
+      .thirdpart {
+        justify-content: center;
+        margin-top: 30px;
+        text-align: center;
+        align-items: center;
+        margin-bottom: 140px;
+        // remove opacity!
+        opacity: 0.3;
+        a {
+          color: white;
+          font-style: normal;
+          text-decoration: none;
+          font-family: "BrandonGrotesqueMedium";
+          font-size: 22px;
+          padding: 10px 50px;
+          background: radial-gradient(
+            47.54% 180.88% at 50% 50%,
+            #1f9eff 0.98%,
+            #1b9eff 36.79%,
+            #0f9fff 71.76%,
+            #009fff 100%
+          );
+          transition: 0.2s;
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+
+      .divo {
+        height: 400px;
+      }
+    }
+
+    .thirdpart2 {
+      background-image: url(../img/bgnft.png);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      .con {
+        .container {
+          width: 80%;
+          margin: 0 auto;
+          text-align: center;
+          justify-content: center;
+          background: transparent;
+
+          .title {
+            p {
+              font-family: "Brandon Grotesque Bold";
+              font-size: 46px;
+              color: white;
+            }
+          }
+
+          .downtitle {
+            margin-top: -30px;
+            p {
+              font-family: "Brandon Grotesque Regular";
+              font-size: 28px;
+              color: white;
+              span {
+                font-family: "Brandon Grotesque Medium";
+                color: #50b5ff;
+              }
+            }
+          }
+
+          .coni {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            color: white;
+            .box {
+              padding: 10px;
+              background: #1d1d1d;
+              border: 2.2px solid #494949;
+              box-sizing: border-box;
+              height: 410px;
+              margin: 0px 20px 0px 20px;
+              img {
+                margin-top: 0px;
+                width: 280px;
+                height: 280px;
+              }
+              .txtup {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                p {
+                  font-family: "FuturaPTMedium";
+                  font-size: 14px;
+                  color: #9da6ac;
+                }
+              }
+              .txtdown {
+                margin-top: -20px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                p {
+                  font-family: "FuturaPTMedium";
+                  font-size: 14px;
+                  color: #ffffff;
+                }
+                .right {
+                  display: flex;
+                  flex-direction: row;
+                  img {
+                    width: 14px;
+                    height: 14px;
+                    margin: auto;
+                    display: block;
+                  }
+                }
+              }
+
+              .button {
+                visibility: hidden;
+                transition: all 0.2s ease-in-out;
+                a {
+                  font-family: "Brandon Grotesque Black";
+                  font-size: 18px;
+                  line-height: 26px;
+                  color: #3aacff;
+                  opacity: 0;
+                }
+              }
+              margin-bottom: 136px;
+              &:hover {
+                height: 420px;
+                margin-bottom: 40px;
+                transition: all 0.2s ease-in-out;
+                .button {
+                  transition: all 1s;
+                  visibility: visible;
+                  margin-top: 20px;
+                  margin-bottom: 8px;
+                  a {
+                    font-family: "Brandon Grotesque Black";
+                    font-size: 18px;
+                    line-height: 26px;
+                    color: #3aacff;
+                    opacity: 1;
+                  }
+                }
+              }
+            }
+          }
+
+          .nft {
+          }
+        }
       }
     }
   }
