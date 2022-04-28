@@ -47,6 +47,24 @@ p {
   color: white;
 }
 
+@-webkit-keyframes fade {
+  0%, 50%, 100% {
+    opacity: 0;
+  }
+  25%, 75% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0%, 50%, 100% {
+    opacity: 0;
+  }
+  25%, 75% {
+    opacity: 1;
+  }
+}
+
 @media only screen and (max-width: 669px) {
   body {
     margin: 0px;
@@ -58,7 +76,8 @@ p {
   body .container {
     background: linear-gradient(179.09deg, #000000 1.08%, #121e31 15.14%, #0f1322 36.61%, #040d1b 49.72%, #111526 64.36%, #000000 85.95%, #000000 99.22%);
     width: 100%;
-    margin: auto;
+    margin: 0px;
+    padding: 0px;
   }
   body .container .firstpart {
     display: -webkit-box;
@@ -68,6 +87,8 @@ p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin: 0px;
+    padding: 0px;
   }
   body .container .firstpart .nav {
     display: none;
@@ -109,6 +130,9 @@ p {
     width: 104.24px;
     height: 70.28px;
   }
+  body .container .firstpart .nav .container .elem1 {
+    width: 100px;
+  }
   body .container .firstpart .navmobile {
     width: 80%;
     margin: 0 auto;
@@ -144,9 +168,7 @@ p {
   body .container .firstpart .photo {
     width: 100%;
     margin: 0 auto;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    display: none;
   }
   body .container .firstpart .photo img {
     width: 100%;
@@ -154,6 +176,17 @@ p {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  body .container .firstpart .photomobile {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+  body .container .firstpart .photomobile img {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
   }
   body .container .firstpart .bg {
     height: 100px;
@@ -177,14 +210,14 @@ p {
             flex-direction: row;
   }
   body .container .secondsection .up .left {
-    -webkit-box-flex: 0.8;
-        -ms-flex: 0.8;
-            flex: 0.8;
+    -webkit-box-flex: 0.6;
+        -ms-flex: 0.6;
+            flex: 0.6;
     margin-top: 20px;
   }
   body .container .secondsection .up .left img {
     width: 100%;
-    height: 30px;
+    height: 15px;
   }
   body .container .secondsection .up .mid {
     -webkit-box-flex: 2;
@@ -199,14 +232,14 @@ p {
     color: white;
   }
   body .container .secondsection .up .right {
-    -webkit-box-flex: 0.8;
-        -ms-flex: 0.8;
-            flex: 0.8;
+    -webkit-box-flex: 0.6;
+        -ms-flex: 0.6;
+            flex: 0.6;
     margin-top: 20px;
   }
   body .container .secondsection .up .right img {
     width: 100%;
-    height: 30px;
+    height: 15px;
   }
   body .container .secondsection .lowermid {
     text-align: center;
@@ -221,18 +254,18 @@ p {
     color: #00adf6;
   }
   body .container .secondsection .txt {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
   }
   body .container .secondsection .txt .container {
-    background-image: url(../img/paragraph1.png);
+    background-image: url(../img/paragraph2.png);
     background-size: 100% 100%;
-    padding-top: 80px;
-    padding-left: 10px;
-    padding-bottom: 10px;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
   }
   body .container .secondsection .txt .container .firstcolor {
-    width: 95%;
+    width: 100%;
     font-family: "FuturaPTLight";
     font-size: 18px;
     line-height: 181%;
@@ -242,7 +275,7 @@ p {
     margin-bottom: -5px;
   }
   body .container .secondsection .txt .container .secondcolor {
-    width: 95%;
+    width: 100%;
     font-family: "FuturaPTMedium";
     font-size: 18px;
     line-height: 181%;
@@ -252,12 +285,14 @@ p {
     margin-bottom: -5px;
   }
   body .container .secondsection .scroll {
-    width: 99%;
+    width: 100%;
     margin: 0 auto;
   }
   body .container .secondsection .scroll img {
     margin: 30px 0px;
     width: 100%;
+    -webkit-animation: fade 5s linear infinite;
+            animation: fade 5s linear infinite;
   }
   body .container .secondsection .demov1 {
     width: 100%;
@@ -348,12 +383,14 @@ p {
     display: none;
   }
   body .container .rewards .up {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
   }
   body .container .rewards .up img {
     margin: 30px 0px;
     width: 100%;
+    -webkit-animation: fade 5s linear infinite;
+            animation: fade 5s linear infinite;
   }
   body .container .rewards .mid {
     width: 100%;
@@ -383,14 +420,14 @@ p {
             flex-direction: row;
   }
   body .container .thirdsection .up .left {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -webkit-box-flex: 0.35;
+        -ms-flex: 0.35;
+            flex: 0.35;
     margin-top: 10px;
   }
   body .container .thirdsection .up .left img {
     width: 100%;
-    height: 30px;
+    height: 15px;
   }
   body .container .thirdsection .up .mid {
     -webkit-box-flex: 1;
@@ -405,28 +442,29 @@ p {
     color: white;
   }
   body .container .thirdsection .up .right {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -webkit-box-flex: 0.35;
+        -ms-flex: 0.35;
+            flex: 0.35;
     margin-top: 10px;
   }
   body .container .thirdsection .up .right img {
     width: 100%;
-    height: 30px;
+    height: 15px;
   }
   body .container .thirdsection .txt {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
   }
   body .container .thirdsection .txt .container {
-    background-image: url(../img/paragraph1.png);
+    background-image: url(../img/paragraph2.png);
     background-size: 100% 100%;
-    padding-top: 100px;
-    padding-left: 10px;
-    padding-bottom: 10px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 20px;
   }
   body .container .thirdsection .txt .container .firstcolor {
-    width: 95%;
+    width: 100%;
     font-family: "FuturaPTLight";
     font-size: 18px;
     line-height: 181%;
@@ -436,7 +474,7 @@ p {
     margin-bottom: -5px;
   }
   body .container .thirdsection .txt .container .firstcolor .secondcolor {
-    width: 95%;
+    width: 100%;
     font-family: "FuturaPTMedium";
     font-size: 18px;
     line-height: 181%;
@@ -708,6 +746,9 @@ p {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  body .container .firstpart .photomobile {
+    display: none;
+  }
   body .container .firstpart .bg {
     height: 100px;
   }
@@ -730,14 +771,14 @@ p {
             flex-direction: row;
   }
   body .container .secondsection .up .left {
-    -webkit-box-flex: 0.8;
-        -ms-flex: 0.8;
-            flex: 0.8;
-    margin-top: 20px;
+    -webkit-box-flex: 0.5;
+        -ms-flex: 0.5;
+            flex: 0.5;
+    margin-top: 10px;
   }
   body .container .secondsection .up .left img {
     width: 100%;
-    height: 30px;
+    height: 20px;
   }
   body .container .secondsection .up .mid {
     -webkit-box-flex: 2;
@@ -752,14 +793,14 @@ p {
     color: white;
   }
   body .container .secondsection .up .right {
-    -webkit-box-flex: 0.8;
-        -ms-flex: 0.8;
-            flex: 0.8;
-    margin-top: 20px;
+    -webkit-box-flex: 0.5;
+        -ms-flex: 0.5;
+            flex: 0.5;
+    margin-top: 10px;
   }
   body .container .secondsection .up .right img {
     width: 100%;
-    height: 30px;
+    height: 20px;
   }
   body .container .secondsection .lowermid {
     text-align: center;
@@ -774,18 +815,18 @@ p {
     color: #00adf6;
   }
   body .container .secondsection .txt {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
   }
   body .container .secondsection .txt .container {
-    background-image: url(../img/paragraph1.png);
+    width: 80%;
+    background-image: url(../img/paragraph2.png);
     background-size: 100% 100%;
-    padding: 40px;
-    margin-left: -25px;
-    padding-top: 80px;
+    padding: 25px;
+    margin: 0 auto;
   }
   body .container .secondsection .txt .container .firstcolor {
-    width: 95%;
+    width: 100%;
     font-family: "FuturaPTLight";
     font-size: 22px;
     line-height: 181%;
@@ -795,7 +836,7 @@ p {
     margin-bottom: -5px;
   }
   body .container .secondsection .txt .container .secondcolor {
-    width: 95%;
+    width: 100%;
     font-family: "FuturaPTMedium";
     font-size: 22px;
     line-height: 181%;
@@ -805,12 +846,14 @@ p {
     margin-bottom: -5px;
   }
   body .container .secondsection .scroll {
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
+    margin: 05 auto;
   }
   body .container .secondsection .scroll img {
     margin: 90px 0px;
     width: 100%;
+    -webkit-animation: fade 5s linear infinite;
+            animation: fade 5s linear infinite;
   }
   body .container .secondsection .demov1 {
     width: 100%;
@@ -901,12 +944,14 @@ p {
     display: none;
   }
   body .container .rewards .up {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
   }
   body .container .rewards .up img {
     margin: 90px 0px;
     width: 100%;
+    -webkit-animation: fade 5s linear infinite;
+            animation: fade 5s linear infinite;
   }
   body .container .rewards .mid {
     width: 100%;
@@ -943,7 +988,7 @@ p {
   }
   body .container .thirdsection .up .left img {
     width: 100%;
-    height: 30px;
+    height: 20px;
   }
   body .container .thirdsection .up .mid {
     -webkit-box-flex: 1;
@@ -965,21 +1010,22 @@ p {
   }
   body .container .thirdsection .up .right img {
     width: 100%;
-    height: 30px;
+    height: 20px;
   }
   body .container .thirdsection .txt {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
   }
   body .container .thirdsection .txt .container {
-    background-image: url(../img/paragraph1.png);
+    width: 80%;
+    margin: 0 auto;
+    background-image: url(../img/paragraph2.png);
     background-size: 100% 100%;
-    padding: 10px;
-    padding-top: 80px;
-    margin-left: 10px;
+    padding: 20px;
+    margin-top: 20px;
   }
   body .container .thirdsection .txt .container .firstcolor {
-    width: 95%;
+    width: 100%;
     font-family: "FuturaPTLight";
     font-size: 22px;
     line-height: 181%;
@@ -989,7 +1035,7 @@ p {
     margin-bottom: -5px;
   }
   body .container .thirdsection .txt .container .firstcolor .secondcolor {
-    width: 95%;
+    width: 100%;
     font-family: "FuturaPTMedium";
     font-size: 22px;
     line-height: 181%;
@@ -1174,8 +1220,11 @@ p {
             flex-direction: column;
   }
   body .container .firstpart .nav {
+    position: absolute;
     background: rgba(11, 11, 11, 0.85);
     height: 100px;
+    width: 100%;
+    margin-top: -1px;
   }
   body .container .firstpart .nav .container {
     width: 80%;
@@ -1198,7 +1247,7 @@ p {
   body .container .firstpart .nav .container .elem p {
     font-family: "FuturaPTHeavy";
     font-size: 16px;
-    color: #cbcbcb;
+    color: #efefef;
     -webkit-transition: 0.2s;
     transition: 0.2s;
     padding-top: 10px;
@@ -1215,6 +1264,9 @@ p {
     width: 104.24px;
     height: 70.28px;
   }
+  body .container .firstpart .nav .container .elem1 {
+    width: 54px;
+  }
   body .container .firstpart .navmobile {
     display: none;
   }
@@ -1224,6 +1276,7 @@ p {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-top: -15px;
   }
   body .container .firstpart .photo img {
     width: 100%;
@@ -1231,6 +1284,9 @@ p {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  body .container .firstpart .photomobile {
+    display: none;
   }
   body .container .firstpart .bg {
     height: 100px;
@@ -1334,6 +1390,8 @@ p {
   body .container .secondsection .scroll img {
     margin: 90px 0px;
     width: 100%;
+    -webkit-animation: fade 5s linear infinite;
+            animation: fade 5s linear infinite;
   }
   body .container .secondsection .demov1 {
     width: 100%;
@@ -1431,6 +1489,8 @@ p {
   body .container .rewards .up img {
     margin: 90px 0px;
     width: 100%;
+    -webkit-animation: fade 5s linear infinite;
+            animation: fade 5s linear infinite;
   }
   body .container .rewards .mid {
     width: 100%;

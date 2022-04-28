@@ -37,6 +37,10 @@ a {
 p {
   color: white;
 }
+@keyframes fade {
+  0%, 50%, 100% { opacity: 0 }
+  25%, 75% { opacity: 1 }
+}
 
 @media only screen and (max-width: 669px) {
   body {
@@ -58,11 +62,14 @@ p {
         #000000 99.22%
       );
       width: 100%;
-      margin: auto;
+      margin: 0px;
+      padding: 0px;
 
       .firstpart {
         display: flex;
         flex-direction: column;
+        margin: 0px;
+        padding: 0px;
         .nav {
           display: none;
           .container {
@@ -92,6 +99,9 @@ p {
                 height: 70.28px;
               }
             }
+            .elem1 {
+              width: 100px;
+            }
           }
         }
         .navmobile {
@@ -116,11 +126,23 @@ p {
         .photo {
           width: 100%;
           margin: 0 auto;
-          justify-content: center;
+          display: none;
+
           img {
             width: 100%;
             margin: 0 auto;
             justify-content: center;
+          }
+        }
+        .photomobile {
+          width: 100%;
+          margin: 0px;
+          padding: 0px;
+          img {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
           }
         }
         .bg {
@@ -135,12 +157,12 @@ p {
           display: flex;
           flex-direction: row;
           .left {
-            flex: 0.8;
+            flex: 0.6;
             margin-top: 20px;
 
             img {
               width: 100%;
-              height: 30px;
+              height: 15px;
             }
           }
           .mid {
@@ -154,11 +176,11 @@ p {
             }
           }
           .right {
-            flex: 0.8;
+            flex: 0.6;
             margin-top: 20px;
             img {
               width: 100%;
-              height: 30px;
+              height: 15px;
             }
           }
         }
@@ -178,16 +200,16 @@ p {
         }
 
         .txt {
-          width: 80%;
+          width: 100%;
           margin: 0 auto;
           .container {
-            background-image: url(../img/paragraph1.png);
+            background-image: url(../img/paragraph2.png);
             background-size: 100% 100%;
-            padding-top: 80px;
-            padding-left: 10px;
-            padding-bottom: 10px;
+            padding: 20px;
+            width: 80%;
+            margin: 0 auto;
             .firstcolor {
-              width: 95%;
+              width: 100%;
               font-family: "FuturaPTLight";
               font-size: 18px;
               line-height: 181%;
@@ -198,7 +220,7 @@ p {
             }
 
             .secondcolor {
-              width: 95%;
+              width: 100%;
               font-family: "FuturaPTMedium";
               font-size: 18px;
               line-height: 181%;
@@ -211,11 +233,12 @@ p {
         }
 
         .scroll {
-          width: 99%;
+          width: 100%;
           margin: 0 auto;
           img {
             margin: 30px 0px;
             width: 100%;
+            animation: fade 5s linear infinite;
           }
         }
         .demov1 {
@@ -318,11 +341,12 @@ p {
 
       .rewards {
         .up {
-          width: 80%;
+          width: 100%;
           margin: 0 auto;
           img {
             margin: 30px 0px;
             width: 100%;
+            animation: fade 5s linear infinite;
           }
         }
         .mid {
@@ -343,12 +367,12 @@ p {
           display: flex;
           flex-direction: row;
           .left {
-            flex: 1;
+            flex: 0.35;
             margin-top: 10px;
 
             img {
               width: 100%;
-              height: 30px;
+              height: 15px;
             }
           }
           .mid {
@@ -362,26 +386,27 @@ p {
             }
           }
           .right {
-            flex: 1;
+            flex: 0.35;
             margin-top: 10px;
             img {
               width: 100%;
-              height: 30px;
+              height: 15px;
             }
           }
         }
 
         .txt {
-          width: 80%;
+          width: 100%;
           margin: 0 auto;
           .container {
-            background-image: url(../img/paragraph1.png);
+            background-image: url(../img/paragraph2.png);
             background-size: 100% 100%;
-            padding-top: 100px;
-            padding-left: 10px;
-            padding-bottom: 10px;
+            width: 80%;
+          margin: 0 auto;
+          padding: 20px;
+          margin-top: 20px;
             .firstcolor {
-              width: 95%;
+              width: 100%;
               font-family: "FuturaPTLight";
               font-size: 18px;
               line-height: 181%;
@@ -390,7 +415,7 @@ p {
               margin-top: -5px;
               margin-bottom: -5px;
               .secondcolor {
-                width: 95%;
+                width: 100%;
                 font-family: "FuturaPTMedium";
                 font-size: 18px;
                 line-height: 181%;
@@ -500,7 +525,7 @@ p {
                   }
                   .s4 {
                     width: 15px;
-                    padding:  14px 15px;
+                    padding: 14px 15px;
                     margin: 0;
 
                     background: rgba(40, 42, 46, 0.55);
@@ -523,7 +548,6 @@ p {
                     border: 1.3px solid #ffffff;
 
                     transition: background-color 0.5s;
-                    
 
                     &:hover {
                       opacity: 1;
@@ -646,6 +670,9 @@ p {
             justify-content: center;
           }
         }
+        .photomobile{
+            display: none;
+        }
         .bg {
           height: 100px;
         }
@@ -658,12 +685,12 @@ p {
           display: flex;
           flex-direction: row;
           .left {
-            flex: 0.8;
-            margin-top: 20px;
+            flex: 0.5;
+            margin-top: 10px;
 
             img {
               width: 100%;
-              height: 30px;
+              height: 20px;
             }
           }
           .mid {
@@ -677,11 +704,11 @@ p {
             }
           }
           .right {
-            flex: 0.8;
-            margin-top: 20px;
+            flex: 0.5;
+            margin-top: 10px;
             img {
               width: 100%;
-              height: 30px;
+              height: 20px;
             }
           }
         }
@@ -701,16 +728,16 @@ p {
         }
 
         .txt {
-          width: 80%;
+          width: 100%;
           margin: 0 auto;
           .container {
-            background-image: url(../img/paragraph1.png);
+            width: 80%;
+            background-image: url(../img/paragraph2.png);
             background-size: 100% 100%;
-            padding: 40px;
-            margin-left: -25px;
-            padding-top: 80px;
+            padding: 25px;
+            margin: 0 auto;
             .firstcolor {
-              width: 95%;
+              width: 100%;
               font-family: "FuturaPTLight";
               font-size: 22px;
               line-height: 181%;
@@ -721,7 +748,7 @@ p {
             }
 
             .secondcolor {
-              width: 95%;
+              width: 100%;
               font-family: "FuturaPTMedium";
               font-size: 22px;
               line-height: 181%;
@@ -734,11 +761,13 @@ p {
         }
 
         .scroll {
-          width: 80%;
-          margin: 0 auto;
+          width: 100%;
+          margin: 05 auto;
+
           img {
             margin: 90px 0px;
             width: 100%;
+            animation: fade 5s linear infinite;
           }
         }
         .demov1 {
@@ -841,11 +870,12 @@ p {
 
       .rewards {
         .up {
-          width: 80%;
+          width: 100%;
           margin: 0 auto;
           img {
             margin: 90px 0px;
             width: 100%;
+            animation: fade 5s linear infinite;
           }
         }
         .mid {
@@ -871,7 +901,7 @@ p {
 
             img {
               width: 100%;
-              height: 30px;
+              height: 20px;
             }
           }
           .mid {
@@ -889,22 +919,23 @@ p {
             margin-top: 10px;
             img {
               width: 100%;
-              height: 30px;
+              height: 20px;
             }
           }
         }
 
         .txt {
-          width: 80%;
+          width: 100%;
           margin: 0 auto;
           .container {
-            background-image: url(../img/paragraph1.png);
+            width: 80%;
+            margin: 0 auto;
+            background-image: url(../img/paragraph2.png);
             background-size: 100% 100%;
-            padding: 10px;
-            padding-top: 80px;
-            margin-left: 10px;
+            padding: 20px;
+            margin-top: 20px;
             .firstcolor {
-              width: 95%;
+              width: 100%;
               font-family: "FuturaPTLight";
               font-size: 22px;
               line-height: 181%;
@@ -913,7 +944,7 @@ p {
               margin-top: -5px;
               margin-bottom: -5px;
               .secondcolor {
-                width: 95%;
+                width: 100%;
                 font-family: "FuturaPTMedium";
                 font-size: 22px;
                 line-height: 181%;
@@ -1106,8 +1137,11 @@ p {
         display: flex;
         flex-direction: column;
         .nav {
+          position: absolute;
           background: rgba(11, 11, 11, 0.85);
           height: 100px;
+          width: 100%;
+          margin-top: -1px;
           .container {
             width: 80%;
             margin: 0 auto;
@@ -1120,7 +1154,7 @@ p {
               p {
                 font-family: "FuturaPTHeavy";
                 font-size: 16px;
-                color: #cbcbcb;
+                color: #efefef;
                 transition: 0.2s;
                 padding-top: 10px;
                 &:hover {
@@ -1136,6 +1170,9 @@ p {
                 height: 70.28px;
               }
             }
+            .elem1 {
+              width: 54px;
+            }
           }
         }
         .navmobile {
@@ -1145,11 +1182,15 @@ p {
           width: 100%;
           margin: 0 auto;
           justify-content: center;
+          margin-top: -15px;
           img {
             width: 100%;
             margin: 0 auto;
             justify-content: center;
           }
+        }
+        .photomobile{
+            display: none;
         }
         .bg {
           height: 100px;
@@ -1243,6 +1284,7 @@ p {
           img {
             margin: 90px 0px;
             width: 100%;
+            animation: fade 5s linear infinite;
           }
         }
         .demov1 {
@@ -1350,6 +1392,7 @@ p {
           img {
             margin: 90px 0px;
             width: 100%;
+            animation: fade 5s linear infinite;
           }
         }
         .mid {
