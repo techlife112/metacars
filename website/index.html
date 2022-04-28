@@ -6,1201 +6,688 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MetaCars</title>
     <link rel="icon" type="image/x-icon" href="/favicons/16x16.png" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://bxslider.com/lib/jquery.bxslider.css"
-    />
+    <link rel="stylesheet" href="assets/css/normalize.min.css" />
+    <link rel="stylesheet" href="assets/css/jquery.bxslider.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/aos.js"></script>
     <script src="assets/js/jquery-2.1.4.min.js"></script>
   </head>
   <body>
-    <div class="content">
-      <section class="firstpart">
-        <div class="nav">
-          <div class="container">
-            <div class="elem">
-              <a href="#theengine"><p>The Engine</p></a>
-            </div>
-            <div class="elem">
-              <a href="#metacarsnft"><p>MetaCars NFT</p></a>
-            </div>
-            <div class="elem">
-              <img src="assets/img/logo.png" alt="" />
-            </div>
-            <div class="elem">
-              <a href="#metacarsp2egame"><p>MetaCars P2E Game</p></a>
-            </div>
-            <div class="elem">
-              <a href=""><p>Whitepaper</p></a>
-            </div>
-          </div>
-        </div>
-        <div class="navmobile">
-          <img src="assets/img/logo.png" alt="" />
-        </div>
-        <div class="txtphoto">
-          <div class="txt1">
-            <div class="waviy">
-              <span style="--i: 1">P</span>
-              <span style="--i: 2">L</span>
-              <span style="--i: 3">A</span>
-              <span style="--i: 4">Y</span>
-              <span style="--i: 5"> </span>
-              <span style="--i: 6">I</span>
-              <span style="--i: 7">N</span>
-              <span style="--i: 8"> </span>
-              <span style="--i: 9">A</span>
-              <span style="--i: 10">N</span>
-              <span style="--i: 11">O</span>
-              <span style="--i: 12">T</span>
-              <span style="--i: 13">H</span>
-              <span style="--i: 14">E</span>
-              <span style="--i: 15">R</span>
-            </div>
-          </div>
-          <div class="txt2">
-            <div class="waviy">
-              <span style="--i: 16">D</span>
-              <span style="--i: 17">I</span>
-              <span style="--i: 18">M</span>
-              <span style="--i: 19">E</span>
-              <span style="--i: 20">N</span>
-              <span style="--i: 21">S</span>
-              <span style="--i: 22">I</span>
-              <span style="--i: 23">O</span>
-              <span style="--i: 24">N</span>
-              <span style="--i: 25">S</span>
-            </div>
-          </div>
-        </div>
-        <div class="bg"></div>
-      </section>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">TOP</button>
 
-      <section class="secondpart" id="theengine">
+    <section class="firstpart">
+      <div class="nav">
         <div class="container">
-          <div class="up" data-aos="fade-up">
-            <p>The Engine of MetaCars</p>
+          <div class="elem">
+            <a href="#theengine"><p>The Engine</p></a>
           </div>
+          <div class="elem">
+            <a href="#metacarsnft"><p>MetaCars NFT</p></a>
+          </div>
+          <div class="elem"><img src="assets/img/logo.png" alt="" /></div>
+          <div class="elem">
+            <a href="#metacarsp2egame"><p>MetaCars P2E Game</p></a>
+          </div>
+          <div class="elem">
+            <a href="/whitepaper"><p>Whitepaper</p></a>
+          </div>
+        </div>
+      </div>
+      <div class="navmobile"><img src="assets/img/logo.png" alt="" /></div>
+      <div class="txtphoto">
+        <div class="txt1">
+          <div class="waviy">
+            <span style="--i: 1">P</span> <span style="--i: 2">L</span>
+            <span style="--i: 3">A</span> <span style="--i: 4">Y</span>
+            <span style="--i: 5"> </span> <span style="--i: 6">I</span>
+            <span style="--i: 7">N</span> <span style="--i: 8"> </span>
+            <span style="--i: 9">A</span> <span style="--i: 10">N</span>
+            <span style="--i: 11">O</span> <span style="--i: 12">T</span>
+            <span style="--i: 13">H</span> <span style="--i: 14">E</span>
+            <span style="--i: 15">R</span>
+          </div>
+        </div>
+        <div class="txt2">
+          <div class="waviy">
+            <span style="--i: 16">D</span> <span style="--i: 17">I</span>
+            <span style="--i: 18">M</span> <span style="--i: 19">E</span>
+            <span style="--i: 20">N</span> <span style="--i: 21">S</span>
+            <span style="--i: 22">I</span> <span style="--i: 23">O</span>
+            <span style="--i: 24">N</span>
+          </div>
+        </div>
+        <div class="buttons">
+            <div class="left">
+                <a href="/audit">Audit</a>
+            </div>
+            <div class="right">
+                <a href="/kyc">KYC</a>
+            </div>
+        </div>
+      </div>
+      <div class="bg"></div>
+    </section>
 
-          <div class="mid" data-aos="fade-up">
+    <section class="secondpart" id="theengine">
+      <div class="container">
+        <div class="up"><p>The Engine of MetaCars</p></div>
+        <div class="mid">
+          <p>
+            MetaCars is a Token + NFT including Play to Earn Metaverse Game
+            inspired by the cartoon Cars. As children, we all watched the
+            cartoon Cars, but now is the time to make our dream come true by
+            creating a community of car enthusiasts. MetaCars is a proprietary,
+            hyper deflationary token on the Ethereum Network. MetaCars is not
+            just a regular token, it is a token where collects all cars cartoon
+            lovers in one community and offers them different kinds of NFTs to
+            use in Metaverse and the cars carton converted into a Metaverse
+            GAME. Our team aims to bring together a community that are car
+            lovers and racing gamers, and this will be by organizing lots of
+            events, organizing CarShows etc.
+          </p>
+        </div>
+        <div class="bottom">
+          <p><a href="/whitepaper">Whitepaper</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="tokenomics">
+      <div class="container">
+        <div class="countdownhas">
+          <div class="txt"><p>Countdown has started</p></div>
+          <div class="imgj">
+            <img src="assets/img/countdownhasstarted.png" alt="" />
+          </div>
+        </div>
+        <div class="countdown">
+          <div class="box">
+            <div class="minibox1"><p id="days"></p></div>
+            <div class="minibox2"><p>days</p></div>
+            <div class="minibox3">
+              <img
+                class="timer1"
+                src="assets/img/tokenomicstimer1.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="box box2">
+            <div class="minibox1"><p id="hours"></p></div>
+            <div class="minibox2"><p>hours</p></div>
+            <div class="minibox3">
+              <img
+                class="timer2"
+                src="assets/img/tokenomicstimer2.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="box box2">
+            <div class="minibox1"><p id="minutes"></p></div>
+            <div class="minibox2"><p>minutes</p></div>
+            <div class="minibox3">
+              <img
+                class="timer3"
+                src="assets/img/tokenomicstimer3.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="box box2">
+            <div class="minibox1"><p id="seconds"></p></div>
+            <div class="minibox2"><p>seconds</p></div>
+            <div class="minibox3">
+              <img
+                class="timer4"
+                src="assets/img/tokenomicstimer4.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="fuel"></div>
+        <div class="buttons">
+          <div class="box">
+            <div class="up"><p>Total Supply</p></div>
+            <div class="down"><p>100,000,000,000</p></div>
+          </div>
+          <div class="box">
+            <div class="up"><p>Presale Supply</p></div>
+            <div class="down"><p>50,000,000,000</p></div>
+          </div>
+          <div class="box">
+            <div class="up"><p>Burned Supply</p></div>
+            <div class="down"><p>29,000,000,000</p></div>
+          </div>
+        </div>
+        <div class="buynow"><a href="https://www.pinksale.finance/#/launchpad/0x95406654Cb68909f69D2Ac6BAe683bEdAD708F8a?chain=ETH">Buy on Presale</a></div>
+        <div class="space1"></div>
+        <div class="imgtoken">
+          <img src="assets/img/tokendistribution.png" alt="" />
+        </div>
+        <div class="txtmid">
+          <p>
+            MetaCars is a token on the Ethereum Network, with a total supply of
+            100 Billions MetaCars tokens, and it has a super mechanism of
+            reflections and buybacks.
+          </p>
+        </div>
+        <div class="imgtoken1">
+          <img src="assets/img/tokendistributionnumbers.png" alt="" />
+        </div>
+        <div class="space2"></div>
+      </div>
+    </section>
+
+    <section class="thirdpart" id="metacarsnft">
+      <img
+        class="imgnorespo"
+        src="assets/img/NFTcollectionsection.png"
+        alt=""
+      />
+      <img class="imgrespo" src="assets/img/bgnftrespo.png" alt="" />
+      <div class="con">
+        <div class="container">
+          <div class="title"><p>McQueen and his Buddies</p></div>
+          <div class="downtitle">
             <p>
-              MetaCars is a Token + NFT + Metaverse Game inspired by the cartoon
-              Cars. When we were children, we all watched the cartoon Cars, but
-              now is the time to make our dream reality by creating a community
-              of car enthusiasts. MetaCars is a proprietary, hyper deflationary
-              token on the Ethereum Network. MetaCars is not just a regular
-              token, it's a token that collects all cars cartoon lovers in one
-              community. Moreover, it offers them different kinds of NFTs to be
-              used in Metaverse and the carton cars are converted into a
-              Metaverse GAME. Our team aims to bring in MetaCars community all
-              car lovers and racing gamers, and this will happen by organizing
-              events such as Car Shows etc.
+              Created by <a href=""><span>@MetaCarsToken</span></a>
             </p>
           </div>
-
-          <div class="bottom" data-aos="fade-up">
-            <p><a href="">Whitepaper</a></p>
+          <div class="boxes">
+            <div class="box1">
+              <div class="up"><p>5K</p></div>
+              <div class="down"><p>Items</p></div>
+            </div>
+            <div class="box2">
+              <div class="up"><p>2K</p></div>
+              <div class="down"><p>Owners</p></div>
+            </div>
+            <div class="box3">
+              <div class="up">
+                <img src="assets/img/ethlogo.png" alt="" />
+                <p>2.26</p>
+              </div>
+              <div class="down"><p>Floor price</p></div>
+            </div>
+            <div class="box4">
+              <div class="up">
+                <img src="assets/img/ethlogo.png" alt="" />
+                <p>5.46</p>
+              </div>
+              <div class="down"><p>Volume Traded</p></div>
+            </div>
+          </div>
+          <div class="txt">
+            <p>
+              The MetaCars NFTs are 5,040 uniquely generated characters, 320x320
+              pixel art images generated algorithmically. None of them is
+              exactly alike, and each one of them can be officially owned by a
+              single person on the Ethereum blockchain.
+            </p>
+          </div>
+          <div class="socials">
+            <a href="https://linktr.ee/metacarset">
+              <img class="s5" src="assets/img/linktree.png" alt="" />
+            </a>
+            <a href="https://t.me/metacarseth">
+              <img class="s1" src="assets/img/telegram.png" alt="" />
+            </a>
+            <a href="https://twitter.com/MetaCarsETH">
+              <img class="s2" src="assets/img/twitter.png" alt="" />
+            </a>
+            <a href="https://www.instagram.com/MetaCarsETH/">
+              <img class="s3" src="assets/img/instagram.png" alt="" />
+            </a>
+            <a href="https://discord.gg/DxvWu6pXga">
+              <img class="s4" src="assets/img/discord.png" alt="" />
+            </a>
+          </div>
+          <div class="nft">
+            <div class="title"><p>NFT Marketplace</p></div>
+            <div class="title5k"><p>5,040 items</p></div>
+            <div class="container">
+              <div class="carousel">
+                <div class="carousel__face"></div>
+                <div class="carousel__face"></div>
+                <div class="carousel__face"></div>
+                <div class="carousel__face"></div>
+                <div class="carousel__face"></div>
+                <div class="carousel__face"></div>
+                <div class="carousel__face"></div>
+                <div class="carousel__face"></div>
+                <div class="carousel__face"></div>
+              </div>
+            </div>
+            <div class="view"><a href="">View all collection</a></div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="tokenomics">
-        <div class="container">
-          <div class="countdown">
-            <div class="box" data-aos="fade-up">
-              <div class="minibox1">
-                <p id="days"></p>
-              </div>
-              <div class="minibox2">
-                <p>days</p>
-              </div>
-              <div class="minibox3">
-                <img
-                  class="timer1"
-                  src="assets/img/tokenomicstimer1.png"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="box box2" data-aos="fade-up">
-              <div class="minibox1">
-                <p id="hours"></p>
-              </div>
-              <div class="minibox2">
-                <p>hours</p>
-              </div>
-              <div class="minibox3">
-                <img
-                  class="timer2"
-                  src="assets/img/tokenomicstimer2.png"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="box box2" data-aos="fade-up">
-              <div class="minibox1">
-                <p id="minutes"></p>
-              </div>
-              <div class="minibox2">
-                <p>minutes</p>
-              </div>
-              <div class="minibox3">
-                <img
-                  class="timer3"
-                  src="assets/img/tokenomicstimer3.png"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="box box2" data-aos="fade-up">
-              <div class="minibox1">
-                <p id="seconds"></p>
-              </div>
-              <div class="minibox2">
-                <p>seconds</p>
-              </div>
-              <div class="minibox3">
-                <img
-                  class="timer4"
-                  src="assets/img/tokenomicstimer4.png"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-
-          <div class="fuel">
-            <div class="left"></div>
-
-            <div class="right" data-aos="fade-left">
-              <img src="assets/img/tokenomicsfuel.png" alt="" />
-            </div>
-          </div>
-
-          <div class="buttons">
-            <div class="box" data-aos="flip-up">
-              <div class="up">
-                <p>Total Supply</p>
-              </div>
-              <div class="down">
-                <p>100,000,000,000</p>
-              </div>
-            </div>
-
-            <div class="box" data-aos="flip-up">
-              <div class="up">
-                <p>Presale Supply</p>
-              </div>
-              <div class="down">
-                <p>50,000,000,000</p>
-              </div>
-            </div>
-
-            <div class="box" data-aos="flip-up">
-              <div class="up">
-                <p>Burned Supply</p>
-              </div>
-              <div class="down">
-                <p>29,000,000,000</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="buynow" data-aos="flip-left">
-            <a href="">Buy on Presale</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="thirdpart" id="metacarsnft">
-        <img
-          class="imgnorespo"
-          src="assets/img/NFTcollectionsection.png"
-          alt=""
-        />
-        <img class="imgrespo" src="assets/img/bgnftrespo.png" alt="" />
-
+    <section class="roadmap">
+      <img src="assets/img/roadmapline.png" alt="" />
+      <div class="container">
         <div class="con">
-          <div class="container">
-            <div class="title" data-aos="flip-up">
-              <p>McQueen and his Buddies</p>
-            </div>
-            <div class="downtitle" data-aos="flip-up">
-              <p>
-                Created by <a href=""><span>@MetaCarsToken</span></a>
-              </p>
-            </div>
-
-            <div class="boxes" data-aos="flip-up">
+          <img src="assets/img/roadmaptitle.png" alt="" />
+          <div class="stages">
+            <div class="left">
               <div class="box1">
                 <div class="up">
-                  <p>5K</p>
+                  <div class="con">
+                    <div class="lefts"><p>Race 1</p></div>
+                    <div class="rights">
+                      <img src="assets/img/loop.png" alt="" />
+                    </div>
+                  </div>
                 </div>
                 <div class="down">
-                  <p>Items</p>
+                  <div class="con">
+                    <p>-MetaCars is born on Ethereum Network</p>
+                    <p>-Website launch</p>
+                    <p>-Presale on Pinksale</p>
+                    <p>-Burned 29% of tokens immediately after launch</p>
+                    <p>
+                      -1/3 of ETH raised in presale used for initial
+                      marketing/exchange listings and etc.
+                    </p>
+                    <p>-MetaCars's WhitePaper V1 release</p>
+                  </div>
                 </div>
               </div>
               <div class="box2">
                 <div class="up">
-                  <p>2K</p>
+                  <div class="con">
+                    <div class="lefts"><p>Race 3</p></div>
+                    <div class="rights">
+                      <img src="assets/img/loop.png" alt="" />
+                    </div>
+                  </div>
                 </div>
                 <div class="down">
-                  <p>Owners</p>
-                </div>
-              </div>
-
-              <div class="box3">
-                <div class="up">
-                  <img src="assets/img/ethlogo.png" alt="" />
-                  <p>2.26K</p>
-                </div>
-
-                <div class="down">
-                  <p>Floor price</p>
-                </div>
-              </div>
-
-              <div class="box4">
-                <div class="up">
-                  <img src="assets/img/ethlogo.png" alt="" />
-                  <p>5.46K</p>
-                </div>
-                <div class="down">
-                  <p>Volume Traded</p>
+                  <div class="con">
+                    <p>-Commence strategic planning of MetaCars P2E Game</p>
+                    <p>-Strategic marketing campaign</p>
+                    <p>-Further define Roadmap</p>
+                    <p>-Possible Exchange Listings</p>
+                    <p>-Apply for BTok/Dextool Banners</p>
+                    <p>-Possible partnership with productions companies</p>
+                    <p>-Meme Contests</p>
+                  </div>
                 </div>
               </div>
             </div>
+            <div class="right">
+              <div class="box1">
+                <div class="up">
+                  <div class="con">
+                    <div class="lefts"><p>Race 2</p></div>
+                    <div class="rights">
+                      <img src="assets/img/loop.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="down">
+                  <div class="con">
+                    <p>MetaCars P2E Game DEMO 1 Release</p>
+                    <p>MetaCars NFT</p>
+                    <p>-CoinMarketCap listing</p>
+                    <p>-Coin-Gecko listing</p>
+                    <p>-Refine community platform</p>
+                    <p>-Further community contests and giveaways</p>
+                    <p>-Refine social media channels</p>
+                    <p>
+                      -Partnership with influencers i.e Youtube, Twitter,
+                      Tiktok..
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="box2">
+                <div class="up">
+                  <div class="con">
+                    <div class="lefts"><p>Race 4</p></div>
+                    <div class="rights">
+                      <img src="assets/img/loop.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="down">
+                  <div class="con">
+                    <p>-Organizing first CAR Meeting</p>
+                    <p>-Further increase social media marketing</p>
+                    <p>-Exchange listings i.e Bitmart, Hotbit, Gate.io etc</p>
+                    <p>-Establish further partnerships</p>
+                    <p>-NFT Drops Begin</p>
+                    <p>-New Website Launch</p>
+                    <p>
+                      -Onboarding consultancies and strategic partners with wide
+                      networks
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="assets/img/roadmapline.png" alt="" />
+    </section>
 
-            <div class="txt" data-aos="flip-up">
+    <section class="roadmapmobile">
+      <img class="upimg" src="assets/img/roadmapline.png" alt="" />
+      <div class="slideshow-container">
+        <div class="mySlides">
+          <div class="box1">
+            <div class="up">
+              <div class="con">
+                <div class="lefts"><p>Race 1</p></div>
+                <div class="rights">
+                  <img src="assets/img/loop.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="down">
+              <div class="con">
+                <p>-MetaCars is born on Ethereum Network</p>
+                <p>-Website launch</p>
+                <p>-Presale on PinkSale</p>
+                <p>-Burned 29% of tokens immediately after launch</p>
+                <p>
+                  -1/3 of ETH raised in presale used for initial
+                  marketing/exchange listings and etc.
+                </p>
+                <p>-MetaCars's WhitePaper V1 release</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mySlides">
+          <div class="box1">
+            <div class="up">
+              <div class="con">
+                <div class="lefts"><p>Race 2</p></div>
+                <div class="rights">
+                  <img src="assets/img/loop.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="down">
+              <div class="con">
+                <p>MetaCars P2E Game DEMO 1 Release</p>
+                <p>MetaCars NFT</p>
+                <p>-CoinMarketCap listing</p>
+                <p>-Coin-Gecko listing</p>
+                <p>-Refine community platform</p>
+                <p>-Further community contests and giveaways</p>
+                <p>-Refine social media channels</p>
+                <p>
+                  -Partnership with influencers i.e Youtube, Twitter, Tiktok..
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mySlides">
+          <div class="box1">
+            <div class="up">
+              <div class="con">
+                <div class="lefts"><p>Race 3</p></div>
+                <div class="rights">
+                  <img src="assets/img/loop.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="down">
+              <div class="con">
+                <p>-Commence strategic planning of MetaCars P2E Game</p>
+                <p>-Strategic marketing campaign</p>
+                <p>-Further define Roadmap</p>
+                <p>-Possible Exchange Listings</p>
+                <p>-Apply for BTok/Dextool Banners</p>
+                <p>-Possible partnership with productions companies</p>
+                <p>-Meme Contests</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mySlides">
+          <div class="box1">
+            <div class="up">
+              <div class="con">
+                <div class="lefts"><p>Race 4</p></div>
+                <div class="rights">
+                  <img src="assets/img/loop.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="down">
+              <div class="con">
+                <p>-Organizing first CAR Meeting</p>
+                <p>-Further increase social media marketing</p>
+                <p>-Exchange listings i.e Bitmart, Hotbit, Gate.io etc</p>
+                <p>-Establish further partnerships</p>
+                <p>-NFT Drops Begin</p>
+                <p>-New Website Launch</p>
+                <p>
+                  -Onboarding consultancies and strategic partners with wide
+                  networks
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      </div>
+      <img class="downimg" src="assets/img/roadmapline.png" alt="" />
+    </section>
+
+    <section class="game" id="metacarsp2egame">
+      <div class="container">
+        <div class="left">
+          <div class="up"><p>MetaCars P2E Game</p></div>
+          <div class="mid">
+            <p>
+              MetaCars P2E Game is the game's utility token that can be used to
+              reward for players participation in tournaments and missions.
+              MetaCarsGame is a 2022 arcade-style racing video game in
+              Metaverse. The game features a racing style that incorporates Cars
+              Cartoon cars and locales with arcade style handling and vehicular
+              combat. This game will be able to play only in Metaverse. Every
+              new player should buy a car with $MetaCarsTokens. Players can
+              upgrade their cars, can buy new cars, also can earn by playing.
+              Another thing is that players that have NFTs, can use those NFTs
+              as cars in the game. <br />
+              For every game that the players win, they will earn $MCPoints,
+              where they can convert those points into MetaCars tokens. Our team
+              will organize weekly tournament for our game players, where top
+              10# winners will be rewarded. The reward prize for top 1# player
+              is 500$, where it will increase 10% for every tournament.
+            </p>
+          </div>
+          <div class="down"><a href="/p2egame">Learn More</a></div>
+        </div>
+        <div class="right"></div>
+      </div>
+    </section>
+
+    <section class="team">
+      <div class="container">
+        <div class="up"><p>Team of MetaCars</p></div>
+        <div class="down">
+          <div class="box">
+            <div class="up"><img src="assets/img/team1.png" alt="" /></div>
+            <div class="mid">
+              <p class="title">Lightning Benjamin</p>
+              <p class="position">Creative Director</p>
+            </div>
+            <div class="txt">
               <p>
-                The MetaCars NFTs are 5,040 uniquely generated characters,
-                320x320 pixel art images generated algorithmically. None of them
-                is exactly alike, and each one of them can be officially owned
-                by a single person on the Ethereum blockchain.
+                Benjamins has been in the cryptospace for over 7 years now,
+                meanwhile he was an assistant director for a lots of movies. He
+                will bring to MetaCars community his big ideas, which we are
+                sure will be resulting in great success.
               </p>
             </div>
+            <!-- <div class="socials"> <a href=""> <img class="s1" src="assets/img/telegram.png" alt=""/> </a> <a href=""> <img class="s2" src="assets/img/twitter.png" alt=""/> </a> <a href=""> <img class="s3" src="assets/img/instagram.png" alt=""/> </a> <a href=""> <img class="s4" src="assets/img/discord.png" alt=""/> </a> <a href=""> <img class="s2" src="assets/img/twitter.png" alt=""/> </a> <a href=""> <img class="s3" src="assets/img/instagram.png" alt=""/> </a> </div>-->
+          </div>
+          <div class="box">
+            <div class="up"><img src="assets/img/team2.png" alt="" /></div>
+            <div class="mid">
+              <p class="title">Matthew</p>
+              <p class="position">Community&Marketing</p>
+            </div>
+            <div class="txt">
+              <p>
+                Matthew has been in the cutting edge of mobile, gaming and
+                e-commerce his entire career.
+              </p>
+            </div>
+            <!-- <div class="socials"> <a href=""> <img class="s2" src="assets/img/twitter.png" alt=""/> </a> </div>-->
+          </div>
+          <div class="box">
+            <div class="up"><img src="assets/img/team3.png" alt="" /></div>
+            <div class="mid">
+              <p class="title">DocFIX</p>
+              <p class="position">Tech</p>
+            </div>
+            <div class="txt">
+              <p>
+                DocFIX has been a game and web developer for 20 years, and
+                recently made the switch to web3, and handled the tech for
+                several projects for different teams and clients.
+              </p>
+            </div>
+            <!-- <div class="socials"> <a href=""> <img class="s2" src="assets/img/twitter.png" alt=""/> </a> <a href=""> <img class="s4" src="assets/img/discord.png" alt=""/> </a> </div>-->
+          </div>
+          <div class="box">
+            <div class="up"><img src="assets/img/team4.png" alt="" /></div>
+            <div class="mid">
+              <p class="title">Jesse</p>
+              <p class="position">Artist</p>
+            </div>
+            <div class="txt">
+              <p>
+                Jesse is an artist with 11 years of experience in crypto. Except
+                crypto projects, his work has been featured in music videos, hit
+                TV shows & films.
+              </p>
+            </div>
+            <!-- <div class="socials"> <a href=""> <img class="s2" src="assets/img/twitter.png" alt=""/> </a> </div>-->
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="socials" data-aos="flip-up">
-              <a href="">
+    <div class="contract">
+      <ul class="bxslider">
+        <li><img src="assets/img/theguido.png" /></li>
+        <li><img src="assets/img/Autobuyback.png" /></li>
+        <li><img src="assets/img/farm.png" /></li>
+        <li><img src="assets/img/marketing.png" /></li>
+      </ul>
+    </div>
+
+    <div class="community">
+      <div class="container">
+        <div class="up">
+          <img src="assets/img/community1.png" alt="" />
+        </div>
+        <div class="mid">
+          <img src="assets/img/community2.png" alt="" />
+        </div>
+        <div class="down">
+          <div class="socials">
+            <a href="https://linktr.ee/metacarset">
+                <img class="s5" src="assets/img/linktree.png" alt="" />
+            </a>
+            <a href="https://t.me/metacarseth">
+              <img class="s1" src="assets/img/telegram.png" alt="" />
+            </a>
+            <a href="https://twitter.com/MetaCarsETH">
+              <img class="s2" src="assets/img/twitter.png" alt="" />
+            </a>
+            <a href="https://www.instagram.com/MetaCarsETH/">
+              <img class="s3" src="assets/img/instagram.png" alt="" />
+            </a>
+            <a href="https://discord.gg/DxvWu6pXga">
+              <img class="s4" src="assets/img/discord.png" alt="" />
+            </a>
+            
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="mcqueen">
+      <img src="assets/img/footermqueen.png" alt="" />
+    </section>
+
+    <div class="links">
+      <div class="container">
+        <a href="/uniswap"
+          ><img class="img1" src="assets/img/pcs.png" width="224px" alt=""
+        /></a>
+        <a href="/poocoin"
+          ><img class="img4" src="assets/img/poocoin.png" width="152px" alt=""
+        /></a>
+        <a href="/coinmarketcap"
+          ><img class="img2" src="assets/img/cmc.png" width="243px" alt=""
+        /></a>
+        <a href="/coingecko"
+          ><img class="img3" src="assets/img/cg.png" width="181px" alt=""
+        /></a>
+        <a href="/boggedfinance"
+          ><img class="img5" src="assets/img/bogged.png" width="211px" alt=""
+        /></a>
+      </div>
+    </div>
+
+    <footer>
+      <div class="up">
+        <div class="left"><img src="assets/img/footerwheels.png" alt="" /></div>
+        <div class="mid">
+          <div class="down">
+            <div class="socials">
+              <a href="https://linktr.ee/metacarset">
+                <img class="s5" src="assets/img/linktree.png" alt="" />
+              </a>
+              <a href="https://t.me/metacarseth">
                 <img class="s1" src="assets/img/telegram.png" alt="" />
               </a>
-              <a href="">
+              <a href="https://twitter.com/MetaCarsETH">
                 <img class="s2" src="assets/img/twitter.png" alt="" />
               </a>
-              <a href="">
+              <a href="https://www.instagram.com/MetaCarsETH/">
                 <img class="s3" src="assets/img/instagram.png" alt="" />
               </a>
-              <a href="">
+              <a href="https://discord.gg/DxvWu6pXga">
                 <img class="s4" src="assets/img/discord.png" alt="" />
               </a>
             </div>
-
-            <div class="nft">
-              <div class="title" data-aos="flip-up">
-                <p>NFT Marketplace</p>
-              </div>
-              <div class="title5k" data-aos="flip-up">
-                <p>5,040 items</p>
-              </div>
-              <!-- 
-            <div class="coni">
-              <div class="box">
-                <img src="assets/img/nft1.png" alt="" />
-
-                <div class="txtup">
-                  <p>McQueen and his Buddies</p>
-                  <p>Price</p>
-                </div>
-
-                <div class="txtdown">
-                  <p>Lightning McQueen #1/420</p>
-
-                  <div class="right">
-                    <img src="assets/img/ethlogo.png" alt="" />
-                    <p>4.26K</p>
-                  </div>
-                </div>
-
-                <div class="button">
-                  <a href="">Buy now</a>
-                </div>
-              </div>
-
-              <div class="box">
-                <img src="assets/img/nft2.png" alt="" />
-
-                <div class="txtup">
-                  <p>McQueen and his Buddies</p>
-                  <p>Price</p>
-                </div>
-
-                <div class="txtdown">
-                  <p>Duc Hudson #18/420</p>
-
-                  <div class="right">
-                    <img src="assets/img/ethlogo.png" alt="" />
-                    <p>2.00K</p>
-                  </div>
-                </div>
-
-                <div class="button">
-                  <a href="">Buy now</a>
-                </div>
-              </div>
-
-              <div class="box">
-                <img src="assets/img/nft3.png" alt="" />
-
-                <div class="txtup">
-                  <p>McQueen and his Buddies</p>
-                  <p>Price</p>
-                </div>
-
-                <div class="txtdown">
-                  <p>Mack The Transporter #12/420</p>
-
-                  <div class="right">
-                    <img src="assets/img/ethlogo.png" alt="" />
-                    <p>1.526K</p>
-                  </div>
-                </div>
-
-                <div class="button">
-                  <a href="">Buy now</a>
-                </div>
-              </div>
-            </div>
-
-
-             -->
-
-              <div class="container">
-                <div class="carousel">
-                  <div class="carousel__face"></div>
-                  <div class="carousel__face"></div>
-                  <div class="carousel__face"></div>
-                  <div class="carousel__face"></div>
-                  <div class="carousel__face"></div>
-                  <div class="carousel__face"></div>
-                  <div class="carousel__face"></div>
-                  <div class="carousel__face"></div>
-                  <div class="carousel__face"></div>
-                </div>
-              </div>
-
-              <div class="view" data-aos="flip-up">
-                <a href="">View all collection</a>
-              </div>
-            </div>
           </div>
         </div>
-      </section>
-
-      <section class="roadmap">
-        <img src="assets/img/roadmapline.png" alt="" />
-
-        <div class="container">
-          <div class="con">
-            <img src="assets/img/roadmaptitle.png" alt="" />
-
-            <div class="stages">
-              <div class="left">
-                <div class="box1" data-aos="fade-right">
-                  <div class="up">
-                    <div class="con">
-                      <div class="lefts">
-                        <p>Race 1</p>
-                      </div>
-
-                      <div class="rights">
-                        <img src="assets/img/loop.png" alt="" />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="down">
-                    <div class="con">
-                      <p>-MetaCars is born on Ethereum Network</p>
-                      <p>-Website launch</p>
-                      <p>-Presale on DxSale</p>
-                      <p>-Burned 35% of tokens immediately after launch</p>
-                      <p>
-                        -1/3 of BNB raised in presale used for initial
-                        marketing/exchange listings and etc.
-                      </p>
-                      <p>-MetaCars's WhitePaper V1 release</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="box2" data-aos="fade-right">
-                  <div class="up">
-                    <div class="con">
-                      <div class="lefts">
-                        <p>Race 3</p>
-                      </div>
-
-                      <div class="rights">
-                        <img src="assets/img/loop.png" alt="" />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="down">
-                    <div class="con">
-                      <p>-Commence strategic planning of MetaCars P2E Game</p>
-                      <p>-Strategic marketing campaign</p>
-                      <p>-Further define Roadmap</p>
-                      <p>-Possible Exchange Listings</p>
-                      <p>-Apply for BTok/Dextool Banners</p>
-                      <p>-Possible partnership with productions companies</p>
-                      <p>-Meme Contests</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="box3" data-aos="fade-right">
-                  <div class="up">
-                    <div class="con">
-                      <div class="lefts">
-                        <p>Race 5</p>
-                      </div>
-
-                      <div class="rights">
-                        <img src="assets/img/loop.png" alt="" />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="down">
-                    <div class="con">
-                      <p>TO BE DEVELOPED...</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="right">
-                <div class="box1" data-aos="fade-left">
-                  <div class="up">
-                    <div class="con">
-                      <div class="lefts">
-                        <p>Race 2</p>
-                      </div>
-
-                      <div class="rights">
-                        <img src="assets/img/loop.png" alt="" />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="down">
-                    <div class="con">
-                      <p>MetaCars P2E Game DEMO 1 Release</p>
-                      <p>MetaCars NFT</p>
-                      <p>-CoinMarketCap listing</p>
-                      <p>-Coin-Gecko listing</p>
-
-                      <p>-Refine community platform</p>
-                      <p>-Further community contests and giveaways</p>
-                      <p>-Refine social media channels</p>
-                      <p>
-                        -Partnership with influencers i.e Youtube, Twitter,
-                        Tiktok..
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="box2" data-aos="fade-left">
-                  <div class="up">
-                    <div class="con">
-                      <div class="lefts">
-                        <p>Race 4</p>
-                      </div>
-
-                      <div class="rights">
-                        <img src="assets/img/loop.png" alt="" />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="down">
-                    <div class="con">
-                      <p>-Organizing first CAR Meeting</p>
-                      <p>-Further increase social media marketing</p>
-                      <p>-Exchange listings i.e Bitmart, Hotbit, Gate.io etc</p>
-                      <p>-Establish further partnerships</p>
-                      <p>-NFT Drops Begin</p>
-                      <p>-New Website Launch</p>
-                      <p>
-                        -Onboarding consultancies and strategic partners with
-                        wide networks
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <img src="assets/img/roadmapline.png" alt="" />
-      </section>
-
-      <section class="roadmapmobile">
-        <img class="upimg" src="assets/img/roadmapline.png" alt="" />
-
-        <!-- <div class="container">
-          <div class="con">
-            <img src="assets/img/roadmaptitle.png" alt="" />
-
-            <div class="stages">
-              <div class="left">
-                <div class="box1">
-                  <div class="up">
-                    <div class="con">
-                      <div class="lefts">
-                        <p>Race 1</p>
-                      </div>
-
-                      <div class="rights">
-                        <img src="assets/img/loop.png" alt="" />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="down">
-                    <div class="con">
-                      <p>-MetaCars is born on Ethereum Network</p>
-                      <p>-Website launch</p>
-                      <p>-Presale on DxSale</p>
-                      <p>-Burned 35% of tokens immediately after launch</p>
-                      <p>
-                        -1/3 of BNB raised in presale used for initial
-                        marketing/exchange listings and etc.
-                      </p>
-                      <p>-MetaCars's WhitePaper V1 release</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="box1">
-                  <div class="up">
-                    <div class="con">
-                      <div class="lefts">
-                        <p>Race 2</p>
-                      </div>
-
-                      <div class="rights">
-                        <img src="assets/img/loop.png" alt="" />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="down">
-                    <div class="con">
-                      <p>MetaCars P2E Game DEMO 1 Release</p>
-                      <p>MetaCars NFT</p>
-                      <p>-CoinMarketCap listing</p>
-                      <p>-Coin-Gecko listing</p>
-
-                      <p>-Refine community platform</p>
-                      <p>-Further community contests and giveaways</p>
-                      <p>-Refine social media channels</p>
-                      <p>
-                        -Partnership with influencers i.e Youtube, Twitter,
-                        Tiktok..
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="box1">
-                  <div class="up">
-                    <div class="con">
-                      <div class="lefts">
-                        <p>Race 3</p>
-                      </div>
-
-                      <div class="rights">
-                        <img src="assets/img/loop.png" alt="" />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="down">
-                    <div class="con">
-                      <p>-Commence strategic planning of MetaCars P2E Game</p>
-                      <p>-Strategic marketing campaign</p>
-                      <p>-Further define Roadmap</p>
-                      <p>-Possible Exchange Listings</p>
-                      <p>-Apply for BTok/Dextool Banners</p>
-                      <p>-Possible partnership with productions companies</p>
-                      <p>-Meme Contests</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="box1">
-                  <div class="up">
-                    <div class="con">
-                      <div class="lefts">
-                        <p>Race 4</p>
-                      </div>
-
-                      <div class="rights">
-                        <img src="assets/img/loop.png" alt="" />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="down">
-                    <div class="con">
-                      <p>-Organizing first CAR Meeting</p>
-                      <p>-Further increase social media marketing</p>
-                      <p>-Exchange listings i.e Bitmart, Hotbit, Gate.io etc</p>
-                      <p>-Establish further partnerships</p>
-                      <p>-NFT Drops Begin</p>
-                      <p>-New Website Launch</p>
-                      <p>
-                        -Onboarding consultancies and strategic partners with
-                        wide networks
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="box1">
-                  <div class="up">
-                    <div class="con">
-                      <div class="lefts">
-                        <p>Race 5</p>
-                      </div>
-
-                      <div class="rights">
-                        <img src="assets/img/loop.png" alt="" />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="down">
-                    <div class="con">
-                      <p>TO BE DEVELOPED...</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-        
-        
-        <div class="slideshow-container">
-          <div class="mySlides">
-            <div class="box1">
-              <div class="up">
-                <div class="con">
-                  <div class="lefts">
-                    <p>Race 1</p>
-                  </div>
-
-                  <div class="rights">
-                    <img src="assets/img/loop.png" alt="" />
-                  </div>
-                </div>
-              </div>
-
-              <div class="down">
-                <div class="con">
-                  <p>-MetaCars is born on Ethereum Network</p>
-                  <p>-Website launch</p>
-                  <p>-Presale on DxSale</p>
-                  <p>-Burned 35% of tokens immediately after launch</p>
-                  <p>
-                    -1/3 of BNB raised in presale used for initial
-                    marketing/exchange listings and etc.
-                  </p>
-                  <p>-MetaCars's WhitePaper V1 release</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="mySlides">
-            <div class="box1">
-              <div class="up">
-                <div class="con">
-                  <div class="lefts">
-                    <p>Race 2</p>
-                  </div>
-
-                  <div class="rights">
-                    <img src="assets/img/loop.png" alt="" />
-                  </div>
-                </div>
-              </div>
-
-              <div class="down">
-                <div class="con">
-                  <p>MetaCars P2E Game DEMO 1 Release</p>
-                  <p>MetaCars NFT</p>
-                  <p>-CoinMarketCap listing</p>
-                  <p>-Coin-Gecko listing</p>
-
-                  <p>-Refine community platform</p>
-                  <p>-Further community contests and giveaways</p>
-                  <p>-Refine social media channels</p>
-                  <p>
-                    -Partnership with influencers i.e Youtube, Twitter,
-                    Tiktok..
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="mySlides">
-            <div class="box1">
-              <div class="up">
-                <div class="con">
-                  <div class="lefts">
-                    <p>Race 3</p>
-                  </div>
-
-                  <div class="rights">
-                    <img src="assets/img/loop.png" alt="" />
-                  </div>
-                </div>
-              </div>
-
-              <div class="down">
-                <div class="con">
-                  <p>-Commence strategic planning of MetaCars P2E Game</p>
-                  <p>-Strategic marketing campaign</p>
-                  <p>-Further define Roadmap</p>
-                  <p>-Possible Exchange Listings</p>
-                  <p>-Apply for BTok/Dextool Banners</p>
-                  <p>-Possible partnership with productions companies</p>
-                  <p>-Meme Contests</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="mySlides">
-            <div class="box1">
-              <div class="up">
-                <div class="con">
-                  <div class="lefts">
-                    <p>Race 4</p>
-                  </div>
-
-                  <div class="rights">
-                    <img src="assets/img/loop.png" alt="" />
-                  </div>
-                </div>
-              </div>
-
-              <div class="down">
-                <div class="con">
-                  <p>-Organizing first CAR Meeting</p>
-                  <p>-Further increase social media marketing</p>
-                  <p>-Exchange listings i.e Bitmart, Hotbit, Gate.io etc</p>
-                  <p>-Establish further partnerships</p>
-                  <p>-NFT Drops Begin</p>
-                  <p>-New Website Launch</p>
-                  <p>
-                    -Onboarding consultancies and strategic partners with
-                    wide networks
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="mySlides">
-            <div class="box1">
-              <div class="up">
-                <div class="con">
-                  <div class="lefts">
-                    <p>Race 5</p>
-                  </div>
-
-                  <div class="rights">
-                    <img src="assets/img/loop.png" alt="" />
-                  </div>
-                </div>
-              </div>
-
-              <div class="down">
-                <div class="con">
-                  <p>TO BE DEVELOPED...</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <a class="prev" onclick="plusSlides(-1)">❮</a>
-          <a class="next" onclick="plusSlides(1)">❯</a>
-        </div>
-
-        
-
-        <img class="downimg" src="assets/img/roadmapline.png" alt="" />
-      </section>
-
-      <section class="game" id="metacarsp2egame">
-        <div class="container">
-          <div class="left">
-            <div class="up" data-aos="fade-right">
-              <p>MetaCars P2E Game</p>
-            </div>
-            <div class="mid" data-aos="fade-up">
-              <p>
-                MetaCarsGame is the game's utility token that can be used to
-                reward for players participation in tournaments and missions.
-                MetaCarsGame is a 2022 arcade-style racing video game in
-                Metaverse. The game features a racing style that incorporates
-                Cars Cartoon cars and locales with arcade style handling and
-                vehicular combat. This game will be able to play only in
-                Metaverse. Every new player should buy a car with
-                $MetaCarsTokens. Players can upgrade their cars, can buy new
-                cars, also can earn by playing.
-                <br />
-                For every game that the players win, they will earn $MCPoints,
-                where they can convert those points into MetaCarsTokens. Our
-                team will organize weekly tournament for our game players, where
-                the winner will be rewarded with $MetaCarsTokens.
-              </p>
-            </div>
-
-            <div class="down" data-aos="fade-up">
-              <a href="">Learn More</a>
-            </div>
-          </div>
-
-          <div class="right"></div>
-        </div>
-      </section>
-
-      <section class="team">
-        <div class="container">
-          <div class="up">
-            <p>Team of MetaCars</p>
-          </div>
-          <div class="down">
-            <div class="box">
-              <div class="up">
-                <img src="assets/img/team1.png" alt="" />
-              </div>
-              <div class="mid">
-                <p class="title">Lightning Benjamin</p>
-                <p class="position">Creative Director</p>
-              </div>
-              <div class="txt">
-                <p>
-                  Benjamin is an award winning Los Angeles based Director
-                  inspired to bring big ideas to life through creative
-                  filmmaking.
-                </p>
-              </div>
-
-              <div class="socials" data-aos="fade-up">
-                <!-- <a href="">
-                  <img class="s1" src="assets/img/telegram.png" alt="" />
-                </a>
-                <a href="">
-                  <img class="s2" src="assets/img/twitter.png" alt="" />
-                </a>
-                <a href="">
-                  <img class="s3" src="assets/img/instagram.png" alt="" />
-                </a>
-                <a href="">
-                  <img class="s4" src="assets/img/discord.png" alt="" />
-                </a> -->
-                <a href="">
-                  <img class="s2" src="assets/img/twitter.png" alt="" />
-                </a>
-                <a href="">
-                  <img class="s3" src="assets/img/instagram.png" alt="" />
-                </a>
-              </div>
-            </div>
-
-            <div class="box">
-              <div class="up">
-                <img src="assets/img/team2.png" alt="" />
-              </div>
-              <div class="mid">
-                <p class="title">Matthew</p>
-                <p class="position">Community&Marketing</p>
-              </div>
-              <div class="txt">
-                <p>
-                  Matthew has been in the cutting edge of mobile, gaming and
-                  e-commerce his entire career.
-                </p>
-              </div>
-
-              <div class="socials" data-aos="fade-up">
-                <a href="">
-                  <img class="s2" src="assets/img/twitter.png" alt="" />
-                </a>
-              </div>
-            </div>
-
-            <div class="box">
-              <div class="up">
-                <img src="assets/img/team3.png" alt="" />
-              </div>
-              <div class="mid">
-                <p class="title">DocFIX</p>
-                <p class="position">Tech</p>
-              </div>
-              <div class="txt">
-                <p>
-                  DocFIX has been a game and web developer for 20 years, and
-                  recently made the switch to web3, and handled the tech for
-                  several projects for different teams and clients.
-                </p>
-              </div>
-
-              <div class="socials" data-aos="fade-up">
-                <a href="">
-                  <img class="s2" src="assets/img/twitter.png" alt="" />
-                </a>
-                <a href="">
-                  <img class="s4" src="assets/img/discord.png" alt="" />
-                </a>
-              </div>
-            </div>
-
-            <div class="box">
-              <div class="up">
-                <img src="assets/img/team4.png" alt="" />
-              </div>
-              <div class="mid">
-                <p class="title">Sator</p>
-                <p class="position">Artist</p>
-              </div>
-              <div class="txt">
-                <p>
-                  Sator is an artist with 11 years of experience. His work has
-                  been featured in music videos, hit TV shows & films.
-                </p>
-              </div>
-
-              <div class="socials" data-aos="fade-up">
-                <a href="">
-                  <img class="s2" src="assets/img/twitter.png" alt="" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div class="contract">
-        <ul class="bxslider">
-          <li>
-            <img src="assets/img/theguido.png" />
-          </li>
-          <li>
-            <img src="assets/img/Autobuyback.png" />
-          </li>
-          <li>
-            <img src="assets/img/farm.png" />
-          </li>
-          <li>
-            <img src="assets/img/marketing.png" />
-          </li>
-        </ul>
+        <div class="right"><img src="assets/img/footerguido.png" alt="" /></div>
       </div>
-
-      <section class="mcqueen">
-        <img data-aos="fade-down" src="assets/img/footermqueen.png" alt="" />
-      </section>
-
-      <div class="links" data-aos="fade-up">
-        <div class="container">
-          <div class="slider">
-            <div class="slide-track">
-              <div class="slide">
-                <a href=""
-                  ><img
-                    class="img1"
-                    src="assets/img/pcs.png"
-                    height="35px"
-                    width="224px"
-                    alt=""
-                /></a>
-              </div>
-              <div class="slide">
-                <a href=""
-                  ><img
-                    class="img2"
-                    src="assets/img/cmc.png"
-                    height="41px"
-                    width="243px"
-                    alt=""
-                /></a>
-              </div>
-              <div class="slide">
-                <a href=""
-                  ><img
-                    class="img3"
-                    src="assets/img/cg.png"
-                    height="49px"
-                    width="181px"
-                    alt=""
-                /></a>
-              </div>
-              <div class="slide">
-                <a href=""
-                  ><img
-                    class="img4"
-                    src="assets/img/poocoin.png"
-                    height="22px"
-                    width="152px"
-                    alt=""
-                /></a>
-              </div>
-              <div class="slide">
-                <a href=""
-                  ><img
-                    class="img5"
-                    src="assets/img/bogged.png"
-                    height="43px"
-                    width="211px"
-                    alt=""
-                /></a>
-              </div>
-              <div class="slide">
-                <a href=""
-                  ><img
-                    class="img1"
-                    src="assets/img/pcs.png"
-                    height="35px"
-                    width="224px"
-                    alt=""
-                /></a>
-              </div>
-              <div class="slide">
-                <a href=""
-                  ><img
-                    class="img2"
-                    src="assets/img/cmc.png"
-                    height="41px"
-                    width="243px"
-                    alt=""
-                /></a>
-              </div>
-              <div class="slide">
-                <a href=""
-                  ><img
-                    class="img3"
-                    src="assets/img/cg.png"
-                    height="49px"
-                    width="181px"
-                    alt=""
-                /></a>
-              </div>
-              <div class="slide">
-                <a href=""
-                  ><img
-                    class="img4"
-                    src="assets/img/poocoin.png"
-                    height="22px"
-                    width="152px"
-                    alt=""
-                /></a>
-              </div>
-              <div class="slide">
-                <a href=""
-                  ><img
-                    class="img5"
-                    src="assets/img/bogged.png"
-                    height="43px"
-                    width="211px"
-                    alt=""
-                /></a>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="downs">
+        <p>Copyright ©2022. All Rights Reserved by MetaCars.</p>
       </div>
-
-      <footer data-aos="fade-up">
-        <div class="up">
-          <div class="left" data-aos="fade-right">
-            <img src="assets/img/footerwheels.png" alt="" />
-          </div>
-
-          <div class="mid">
-            <div class="down">
-              <div class="socials" data-aos="fade-up">
-                <a href="">
-                  <img class="s1" src="assets/img/telegram.png" alt="" />
-                </a>
-                <a href="">
-                  <img class="s2" src="assets/img/twitter.png" alt="" />
-                </a>
-                <a href="">
-                  <img class="s3" src="assets/img/instagram.png" alt="" />
-                </a>
-                <a href="">
-                  <img class="s4" src="assets/img/discord.png" alt="" />
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="right" data-aos="fade-left">
-            <img src="assets/img/footerguido.png" alt="" />
-          </div>
-        </div>
-        <div class="downs">
-          <p>Copyright ©2022. All Rights Reserved by MetaCars.</p>
-        </div>
-      </footer>
-    </div>
-
-    <div id="loader-wrapper" style="/*! display: none; */">
-      <div class="loader">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="subline"></div>
-        <div class="subline"></div>
-        <div class="subline"></div>
-        <div class="subline"></div>
-        <div class="subline"></div>
-        <div class="loader-circle-1">
-          <div class="loader-circle-2"></div>
-        </div>
-        <div class="needle"></div>
-        <div class="loading">MetaCars</div>
-      </div>
-    </div>
-
+    </footer>
     <script>
       $(window).on("load", function () {
-        $("#loader-wrapper").delay(2900).fadeOut("slow");
+        $("#loader-wrapper").delay(900).fadeOut("slow");
       });
-
       var slideIndex = 1;
       showSlides(slideIndex);
-
       function plusSlides(n) {
         showSlides((slideIndex += n));
       }
-
       function currentSlide(n) {
         showSlides((slideIndex = n));
       }
-
       function showSlides(n) {
         var i;
         var slides = document.getElementsByClassName("mySlides");
@@ -1221,8 +708,8 @@
         dots[slideIndex - 1].className += " active";
       }
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://bxslider.com/lib/jquery.bxslider.js"></script>
+    <script src="assets/js/jquery-2.1.4.min.js"></script>
+    <script src="assets/js/jquery.bxslider.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
 </html>

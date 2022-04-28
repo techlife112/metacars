@@ -1,41 +1,11 @@
 @font-face {
-  font-family: "FuturaBoldCon";
-  src: url(../FuturaPTCondBold.otf);
-}
-
-@font-face {
   font-family: "FuturaLightCon";
-  src: url(../FuturaLightCondensedBT.ttf);
-}
-
-@font-face {
-  font-family: "BrandonGrotesqueRegular";
-  src: url(../Brandon_reg.otf);
-}
-
-@font-face {
-  font-family: "BrandonGrotesqueMedium";
-  src: url(../Brandon_med.otf);
-}
-
-@font-face {
-  font-family: "BrandonGrotesqueBold";
-  src: url(../Brandon_blk.otf);
-}
-
-@font-face {
-  font-family: "FuturaPTLight";
-  src: url(../fonts/FuturaPT/FuturaPTLight.otf);
+  src: url(../fonts/FuturaLightCondensedBT.ttf);
 }
 
 @font-face {
   font-family: "FuturaPTMedium";
   src: url(../fonts/FuturaPT/FuturaPTMedium.otf);
-}
-
-@font-face {
-  font-family: "FuturaPTHeavy";
-  src: url(../fonts/FuturaPT/FuturaPTHeavy.otf);
 }
 
 @font-face {
@@ -61,11 +31,6 @@
 @font-face {
   font-family: "subwt";
   src: url(../fonts/SUBWT.ttf);
-}
-
-@font-face {
-  font-family: "HIGHSPEED";
-  src: url(../fonts/HIGHSPEED.TTF);
 }
 
 a {
@@ -205,11 +170,11 @@ a {
   body .container .secondpart .up {
     font-size: 30px;
     text-align: center;
-    font-family: "BrandonGrotesqueRegular";
+    font-family: "Brandon Grotesque Regular";
     color: white;
   }
   body .container .secondpart .up span {
-    font-family: "BrandonGrotesqueBold";
+    font-family: "Brandon Grotesque Bold";
   }
   body .container .secondpart .up p {
     margin-top: 100px;
@@ -268,15 +233,24 @@ a {
         -ms-flex-align: center;
             align-items: center;
     margin-bottom: 40px;
-    opacity: 0.3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    opacity: 1;
   }
   body .container .thirdpart a {
     color: white;
     font-style: normal;
     text-decoration: none;
-    font-family: "BrandonGrotesqueMedium";
+    font-family: "Brandon Grotesque Medium";
     font-size: 22px;
     padding: 10px 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     background: radial-gradient(47.54% 180.88% at 50% 50%, #1f9eff 0.98%, #1b9eff 36.79%, #0f9fff 71.76%, #009fff 100%);
     -webkit-transition: 0.2s;
     transition: 0.2s;
@@ -565,11 +539,11 @@ a {
   body .container .secondpart .up {
     font-size: 30px;
     text-align: center;
-    font-family: "BrandonGrotesqueRegular";
+    font-family: "Brandon Grotesque Regular";
     color: white;
   }
   body .container .secondpart .up span {
-    font-family: "BrandonGrotesqueBold";
+    font-family: "Brandon Grotesque Bold";
   }
   body .container .secondpart .up p {
     margin-top: 100px;
@@ -628,13 +602,14 @@ a {
         -ms-flex-align: center;
             align-items: center;
     margin-bottom: 140px;
-    opacity: 0.3;
   }
   body .container .thirdpart a {
+    margin-left: 15px;
+    margin-right: 15px;
     color: white;
     font-style: normal;
     text-decoration: none;
-    font-family: "BrandonGrotesqueMedium";
+    font-family: "Brandon Grotesque Medium";
     font-size: 22px;
     padding: 10px 50px;
     background: radial-gradient(47.54% 180.88% at 50% 50%, #1f9eff 0.98%, #1b9eff 36.79%, #0f9fff 71.76%, #009fff 100%);
